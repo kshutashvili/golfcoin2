@@ -1,0 +1,73 @@
+@import "../helpers.scss";
+
+.block9{
+    padding-bottom: 116px;
+    background-image: url("../img/bg_faq.png");
+    &__title{
+        margin: 0 0 30px 0;
+        padding: 83px 0 0 0;
+        font-family: $museosanscyrl700;
+        font-size: em(35);
+        color: $darktext;
+        text-align: center;
+    }
+    & .accordion{
+        width: 970px;
+        margin: 0 auto 0 auto;
+        @include media-max(970){
+            width: 100%;
+        }
+        &__item{
+            margin: 20px 0 20px 0;
+            padding: 17.5px 0;
+            background-color: $whitebg;
+            box-shadow: 0px 0px 2.5px 0px rgba(0, 0, 0, 0.10);
+            & .title{
+                cursor: pointer;
+                position: relative;
+                padding: 0 26px;
+                font-family: $museosanscyrl500;
+                font-size: em(17);
+                color: $greytext;
+                transition: margin 1s;
+                &:after{
+                    content: "\f107";
+                    position: absolute;
+                    //top: 19px;
+                    right: 25px;
+                    font-family: "fontawesome";
+                    color: $btncolor;
+                }
+            }
+            & .content{
+                overflow: hidden;
+                width: 880px;
+                margin: 0 auto 0 auto;
+                max-height: 0px;
+                line-height: 1.39;
+                font-family: $museosanscyrl500;
+                font-size: em(15);
+                color: $lightgreytext;
+                transition: all 1s;
+                @include media-max(880){
+                    width: 100%;
+                    padding: 0 5px;
+                }
+            }
+            &.active{
+                & .title{
+                    &:after{
+                        content: "\f106";
+                    }
+                }
+                & .content{
+                    margin: 17.5px auto 0 auto;
+                    max-height: 1500px;
+                }
+            }
+            &:nth-child(1){
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+}

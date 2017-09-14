@@ -1,0 +1,70 @@
+@import "../helpers.scss";
+
+.block5{
+    &__title{
+        padding: 108px 0 0 0;
+        font-family: $museosanscyrl700;
+        font-size: em(35);
+        color: $darktext;
+        text-align: center;
+    }
+    & .roadmap-wrap{
+        text-align: center;
+        & .point{
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            width: 133px;
+            margin: 78px 25px;
+            text-align: center;
+            @include media-max(600){
+                display: block;
+                margin: 0 auto 0 auto;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                top: 15px;
+                right: -110px;
+                width: 170px;
+                height: 1px;
+                background-image: url("../img/line.png");
+                @include media-max(1229){
+                    display: none;
+                }
+            }
+            & img{
+                display: block;
+                margin: 0 auto 0 auto;
+            }
+            & .date{
+                margin: 7px 0 0 0;
+                font-family: $museosanscyrl500;
+                font-size: em(17);
+                color: $greytext;
+            }
+            & .text{
+                margin: 5px 0 0 0;
+                font-family: $museosanscyrl500;
+                font-size: em(15);
+                color: $lightgreytext;
+                line-height: 1.4;
+            }
+            &.flag{
+                margin: 0 25px;
+                @include media-max(600){
+                    margin: 10px auto 0 auto;
+                }
+                &:after{
+                    display: none;
+                }
+                & img{
+                    margin: -5px 0 0 53px;
+                }
+                & .date{
+                    margin: 25px 0 0 0;
+                }
+            }
+        }
+    }
+}

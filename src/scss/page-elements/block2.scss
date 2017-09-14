@@ -1,0 +1,28 @@
+@import "../helpers.scss";
+
+.block2{
+    padding: 20px 0;
+    background-color: #f6f6f6;
+    & .title{
+        line-height: 40px;
+        font-family: $museosanscyrl300;
+        font-size: em(15);
+        color: $greytext;
+        text-align: center;
+        & span{
+            margin: 0 20px;
+            @include media-max(450){
+                display: block;
+            }
+        }
+        & img{
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 10px 0 0;
+            @include media-max(450){
+                display: block;
+                margin: 0 auto 0 auto;
+            }
+        }
+    }
+}

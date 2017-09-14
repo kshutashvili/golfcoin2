@@ -1,0 +1,293 @@
+@import "../helpers.scss";
+
+.header{
+    padding-bottom: 30px;
+    background-image: url("../img/header-bg.png");
+    @include media-max(1100){
+        background-size: cover;
+        background-position: center center;
+    }
+    & .top-line{
+        & .logo{
+            display: inline-block;
+            vertical-align: top;
+            margin: 22px 0 0 30px;
+            width: 133px;
+            height: 45px;
+            background-image: url("../img/header-logo.png");
+            background-repeat: no-repeat;
+            @include media-max(667){
+                display: block;
+                margin: 0 auto 0 auto;
+            }
+        }
+        & .menu{
+            display: inline-block;
+            vertical-align: top;
+            margin: 34px 0 0 371px;
+            @include media-max(1229){
+                margin: 34px 0 0 100px;
+            }
+            @include media-max(768){
+                margin: 34px 0 0 30px;
+            }
+            @include media-max(667){
+                display: none;
+            }
+            & li{
+                display: inline-block;
+                vertical-align: top;
+                margin: 3px 14px 0 0;
+                & a{
+                    display: block;
+                    font-family: $museosanscyrl500;
+                    font-size: em(15);
+                    text-transform: uppercase;
+                    color: $whitetext;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                &.lang{
+                    position: relative;
+                    margin: 0 0 0 3px;
+                    &:after{
+                        content: "\f107";
+                        position: absolute;
+                        top: 4px;
+                        right: -13px;
+                        font-family: $fontawesome;
+                        color: $whitetext;
+                    }
+                    & > a{
+                        display: inline-block;
+                        vertical-align: top;
+                        text-transform: none;
+                        font-family: $museosanscyrl300;
+                        line-height: 25px;
+                        & img{
+                            display: inline-block;
+                            vertical-align: top;
+                            margin: 0 4px 0 0;
+                        }
+                    }
+                    & .sub{
+                        display: none;
+                        position: absolute;
+                        padding: 5px 0 0 0;
+                        width: 50px;
+                        & li{
+                            display: block;
+                            margin: 0 0 5px 0;
+                            & > a{
+                                display: inline-block;
+                                vertical-align: top;
+                                text-transform: none;
+                                font-family: $museosanscyrl300;
+                                line-height: 25px;
+                                & img{
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    opacity: 0;
+                                    margin: 0 4px 0 0;
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        & .sub{
+                            display: block;
+                        }
+                        &:after{
+                            content: "\f106";
+                        }
+                    }
+                }
+            }
+        }
+        & .auth{
+            display: inline-block;
+            vertical-align: top;
+            margin: 37px 0 0 36px;
+            @include media-max(900){
+                display: block;
+                margin: 37px 0 0 0;
+                text-align: center;
+            }
+            @include media-max(768){
+                display: block;
+                margin: 37px 0 0 0;
+                text-align: center;
+            }
+            & a{
+                display: inline-block;
+                vertical-align: top;
+                font-family: $museosanscyrl500;
+                font-size: em(16);
+                color: $whitetext;
+                text-transform: uppercase;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+                &.sign-up{
+                    margin: 0 11px 0 0;
+                }
+                &.login{
+                    margin: 0 0 0 11px;
+                }
+            }
+            & .line{
+                display: inline-block;
+                vertical-align: top;
+                width: 1px;
+                height: 16px;
+                background-color: $whitebg;
+            }
+        }
+    }
+    &__title{
+        margin: 149px 0 0 0;
+        font-family: $museosanscyrl700;
+        font-size: em(45);
+        color: $whitetext;
+        text-align: center;
+        @include media-max(667){
+            margin: 100px 0 0 0;
+        }
+    }
+    &__subtitle{
+        margin: 8px 0 0 0;
+        font-family: $museosanscyrl500;
+        font-size: em(25);
+        color: $whitetext;
+        text-align: center;
+    }
+    &__btns{
+        overflow: hidden;
+        width: 340px;
+        margin: 19px auto 0 auto;
+        @include media-max(340){
+            width: 100%;
+        }
+        & .btn{
+            display: block;
+            float: left;
+            width: 160px;
+            height: 45px;
+            line-height: 45px;
+            @include media-max(340){
+                float: none;
+            }
+        }
+        & .start{
+            margin: 0 10px 0 0;
+            font-family: $museosanscyrl500;
+            font-size: em(17);
+            color: $whitetext;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            background-color: $btncolor;
+            @include media-max(340){
+                margin: 0 auto;
+            }
+            &:hover{
+                background-color: $btncolorhover;
+            }
+        }
+        & .whitepapper{
+            margin: 0 0 0 10px;
+            font-family: $museosanscyrl500;
+            font-size: em(17);
+            color: $whitetext;
+            text-align: center;
+            text-decoration: none;
+            box-sizing: border-box;
+            border: 1px solid $whitebg;
+            border-radius: 5px;
+            @include media-max(340){
+                margin: 10px auto 0 auto;
+            }
+            &:hover{
+                color: $btncolor;
+                background-color: $whitebg;
+            }
+        }
+    }
+    &__bottom-title{
+        margin: 116px 0 0 0;
+        font-family: $museosanscyrl500;
+        font-size: em(17);
+        color: $whitetext;
+        text-align: center;
+    }
+    &__circles{
+        overflow: hidden;
+        width: 420px;
+        margin: 16px auto 0 auto;
+        @include media-max(420){
+            width: 100%;
+        }
+        & .circle{
+            float: left;
+            width: 90px;
+            height: 90px;
+            margin: 0 7.5px;
+            box-sizing: border-box;
+            border: 0.5px solid $whitebg;
+            border-radius: 50%;
+            @include media-max(420){
+                float: none;
+                margin: 0 auto 0 auto;
+            }
+            & span{
+                display: block;
+                text-align: center;
+                &.number{
+                    margin: 22px 0 0 0;
+                    font-family: $museosanscyrl300;
+                    font-size: em(25);
+                    color: $whitetext;
+                    line-height: 1;
+                }
+                &.caption{
+                    font-family: $museosanscyrl;
+                    font-size: em(12); 
+                    color: $whitetext;
+                }
+            }
+        }
+    }
+    &.white{
+        background-image: none;
+        background-color: $whitebg;
+        box-shadow: 0 0px 5px 0px rgba(0,0,0,.2);
+        & .top-line{
+            & .logo{
+                background-image: url("../img/header-logo-green.png");
+            }
+            & .menu{
+                & li{
+                    & a{
+                        color: $greytext;
+                    }
+                    &.lang{
+                        &:after{
+                            color: $greytext;
+                        }
+                    }
+                }
+            }
+            & .auth{
+                & a{
+                    color: $greytext;
+                }
+                & .line{
+                    background-color: $greytext;
+                }
+            }
+        }
+    }
+}

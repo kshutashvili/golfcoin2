@@ -1,0 +1,222 @@
+@import "../helpers.scss";
+
+.block3{
+    padding-bottom: 151px;
+    &__title{
+        padding: 105px 0 0 0;
+        font-family: $museosanscyrl700;
+        font-size: em(35);
+        color: $darktext;
+        text-align: center;
+    }
+    &__info{
+        margin: 21px 0 0 0;
+        padding: 0 221px;
+        font-family: $museosanscyrl500;
+        font-size: em(16);
+        color: $lightgreytext;
+        text-align: center;
+        line-height: 1.63;
+        @include media-max(950){
+            padding: 0 5px;
+        }
+    }
+}
+
+.discount-block{
+    width: 400px;
+    margin: 24px auto 0 auto;
+    @include media-max(400){
+        width: 100%;
+    }
+    &__title{
+        font-family: $museosanscyrl500;
+        font-size: em(20);
+        color: $greytext;
+        text-align: center;
+    }
+    &__benefits{
+        margin: 25px 0 0 0;
+        text-align: center;
+        &__benefit{
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 5px;
+            & .circle{
+                width: 90px;
+                height: 90px;
+                line-height: 90px;
+                font-family: $museosanscyrl300;
+                font-size: em(25);
+                color: $greytext;
+                text-align: center;
+                box-sizing: border-box;
+                border: 1px solid $btncolor;
+                border-radius: 50%;
+            }
+            & .caption{
+                margin: 4px 0 0 0;
+                font-family: $museosanscyrl300;
+                font-size: em(12);
+                text-align: center;
+                line-height: 1.5;
+            }
+        }
+    }
+    & .show-address-btn{
+        display: block;
+        width: 310px;
+        height: 44px;
+        margin: 15px auto 0 auto;
+        line-height: 44px;
+        font-family: $museosanscyrl500;
+        font-size: em(17);
+        color: $whitetext;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        background-color: $btncolor;
+        &:hover{
+            background-color: $btncolorhover;
+        }
+    }
+    & .term-title{
+        margin: 8px 0 0 0;
+        font-family: $museosanscyrl300;
+        font-size: em(12);
+        color: $greytext;
+        text-align: center;
+        & a{
+            color: $btncolor;
+        }
+    }
+    & .payments-block{
+        margin: 12px 0 0 0;
+        text-align: center;
+        &__title{
+            font-family: $museosanscyrl300;
+            font-size: em(15);
+            color: $greytext;
+            text-align: center;
+        }
+        &__payment{
+            display: inline-block;
+            vertical-align: top;
+            margin: 6px 1.5px 0px;
+            width: 43px;
+            height: 30px;
+            background-image: url("../img/payments-sprite.png");
+            &.visa{
+                background-position: 0 0;
+                &:hover{
+                    background-position: 0px -32px;
+                }
+            }
+            &.mastercard{
+                background-position: -50px 0;
+                &:hover{
+                    background-position: -50px -32px;
+                }
+            }
+            &.paypal{
+                background-position: -100px 0;
+                &:hover{
+                    background-position: -100px -32px;
+                }
+            }
+            &.express{
+                background-position: -150px 0;
+                &:hover{
+                    background-position: -150px -32px;
+                }
+            }
+        }
+    }
+    & .address-block{
+        margin: 25px 0 0 0;
+        text-align: center;
+        &__address{
+            font-family: $museosanscyrl500;
+            font-size: em(17);
+            color: $greytext;
+        }
+        &__copy{
+            display: block;
+            font-family: $museosanscyrl300;
+            font-size: em(12);
+            color: $greytext;
+        }
+    }
+    & .terms-list{
+        margin: 10px 0;
+        list-style-type: none;
+        font-family: $museosanscyrl300;
+        font-size: em(12);
+        color: $greytext;
+        @include media-max(425){
+            text-align: center;
+        }
+        & li{
+            & a{
+                color: $btncolor;
+            }
+        }
+    }
+}
+.pay-other-types-block{
+    width: 570px;
+    margin: 31px auto 0 auto;
+    @include media-max(570){
+        width: 100%;
+    }
+    
+    &__title{
+        font-family: $museosanscyrl500;
+        font-size: em(20);
+        color: $greytext;
+        text-align: center;
+        line-height: 1.4;
+    }
+    
+    &__btns-wrap{
+        margin: 14px 0 0 0;
+        text-align: center;
+        & a{
+            display: inline-block;
+            vertical-align: top;
+            width: 155px;
+            height: 41px;
+            line-height: 41px;
+            font-family: $museosanscyrl500;
+            font-size: em(17);
+            color: $btncolor;
+            text-align: center;
+            text-decoration: none;
+            box-sizing: border-box;
+            border: 1px solid $btncolor;
+            border-radius: 5px;
+            @include media-max(568){
+                display: block;
+                margin: 0 auto;
+            }
+            &:hover{
+                color: $whitetext;
+                background-color: $btncolor;
+            }
+        }
+        & .or{
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 6px;
+            height: 41px;
+            line-height: 41px;
+            font-family: $museosanscyrl300;
+            font-size: em(12);
+            color: $greytext;
+            text-align: center;
+            @include media-max(568){
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+@import "../helpers.scss";
+
+.block11{
+    margin: 142px 0 0 0;
+    padding-bottom: 142px;
+    &__title{
+        font-family: $museosanscyrl700;
+        font-size: em(35);
+        color: $darktext;
+        text-align: center;
+    }
+    & .subscribe-form{
+        width: 300px;
+        margin: 65px auto 0 auto;
+        & input[type="text"]{
+            outline: none;
+            display: block;
+            width: 100%;
+            padding: 9px 0;
+            font-family: $museosanscyrl500;
+            font-size: em(15);
+            color: $lightgreytext;
+            text-align: center;
+            border: none;
+            box-sizing: border-box;
+            border-bottom: 1px solid #d3d3d3;
+            &:focus{
+                font-size: em(17);
+                color: $greytext;
+            }
+            &.email{
+                margin: 14px 0 0 0;
+            }
+            &.error{
+                border-bottom: 1px solid $errorcolor;
+            }
+        }
+        & .label-required{
+            display: block;
+            margin: 6px 0 0 0;
+            font-family: $museosanscyrl300;
+            font-size: em(12);
+            color: $greytext;
+            text-align: center;
+        }
+        & .submit{
+            display: block;
+            margin: 26px auto 0 auto;
+            width: 155px;
+            height: 41px;
+            font-family: $museosanscyrl500;
+            font-size: em(17);
+            color: $whitetext;
+            border: none;
+            border-radius: 5px;
+            background-color: $btncolor;
+        }
+    }
+
+    & .join-us-block{
+        display: inline-block;
+        vertical-align: top;
+        width: 253px;
+        margin: 33px 0 0 489px;
+        @include media-max(1100){
+            margin: 33px 0 0 415px;
+        }
+        @include media-max(1024){
+            display: block;
+            margin: 33px auto 0 auto;
+        }
+        &__title{
+            font-family: $museosanscyrl500;
+            font-size: em(20);
+            color: $darktext;
+            text-align: center;
+        }
+        &__email{
+            margin: 14px 0 0 0;
+            font-family: $museosanscyrl500;
+            font-size: em(15);
+            color: $greytext;
+            text-align: center;
+        }
+        & .socials{
+            margin: 14px 0 0 0;
+            & a{
+                display: inline-block;
+                vertical-align: top;
+                margin: 0 20px 0 0;
+                width: 30px;
+                height: 31px;
+                background-image: url("../img/socials-sprite.png");
+                background-repeat: no-repeat;
+                &:last-child{
+                    margin: 0;
+                }
+                &.facebook{
+                    background-position: 0 0;
+                    &:hover{
+                        background-position: 0 -31px;
+                    }
+                }
+                &.in{
+                    background-position: -50px 0;
+                    &:hover{
+                        background-position: -50px -31px;
+                    }
+                }
+                &.instagram{
+                    background-position: -100px 0;
+                    &:hover{
+                        background-position: -100px -31px;
+                    }
+                }
+                &.telegram{
+                    background-position: -150px 0;
+                    &:hover{
+                        background-position: -150px -31px;
+                    }
+                }
+                &.twitter{
+                    width: 37px;
+                    background-position: -200px 0;
+                    &:hover{
+                        background-position: -200px -31px;
+                    }
+                }
+            }
+        }
+    }
+    & .ball{
+        display: inline-block;
+        vertical-align: top;
+        margin: 35px 0 0 263px;
+        @include media-max(1100){
+            margin: 35px 0 0 100px;
+        }
+        @include media-max(1024){
+            display: block;
+            margin: 35px auto 0 auto;
+        }
+    }
+}

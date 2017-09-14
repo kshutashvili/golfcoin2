@@ -1,0 +1,77 @@
+@import "../helpers.scss";
+
+.footer{
+    background-color: #494949;
+    padding-bottom: 39px;
+
+    &__logo{
+        display: inline-block;
+        vertical-align: top;
+        margin: 36px 0 0 30px;
+        width: 133px;
+        height: 45px;
+        background-image: url("../img/header-logo.png");
+        background-repeat: no-repeat;
+        @include media-max(667){
+            display: block;
+            margin: 36px auto 0 auto;
+        }
+    }
+
+    &__menu{
+        display: inline-block;
+        vertical-align: top;
+        margin: 51px 0 0 216px;
+        @include media-max(1200){
+            margin: 51px 0 0 175px;
+        }
+        @include media-max(1024){
+            margin: 51px 0 0 150px;
+        }
+        @include media-max(900){
+            margin: 51px 0 0 100px;
+        }
+        @include media-max(768){
+            margin: 51px 0 0 50px;
+        }
+        @include media-max(667){
+            display: block;
+            margin: 51px auto 0 auto;
+        }
+        & li{
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 24.5px 0 0;
+            @include media-max(667){
+                display: block;
+                margin: 0 0 10px 0;
+                text-align: center;
+            }
+            & a{
+                font-family: $museosanscyrl500;
+                font-size: em(15);
+                color: $whitetext;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            &:last-child{
+                margin: 0;
+            }
+        }
+    }
+
+    &__email{
+        display: inline-block;
+        vertical-align: top;
+        margin: 50px 0 0 147px;
+        font-family: $museosanscyrl300;
+        font-size: em(15);
+        color: $whitetext;
+        text-decoration: none;
+        @include media-max(1100){
+            display: block;
+            margin: 50px 0 0 0;
+            text-align: center;
+        }
+    }
+}

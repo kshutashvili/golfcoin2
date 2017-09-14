@@ -1,0 +1,83 @@
+@import "../helpers.scss";
+
+.signup-form{
+    width: 300px;
+    margin: 70px auto 225px auto;
+    & .title{
+        font-family: $museosanscyrl700;
+        font-size: em(35);
+        color: $darktext;
+        text-align: center;
+    }
+    & .caption{
+        margin: 12px 0 21px 0;
+        font-family: $museosanscyrl500;
+        font-size: em(15);
+        color: $lightgreytext;
+        text-align: center;
+        & a{
+            color: $lightgreytext;
+            &:hover{
+                color: $btncolor;
+            }
+        }
+    }
+    & .input{
+        outline: none;
+        width: 100%;
+        height: 45px;
+        margin: 0 0 15px 0;
+        font-family: $museosanscyrl500;
+        font-size: em(15);
+        color: $lightgreytext;
+        text-align: center;
+        box-sizing: border-box;
+        border: 1px solid #c0c0c0;
+        border-radius: 5px;
+        &.error{
+            border: 1px solid $errorcolor;
+            background-image: url("../img/sad.png");
+            background-repeat: no-repeat;
+            background-position: 95% 50%;
+        }
+        &:focus{
+            color: $greytext;
+        }
+    }
+    & .password-wrap{
+        position: relative;
+        margin: 0 0 15px 0;
+        & .input{
+            margin: 0;
+        }
+        & .eye{
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 20px;
+            height: 14px;
+            background-image: url('../img/eye.png');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            &.active{
+                background-position: 0 -14px;
+            }
+        }
+    }
+    & .submit{
+        outline: none;
+        cursor: pointer;
+        width: 100%;
+        height: 45px;
+        margin: 0 0 0 0;
+        font-family: $museosanscyrl500;
+        font-size: em(17);
+        color: $whitetext;
+        text-align: center;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 5px;
+        background-color: $btncolor;
+        box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+    }
+}
