@@ -1,0 +1,160 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-22 13:46+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: golfco/settings.py:128
+msgid "Английский"
+msgstr ""
+
+#: golfco/settings.py:129
+msgid "Русский"
+msgstr ""
+
+#: golfco/settings.py:130
+msgid "Китайский"
+msgstr ""
+
+#: templates/index_old.html:83 templates/index_old.html:175
+#: templates/index_old.html:513
+msgid "Sign Up"
+msgstr ""
+
+#: templates/index_old.html:85 templates/index_old.html:177
+#: templates/index_old.html:515
+msgid "Login"
+msgstr ""
+
+#: templates/index_old.html:91
+msgid "Start Pre-ICO"
+msgstr ""
+
+#: templates/index_old.html:92
+msgid "Whitepapper"
+msgstr ""
+
+#: templates/index_old.html:98
+msgid "Days"
+msgstr ""
+
+#: templates/index_old.html:102
+msgid "Hours"
+msgstr ""
+
+#: templates/index_old.html:106
+msgid "Minutes"
+msgstr ""
+
+#: templates/index_old.html:110
+msgid "Seconds"
+msgstr ""
+
+#: templates/index_old.html:123
+msgid "raised"
+msgstr ""
+
+#: templates/index_old.html:123
+msgid "from"
+msgstr ""
+
+#: templates/index_old.html:124
+msgid "participants"
+msgstr ""
+
+#: templates/index_old.html:139 templates/index_old.html:485
+msgid "Discount for early investors"
+msgstr ""
+
+#: templates/index_old.html:143 templates/index_old.html:147
+#: templates/index_old.html:151 templates/index_old.html:489
+#: templates/index_old.html:493 templates/index_old.html:497
+msgid "In the first"
+msgstr ""
+
+#: templates/index_old.html:143 templates/index_old.html:147
+#: templates/index_old.html:151 templates/index_old.html:489
+#: templates/index_old.html:493 templates/index_old.html:497
+msgid "days"
+msgstr ""
+
+#: templates/index_old.html:157
+msgid "Copy address"
+msgstr ""
+
+#: templates/index_old.html:161
+msgid "you have read, understand and agree to our"
+msgstr ""
+
+#: templates/index_old.html:161
+msgid "terms and conditions"
+msgstr ""
+
+#: templates/index_old.html:162
+msgid "you will only send ETH from a compatible wallet (not from any exchange)"
+msgstr ""
+
+#: templates/index_old.html:162
+msgid "more details"
+msgstr ""
+
+#: templates/index_old.html:165 templates/index_old.html:503
+msgid "Other payment methods"
+msgstr ""
+
+#: templates/index_old.html:173 templates/index_old.html:511
+msgid "To pay for other types of crypto currency (BTC, ETC, LTC etc)"
+msgstr ""
+
+#: templates/index_old.html:173 templates/index_old.html:511
+msgid "Please sign up or log in to your account"
+msgstr ""
+
+#: templates/index_old.html:176 templates/index_old.html:514
+msgid "or"
+msgstr ""
+
+#: templates/index_old.html:189
+msgid "How it works"
+msgstr ""
+
+#: templates/index_old.html:241
+msgid "Details"
+msgstr ""
+
+#: templates/index_old.html:500
+msgid "Show the address for donating ETH"
+msgstr ""
+
+#: templates/index_old.html:501
+msgid "By clicking you acknowledge"
+msgstr ""
+
+#: templates/index_old.html:501
+msgid "terms of agreement"
+msgstr ""
+
+#: templates/index_old.html:527
+msgid "Get the most latest news"
+msgstr ""
+
+#: templates/index_old.html:531
+msgid "This field is required"
+msgstr ""
+
+#: templates/index_old.html:535
+msgid "Join Us"
+msgstr ""
