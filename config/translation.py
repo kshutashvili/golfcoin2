@@ -1,6 +1,6 @@
 from modeltranslation.translator import translator, TranslationOptions
 
-from .models import SiteConfiguration
+from .models import SiteConfiguration, Teammate, Advisor
 
 
 class SiteConfigurationTranslationOptions(TranslationOptions):
@@ -15,19 +15,21 @@ class SiteConfigurationTranslationOptions(TranslationOptions):
               'project_plan_text3',
               'project_plan_text4',
               'project_plan_text5',
-              'project_plan_text6')
+              'project_plan_text6',
+              'team_block_title',
+              'advisor_block_title')
 
 
 # class DocumentTranslationOptions(TranslationOptions):
 #     fields = ('text',)
 
 
-# class TeammateCategoryTranslationOptions(TranslationOptions):
-#     fields = ('name',)
+class TeammateTranslationOptions(TranslationOptions):
+    fields = ('name', 'position')
 
 
-# class TeammateTranslationOptions(TranslationOptions):
-#     fields = ('name', 'position')
+class AdvisorTranslationOptions(TranslationOptions):
+    fields = ('name',)
 
 
 # class ProjectTranslationOptions(TranslationOptions):
@@ -36,6 +38,6 @@ class SiteConfigurationTranslationOptions(TranslationOptions):
 
 translator.register(SiteConfiguration, SiteConfigurationTranslationOptions)
 #translator.register(Document, DocumentTranslationOptions)
-#translator.register(TeammateCategory, TeammateCategoryTranslationOptions)
-#translator.register(Teammate, TeammateTranslationOptions)
+translator.register(Teammate, TeammateTranslationOptions)
+translator.register(Advisor, AdvisorTranslationOptions)
 #translator.register(Project, ProjectTranslationOptions)

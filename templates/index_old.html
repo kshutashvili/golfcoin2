@@ -5,7 +5,7 @@
 <html lang="ru">
 
 <head>
-    <title>ICO</title>
+    <title>Golfcoin</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -250,67 +250,30 @@
 
     <section class="block7">
         <div class="container">
+            {% if conf.teammates.all|length > 0 %}
             <div class="team-block">
-                <h2 class="team-block__title">Team</h2>
-                <div class="team-block__member">
-                    <div class="image" style="background-image: url('/img/')"></div>
-                    <p class="name">Daria Barenkova</p>
-                    <p class="position">Marketing</p>
-                </div>
-                <div class="team-block__member">
-                    <div class="image" style="background-image: url('/img/')"></div>
-                    <p class="name">Konstantin Surname</p>
-                    <p class="position">Founder</p>
-                </div>
-                <div class="team-block__member">
-                    <div class="image" style="background-image: url('/img/')"></div>
-                    <p class="name">Oleg Ostapov</p>
-                    <p class="position">Smart contracts</p>
-                </div>
-                <div class="team-block__member">
-                    <div class="image" style="background-image: url('/img/')"></div>
-                    <p class="name">Ivan Potapov</p>
-                    <p class="position">Programmer</p>
-                </div>
-                <div class="team-block__member">
-                    <div class="image" style="background-image: url('/img/')"></div>
-                    <p class="name">Viktor Levchenko</p>
-                    <p class="position">Programmer</p>
-                </div>
-                <div class="team-block__member">
-                    <div class="image" style="background-image: url('/img/')"></div>
-                    <p class="name">Alexandr Kononenko</p>
-                    <p class="position">CEO</p>
-                </div>
+                <h2 class="team-block__title">{{ conf.team_block_title }}</h2>
+                {% for teammate in conf.teammates.all %}
+                    <div class="team-block__member">
+                        <div class="image" style="background-image: url({{ teammate.photo.url }})"></div>
+                        <p class="name">{{ teammate.name }}</p>
+                        <p class="position">{{ teammate.position }}</p>
+                    </div>
+                {% endfor %}
             </div>
+            {% endif %}
 
+            {% if conf.advisors.all|length > 0 %}
             <div class="advisers-block">
-                <h2 class="advisers-block__title">Advisers</h2>
+                <h2 class="advisers-block__title">{{ conf.advisor_block_title }}</h2>
+                {% for advisor in conf.advisors.all %}
                 <div class="advisers-block__member">
-                    <div class="image" style="background-image: url('/img/')"></div>
-                    <p class="name">Alex Kiroll</p>
+                    <div class="image" style="background-image: url({{ advisor.photo.url }})"></div>
+                    <p class="name">{{ advisor.name }}</p>
                 </div>
-                <div class="advisers-block__member">
-                    <div class="image" style="background-image: url('/img/')"></div>
-                    <p class="name">Viena Olton</p>
-                </div>
-                <div class="advisers-block__member">
-                    <div class="image" style="background-image: url('/img/')"></div>
-                    <p class="name">Rassel Hyiston</p>
-                </div>
-                <div class="advisers-block__member">
-                    <div class="image" style="background-image: url('/img/')"></div>
-                    <p class="name">Leo Flex</p>
-                </div>
-                <div class="advisers-block__member">
-                    <div class="image" style="background-image: url('/img/')"></div>
-                    <p class="name">Alan Urban</p>
-                </div>
-                <div class="advisers-block__member">
-                    <div class="image" style="background-image: url('/img/')"></div>
-                    <p class="name">Patrik Weo</p>
-                </div>
+                {% endfor %}
             </div>
+            {% endif %}
         </div>
     </section>
 

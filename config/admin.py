@@ -5,7 +5,20 @@ from solo.admin import SingletonModelAdmin
 
 from django.contrib import admin
 
-from .models import SiteConfiguration
+from .models import SiteConfiguration, Teammate, Advisor
+
+
+
+class TeammateInline(admin.StackedInline):
+    model = Teammate
+    extra = 1
+    insert_after = 'team_block_title_zh'
+
+
+class AdvisorInline(admin.StackedInline):
+    model = Advisor
+    extra = 1
+    insert_after = 'advisor_block_title_zh'
 
 
 @admin.register(SiteConfiguration)
@@ -48,11 +61,13 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "about_text_en",
                                "about_text_ru",
                                "about_text_zh",
-                               "about_address")
+                               "about_address",
+                               "about_block_html_id")
                   }),
                  ("Блок 'План проекта'", {
                     'classes': ('collapse',),
-                    "fields": ("project_plan_title",
+                    "fields": ("project_plan_html_id",
+                               "project_plan_title",
                                "project_plan_title_en",
                                "project_plan_title_ru",
                                "project_plan_title_zh",
@@ -87,6 +102,18 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                 "project_plan_text6_zh",
                                 "project_plan_date6"),)
                     }),
+                 ("Блок 'Команда'", {
+                    'classes': ('collapse',),
+                    "fields": ("team_block_title",
+                               "team_block_title_en",
+                               "team_block_title_ru",
+                               "team_block_title_zh",)}),
+                 ("Блок 'Советники'", {
+                    'classes': ('collapse',),
+                    "fields": ("advisor_block_title",
+                               "advisor_block_title_en",
+                               "advisor_block_title_ru",
+                               "advisor_block_title_zh",)}),
                  ("Контакты", {
                     'classes': ('collapse',),
                     "fields": ("main_email",)
@@ -99,4 +126,6 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "social_twi",
                                "social_telegram")
                     }),)
+    inlines = [TeammateInline, AdvisorInline]
+    change_form_template = 'admin/custom/change_form.html'
 

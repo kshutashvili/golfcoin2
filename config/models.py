@@ -111,14 +111,18 @@ class SiteConfiguration(SingletonModel):
     project_plan_text6 = models.CharField("План 6 (текст)",
                                           max_length=128,
                                           blank=True)
+    # block team
+    team_block_title = models.CharField("Заголовок для блока 'Team'",
+                                        max_length=128,
+                                        default="Team")
+    # block advisors
+    advisor_block_title = models.CharField("Заголовок для блока 'Advisors'",
+                                           max_length=128,
+                                           default="Advisors")
     # block documents
     # document_block_title = models.CharField("Заголовок для блока 'Документы'",
     #                                         max_length=128,
     #                                         default="Документы")
-    # block teammates
-    # teammates_block_title = models.CharField("Заголовок для блока 'Команда'",
-    #                                         max_length=128,
-    #                                         default="Наша команда")
     # block projects
     # projects_block_title = models.CharField("Заголовок для блока 'Проекты'",
     #                                         max_length=128,
@@ -129,3 +133,40 @@ class SiteConfiguration(SingletonModel):
 
     def __unicode__(self):
         return "Конфигурация сайта"
+
+
+
+class Teammate(models.Model):
+    config = models.ForeignKey(SiteConfiguration,
+                               verbose_name="Настройки сайта",
+                               related_name="teammates")
+    photo = models.ImageField("Фото",
+                              upload_to="team")
+    name = models.CharField("Имя",
+                            max_length=128)
+    position = models.CharField("Должность",
+                                max_length=128)
+
+    class Meta:
+        verbose_name = "Сотрудник"
+        verbose_name_plural = "Сотрудники"
+
+    def __unicode__(self):
+        return self.name
+
+
+class Advisor(models.Model):
+    config = models.ForeignKey(SiteConfiguration,
+                               verbose_name="Настройки сайта",
+                               related_name="advisors")
+    photo = models.ImageField("Фото",
+                              upload_to="team")
+    name = models.CharField("Имя",
+                            max_length=128)
+
+    class Meta:
+        verbose_name = "Советник (Advisor)"
+        verbose_name_plural = "Советники (Advisors)"
+
+    def __unicode__(self):
+        return self.name
