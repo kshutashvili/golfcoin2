@@ -119,14 +119,6 @@ class SiteConfiguration(SingletonModel):
     advisor_block_title = models.CharField("Заголовок для блока 'Advisors'",
                                            max_length=128,
                                            default="Advisors")
-    # block documents
-    # document_block_title = models.CharField("Заголовок для блока 'Документы'",
-    #                                         max_length=128,
-    #                                         default="Документы")
-    # block projects
-    # projects_block_title = models.CharField("Заголовок для блока 'Проекты'",
-    #                                         max_length=128,
-    #                                         default="Проекты")
 
     class Meta:
         verbose_name = "Конфигурация сайта"
