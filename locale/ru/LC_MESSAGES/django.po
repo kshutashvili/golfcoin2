@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-22 19:06+0000\n"
+"POT-Creation-Date: 2017-09-26 16:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: golfco/settings.py:129
 msgid "Английский"
@@ -30,12 +33,12 @@ msgid "Китайский"
 msgstr ""
 
 #: templates/index.html:107 templates/index_main.html:83
-#: templates/index_main.html:175 templates/index_main.html:476
+#: templates/index_main.html:177 templates/index_main.html:478
 msgid "Sign Up"
 msgstr ""
 
 #: templates/index.html:109 templates/index_main.html:85
-#: templates/index_main.html:177 templates/index_main.html:478
+#: templates/index_main.html:179 templates/index_main.html:480
 msgid "Login"
 msgstr ""
 
@@ -56,118 +59,114 @@ msgstr ""
 msgid "Whitepapper"
 msgstr ""
 
-#: templates/index.html:118
-msgid "Pre-ICO tokens golfcoin starts through"
-msgstr ""
-
-#: templates/index.html:122 templates/index_main.html:98
+#: templates/index.html:123 templates/index_main.html:99
 msgid "Days"
 msgstr ""
 
-#: templates/index.html:126 templates/index_main.html:102
+#: templates/index.html:127 templates/index_main.html:103
 msgid "Hours"
 msgstr ""
 
-#: templates/index.html:130 templates/index_main.html:106
+#: templates/index.html:131 templates/index_main.html:107
 msgid "Minutes"
 msgstr ""
 
-#: templates/index.html:134 templates/index_main.html:110
+#: templates/index.html:135 templates/index_main.html:111
 msgid "Seconds"
 msgstr ""
 
-#: templates/index_main.html:123
+#: templates/index_main.html:125
 msgid "raised"
 msgstr ""
 
-#: templates/index_main.html:123
+#: templates/index_main.html:125
 msgid "from"
 msgstr ""
 
-#: templates/index_main.html:124
+#: templates/index_main.html:126
 msgid "participants"
 msgstr ""
 
-#: templates/index_main.html:139 templates/index_main.html:448
+#: templates/index_main.html:141 templates/index_main.html:450
 msgid "Discount for early investors"
 msgstr ""
 
-#: templates/index_main.html:143 templates/index_main.html:147
-#: templates/index_main.html:151 templates/index_main.html:452
-#: templates/index_main.html:456 templates/index_main.html:460
+#: templates/index_main.html:145 templates/index_main.html:149
+#: templates/index_main.html:153 templates/index_main.html:454
+#: templates/index_main.html:458 templates/index_main.html:462
 msgid "In the first"
 msgstr ""
 
-#: templates/index_main.html:143 templates/index_main.html:147
-#: templates/index_main.html:151 templates/index_main.html:452
-#: templates/index_main.html:456 templates/index_main.html:460
+#: templates/index_main.html:145 templates/index_main.html:149
+#: templates/index_main.html:153 templates/index_main.html:454
+#: templates/index_main.html:458 templates/index_main.html:462
 msgid "days"
 msgstr ""
 
-#: templates/index_main.html:157
+#: templates/index_main.html:159
 msgid "Copy address"
 msgstr ""
 
-#: templates/index_main.html:161
+#: templates/index_main.html:163
 msgid "you have read, understand and agree to our"
 msgstr ""
 
-#: templates/index_main.html:161
+#: templates/index_main.html:163
 msgid "terms and conditions"
 msgstr ""
 
-#: templates/index_main.html:162
+#: templates/index_main.html:164
 msgid "you will only send ETH from a compatible wallet (not from any exchange)"
 msgstr ""
 
-#: templates/index_main.html:162
+#: templates/index_main.html:164
 msgid "more details"
 msgstr ""
 
-#: templates/index_main.html:165 templates/index_main.html:466
+#: templates/index_main.html:167 templates/index_main.html:468
 msgid "Other payment methods"
 msgstr ""
 
-#: templates/index_main.html:173 templates/index_main.html:474
+#: templates/index_main.html:175 templates/index_main.html:476
 msgid "To pay for other types of crypto currency (BTC, ETC, LTC etc)"
 msgstr ""
 
-#: templates/index_main.html:173 templates/index_main.html:474
+#: templates/index_main.html:175 templates/index_main.html:476
 msgid "Please sign up or log in to your account"
 msgstr ""
 
-#: templates/index_main.html:176 templates/index_main.html:477
+#: templates/index_main.html:178 templates/index_main.html:479
 msgid "or"
 msgstr ""
 
-#: templates/index_main.html:189
+#: templates/index_main.html:191
 msgid "How it works"
 msgstr ""
 
-#: templates/index_main.html:241
+#: templates/index_main.html:243
 msgid "Details"
 msgstr ""
 
-#: templates/index_main.html:463
+#: templates/index_main.html:465
 msgid "Show the address for donating ETH"
 msgstr ""
 
-#: templates/index_main.html:464
+#: templates/index_main.html:466
 msgid "By clicking you acknowledge"
 msgstr ""
 
-#: templates/index_main.html:464
+#: templates/index_main.html:466
 msgid "terms of agreement"
 msgstr ""
 
-#: templates/index_main.html:490
+#: templates/index_main.html:492
 msgid "Get the most latest news"
 msgstr ""
 
-#: templates/index_main.html:495
+#: templates/index_main.html:497
 msgid "This field is required"
 msgstr ""
 
-#: templates/index_main.html:499
+#: templates/index_main.html:501
 msgid "Join Us"
 msgstr ""

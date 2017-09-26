@@ -38,7 +38,10 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "main_block_subtitle_zh",
 
                                "main_block_start_link",
-                               "main_block_whitepaper_link")}),
+                               "main_block_whitepaper_link",
+                               "main_block_whitepaper_link_en",
+                               "main_block_whitepaper_link_ru",
+                               "main_block_whitepaper_link_zh")}),
                  ("Таймер", {
                     'classes': ('collapse',),
                     "fields": ("show_timer",

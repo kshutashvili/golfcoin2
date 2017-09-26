@@ -7,6 +7,7 @@ class SiteConfigurationTranslationOptions(TranslationOptions):
     fields = ('main_block_title',
               'main_block_subtitle',
               'main_block_timer_text',
+              'main_block_whitepaper_link',
               'about_title',
               'about_text',
               'project_plan_title',

@@ -112,8 +112,8 @@
             <h1 class="header__title">{% trans 'We integrates the blockchain of 60 million golfers' %}</h1>
             <h2 class="header__subtitle">{% trans 'Discount for early investors up to 40%' %}</h2>
             <div class="header__btns">
-                <a href="#!" class="btn start">{% trans 'Start Pre-ICO' %}</a>
-                <a href="#!" class="btn whitepapper">{% trans 'Whitepapper' %}</a>
+                <a href="{% if conf.main_block_start_link %}{{ conf.main_block_start_link }}{% else %}#{% endif %}" class="btn start">{% trans 'Start Pre-ICO' %}</a>
+                <a href="{% if conf.main_block_whitepaper_link %}{{ conf.main_block_whitepaper_link }}{% else %}#{% endif %}" class="btn whitepapper" target="_blank">{% trans 'Whitepapper' %}</a>
             </div>
             {% if conf.show_timer %}
             <p class="header__bottom-title">{{ conf.main_block_timer_text }}</p>
