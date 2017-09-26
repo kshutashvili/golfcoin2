@@ -91,8 +91,9 @@
                 <a href="{% if conf.main_block_start_link %}{{ conf.main_block_start_link }}{% else %}#{% endif %}" class="btn start">{% trans 'Start Pre-ICO' %}</a>
                 <a href="{% if conf.main_block_whitepaper_link %}{{ conf.main_block_whitepaper_link }}{% else %}#{% endif %}" class="btn whitepapper">{% trans 'Whitepapper' %}</a>
             </div>
+            {% if conf.show_timer %}
             <p class="header__bottom-title">{{ conf.main_block_timer_text }}</p>
-            <div class="header__circles" id="timer" data-date="2017/09/30">
+            <div class="header__circles" id="timer" data-date="{{ conf.timer_deadline|date:'Y/m/d' }}">
                 <div class="circle">
                     <span class="number" id="days"></span>
                     <span class="caption">{% trans 'Days' %}</span>
@@ -110,6 +111,7 @@
                     <span class="caption">{% trans 'Seconds' %}</span>
                 </div>
             </div>
+            {% endif %}
         </div>
     </header>
 

@@ -45,7 +45,8 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "main_block_timer_text",
                                "main_block_timer_text_en",
                                "main_block_timer_text_ru",
-                               "main_block_timer_text_zh")
+                               "main_block_timer_text_zh",
+                               "timer_deadline")
                     }),
                  ("Блок 'Уже инвестировано'", {
                     'classes': ('collapse',),

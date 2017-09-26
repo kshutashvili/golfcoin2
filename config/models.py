@@ -27,6 +27,9 @@ class SiteConfiguration(SingletonModel):
                                   default='Pre-ICO tokens golfcoin starts through')
     show_timer = models.BooleanField('Включить таймер',
                                     default=True)
+    timer_deadline = models.DateField('Дата запуска проекта',
+                                      default='2017-10-30',
+                                      help_text='Дата для таймера')
     # footer contacts
     main_email = models.EmailField('Email',
                                    max_length=128,

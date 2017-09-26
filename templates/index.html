@@ -115,8 +115,9 @@
                 <a href="#!" class="btn start">{% trans 'Start Pre-ICO' %}</a>
                 <a href="#!" class="btn whitepapper">{% trans 'Whitepapper' %}</a>
             </div>
-            <p class="header__bottom-title">{% trans 'Pre-ICO tokens golfcoin starts through' %}</p>
-            <div class="header__circles" id="timer" data-date="2017/09/30">
+            {% if conf.show_timer %}
+            <p class="header__bottom-title">{{ conf.main_block_timer_text }}</p>
+            <div class="header__circles" id="timer" data-date="{{ conf.timer_deadline|date:'Y/m/d' }}"> <!-- 2017/09/30 -->
                 <div class="circle">
                     <span class="number" id="days"></span>
                     <span class="caption">{% trans 'Days' %}</span>
@@ -134,6 +135,7 @@
                     <span class="caption">{% trans 'Seconds' %}</span>
                 </div>
             </div>
+            {% endif %}
         </div>
     </header>
 
