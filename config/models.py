@@ -19,9 +19,8 @@ class SiteConfiguration(SingletonModel):
     main_block_start_link = models.CharField('Ссылка в кнопке "Start Pre-ICO"',
                                              max_length=255,
                                              blank=True)
-    main_block_whitepaper_link = models.CharField("Ссылка в кнопке 'Whitepaper'",
-                                                  max_length=255,
-                                                  blank=True)
+    main_block_whitepaper_link = models.FileField("Whitepaper",
+                                                  upload_to='whitepapers')
     main_block_timer_text = models.CharField('Текст таймера',
                                   max_length=128,
                                   default='Pre-ICO tokens golfcoin starts through')
