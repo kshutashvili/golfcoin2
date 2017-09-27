@@ -282,35 +282,21 @@
     <!-- block7 end -->
 
     <!-- block8 start -->
-
+    {% if conf.partners.all|length > 0 %}
     <section class="block8">
         <div class="container">
-            <div class="block8__title">Our partners</div>
+            <div class="block8__title">{{ conf.partners_block_title }}</div>
 
             <div class="partners-slider-wrap">
                 <div class="partners-slider" id="slider">
+                    {% for partner in conf.partners.all %}
                     <div class="slide">
-                        <a href="#!" style="background-image: url('{% static 'img/partner_1.png' %}');"></a>
+                        <a href="{% if partner.link %}{{ partner.link }}{% else %}#!{% endif %}" style="background-image: url({{ partner.logo.url }});"></a>
                         <p>
-                            Sunt in culpa qui officia deserunt mollit anim nulla pariatur. Excepteuir sint occaecat cupidatat non prowwiide culpa qui
-                            officia deserunt ipsm mollit. Unde omnis iste natus error sit voluptatem. Eaque ipsa quae ab
-                            illo invenre veritatis enim ipsam voluptatem
+                            {{ partner.description }}
                         </p>
                     </div>
-                    <div class="slide">
-                        <a href="#!" style="background-image: url('{% static 'img/partner_2.png' %}');"></a>
-                        <p>
-                            Sunt in culpa qui officia deserunt mollit anim nulla pariatur. Excepteuir sint occaecat cupidatat non prowwiide culpa qui
-                            officia deserunt ipsm mollit
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <a href="#!" style="background-image: url('{% static 'img/partner_3.png' %}');"></a>
-                        <p>
-                            Sunt in culpa qui officia deserunt mollit anim nulla pariatur. Excepteuir sint occaecat cupidatat non prowwiide culpa qui
-                            officia deserunt ipsm mollit voluptatem sequi nesciunt officia non amet
-                        </p>
-                    </div>
+                    {% endfor %}
                 </div>
                 <div class="nav">
                     <a href="#!" class="prev"></i></a>
@@ -320,6 +306,7 @@
 
         </div>
     </section>
+    {% endif %}
 
     <!-- block8 end -->
 

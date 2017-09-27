@@ -122,6 +122,10 @@ class SiteConfiguration(SingletonModel):
     advisor_block_title = models.CharField("Заголовок для блока 'Advisors'",
                                            max_length=128,
                                            default="Advisors")
+    # block partners
+    partners_block_title = models.CharField("Заголовок для блока 'Our partners'",
+                                           max_length=128,
+                                           default="Our partners")
 
     class Meta:
         verbose_name = "Конфигурация сайта"
@@ -165,3 +169,23 @@ class Advisor(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
+class Partner(models.Model):
+    config = models.ForeignKey(SiteConfiguration,
+                               verbose_name="Настройки сайта",
+                               related_name="partners")
+    logo = models.ImageField("Логотип",
+                             upload_to="partners")
+    description = models.TextField("Описание",
+                                   max_length=256)
+    link = models.CharField("Ссылка",
+                            max_length=128,
+                            blank=True)
+
+    class Meta:
+        verbose_name = "Партнер"
+        verbose_name_plural = "Партнеры"
+
+    def __unicode__(self):
+        return self.description
