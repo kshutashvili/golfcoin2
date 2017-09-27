@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-27 11:51+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: golfco/settings.py:129
+msgid "Английский"
+msgstr ""
+
+#: golfco/settings.py:130
+msgid "Русский"
+msgstr ""
+
+#: golfco/settings.py:131
+msgid "Испанский"
+msgstr ""
+
+#: golfco/settings.py:132
+msgid "Немецкий"
+msgstr ""
+
+#: golfco/settings.py:133
+msgid "Китайский"
+msgstr ""
+
+#: templates/index.html:235 templates/index_main.html:234
+#: templates/index_main.html:328 templates/index_main.html:520
+msgid "Sign Up"
+msgstr ""
+
+#: templates/index.html:237 templates/index_main.html:236
+#: templates/index_main.html:330 templates/index_main.html:522
+msgid "Login"
+msgstr ""
+
+#: templates/index.html:240
+msgid "We integrates the blockchain of 60 million golfers"
+msgstr ""
+
+#: templates/index.html:241
+#, python-format
+msgid "Discount for early investors up to 40%%"
+msgstr ""
+
+#: templates/index.html:243 templates/index_main.html:242
+msgid "Start Pre-ICO"
+msgstr ""
+
+#: templates/index.html:244 templates/index_main.html:243
+msgid "Whitepapper"
+msgstr ""
+
+#: templates/index.html:251 templates/index_main.html:250
+msgid "Days"
+msgstr ""
+
+#: templates/index.html:255 templates/index_main.html:254
+msgid "Hours"
+msgstr ""
+
+#: templates/index.html:259 templates/index_main.html:258
+msgid "Minutes"
+msgstr ""
+
+#: templates/index.html:263 templates/index_main.html:262
+msgid "Seconds"
+msgstr ""
+
+#: templates/index_main.html:276
+msgid "raised"
+msgstr ""
+
+#: templates/index_main.html:276
+msgid "from"
+msgstr ""
+
+#: templates/index_main.html:277
+msgid "participants"
+msgstr ""
+
+#: templates/index_main.html:292 templates/index_main.html:492
+msgid "Discount for early investors"
+msgstr ""
+
+#: templates/index_main.html:296 templates/index_main.html:300
+#: templates/index_main.html:304 templates/index_main.html:496
+#: templates/index_main.html:500 templates/index_main.html:504
+msgid "In the first"
+msgstr ""
+
+#: templates/index_main.html:296 templates/index_main.html:300
+#: templates/index_main.html:304 templates/index_main.html:496
+#: templates/index_main.html:500 templates/index_main.html:504
+msgid "days"
+msgstr ""
+
+#: templates/index_main.html:310
+msgid "Copy address"
+msgstr ""
+
+#: templates/index_main.html:314
+msgid "you have read, understand and agree to our"
+msgstr ""
+
+#: templates/index_main.html:314
+msgid "terms and conditions"
+msgstr ""
+
+#: templates/index_main.html:315
+msgid "you will only send ETH from a compatible wallet (not from any exchange)"
+msgstr ""
+
+#: templates/index_main.html:315
+msgid "more details"
+msgstr ""
+
+#: templates/index_main.html:318 templates/index_main.html:510
+msgid "Other payment methods"
+msgstr ""
+
+#: templates/index_main.html:326 templates/index_main.html:518
+msgid "To pay for other types of crypto currency (BTC, ETC, LTC etc)"
+msgstr ""
+
+#: templates/index_main.html:326 templates/index_main.html:518
+msgid "Please sign up or log in to your account"
+msgstr ""
+
+#: templates/index_main.html:329 templates/index_main.html:521
+msgid "or"
+msgstr ""
+
+#: templates/index_main.html:342
+msgid "How it works"
+msgstr ""
+
+#: templates/index_main.html:394
+msgid "Details"
+msgstr ""
+
+#: templates/index_main.html:507
+msgid "Show the address for donating ETH"
+msgstr ""
+
+#: templates/index_main.html:508
+msgid "By clicking you acknowledge"
+msgstr ""
+
+#: templates/index_main.html:508
+msgid "terms of agreement"
+msgstr ""
+
+#: templates/index_main.html:534
+msgid "Get the most latest news"
+msgstr ""
+
+#: templates/index_main.html:539
+msgid "This field is required"
+msgstr ""
+
+#: templates/index_main.html:543
+msgid "Join Us"
+msgstr ""

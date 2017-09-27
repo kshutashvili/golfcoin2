@@ -36,7 +36,10 @@ class AnswerQuestionInline(admin.StackedInline):
 @admin.register(SiteConfiguration)
 class SiteConfigurationAdmin(SingletonModelAdmin):
     fieldsets = ((None, {
-                    "fields": ("show_site",)}),
+                    "fields": ("show_site",
+                               "enable_es",
+                               "enable_de",
+                               "enable_zh")}),
                  ("Информация для главного блока", {
                     'classes': ('collapse',),
                     "fields": ("main_block_title",

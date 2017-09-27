@@ -36,7 +36,17 @@
                             <a href="#!" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a>
                             <ul class="sub">
                                 <li><a href="/ru/" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a></li>
+                                {% if conf.enable_zh %}
                                 <li><a href="/zh/" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a></li>
+                                {% endif %}
+
+                                {% if conf.enable_de %}
+                                <li><a href="/de/" class="china"><img src="{% static 'img/china.png' %}" alt="deutsch">de</a></li>
+                                {% endif %}
+
+                                {% if conf.enable_es %}
+                                <li><a href="/es/" class="china"><img src="{% static 'img/china.png' %}" alt="spanish">es</a></li>
+                                {% endif %}
                             </ul>
                         </li>
                     {% endif %}
@@ -46,7 +56,17 @@
                             <a href="#!" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a>
                             <ul class="sub">
                                 <li><a href="/en/" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a></li>
+                                {% if conf.enable_zh %}
                                 <li><a href="/zh/" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a></li>
+                                {% endif %}
+
+                                {% if conf.enable_de %}
+                                <li><a href="/de/" class="china"><img src="{% static 'img/china.png' %}" alt="deutsch">de</a></li>
+                                {% endif %}
+
+                                {% if conf.enable_es %}
+                                <li><a href="/es/" class="china"><img src="{% static 'img/china.png' %}" alt="spanish">es</a></li>
+                                {% endif %}
                             </ul>
                         </li>
                     {% endif %}
@@ -57,6 +77,50 @@
                             <ul class="sub">
                                 <li><a href="/en/" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a></li>
                                 <li><a href="/ru/" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a></li>
+
+                                {% if conf.enable_de %}
+                                <li><a href="/de/" class="china"><img src="{% static 'img/china.png' %}" alt="deutsch">de</a></li>
+                                {% endif %}
+
+                                {% if conf.enable_es %}
+                                <li><a href="/es/" class="china"><img src="{% static 'img/china.png' %}" alt="spanish">es</a></li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                    {% endif %}
+
+                    {% if LANGUAGE_CODE == 'es' %}
+                        <li class="lang">
+                            <a href="#!" class="china"><img src="" alt="spanish">es</a>
+                            <ul class="sub">
+                                <li><a href="/en/" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a></li>
+                                <li><a href="/ru/" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a></li>
+
+                                {% if conf.enable_de %}
+                                <li><a href="/de/" class="china"><img src="{% static 'img/china.png' %}" alt="deutsch">de</a></li>
+                                {% endif %}
+
+                                {% if conf.enable_zh %}
+                                <li><a href="/zh/" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a></li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                    {% endif %}
+
+                    {% if LANGUAGE_CODE == 'de' %}
+                        <li class="lang">
+                            <a href="#!" class="china"><img src="" alt="deutsch">de</a>
+                            <ul class="sub">
+                                <li><a href="/en/" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a></li>
+                                <li><a href="/ru/" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a></li>
+
+                                {% if conf.enable_es %}
+                                <li><a href="/es/" class="china"><img src="{% static 'img/china.png' %}" alt="spanish">es</a></li>
+                                {% endif %}
+
+                                {% if conf.enable_zh %}
+                                <li><a href="/zh/" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a></li>
+                                {% endif %}
                             </ul>
                         </li>
                     {% endif %}
@@ -75,7 +139,17 @@
                                     <a href="#!" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a>
                                     <ul class="sub">
                                         <li><a href="/ru/" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a></li>
+                                        {% if conf.enable_zh %}
                                         <li><a href="/zh/" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a></li>
+                                        {% endif %}
+
+                                        {% if conf.enable_de %}
+                                        <li><a href="/de/" class="china"><img src="{% static 'img/china.png' %}" alt="deutsch">de</a></li>
+                                        {% endif %}
+
+                                        {% if conf.enable_es %}
+                                        <li><a href="/es/" class="china"><img src="{% static 'img/china.png' %}" alt="spanish">es</a></li>
+                                        {% endif %}
                                     </ul>
                                 </li>
                             {% endif %}
@@ -85,7 +159,17 @@
                                     <a href="#!" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a>
                                     <ul class="sub">
                                         <li><a href="/en/" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a></li>
+                                        {% if conf.enable_zh %}
                                         <li><a href="/zh/" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a></li>
+                                        {% endif %}
+
+                                        {% if conf.enable_de %}
+                                        <li><a href="/de/" class="china"><img src="{% static 'img/china.png' %}" alt="deutsch">de</a></li>
+                                        {% endif %}
+
+                                        {% if conf.enable_es %}
+                                        <li><a href="/es/" class="china"><img src="{% static 'img/china.png' %}" alt="spanish">es</a></li>
+                                        {% endif %}
                                     </ul>
                                 </li>
                             {% endif %}
@@ -96,6 +180,50 @@
                                     <ul class="sub">
                                         <li><a href="/en/" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a></li>
                                         <li><a href="/ru/" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a></li>
+
+                                        {% if conf.enable_de %}
+                                        <li><a href="/de/" class="china"><img src="{% static 'img/china.png' %}" alt="deutsch">de</a></li>
+                                        {% endif %}
+
+                                        {% if conf.enable_es %}
+                                        <li><a href="/es/" class="china"><img src="{% static 'img/china.png' %}" alt="spanish">es</a></li>
+                                        {% endif %}
+                                    </ul>
+                                </li>
+                            {% endif %}
+
+                            {% if LANGUAGE_CODE == 'es' %}
+                                <li class="lang">
+                                    <a href="#!" class="china"><img src="" alt="spanish">es</a>
+                                    <ul class="sub">
+                                        <li><a href="/en/" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a></li>
+                                        <li><a href="/ru/" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a></li>
+
+                                        {% if conf.enable_de %}
+                                        <li><a href="/de/" class="china"><img src="{% static 'img/china.png' %}" alt="deutsch">de</a></li>
+                                        {% endif %}
+
+                                        {% if conf.enable_zh %}
+                                        <li><a href="/zh/" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a></li>
+                                        {% endif %}
+                                    </ul>
+                                </li>
+                            {% endif %}
+
+                            {% if LANGUAGE_CODE == 'de' %}
+                                <li class="lang">
+                                    <a href="#!" class="china"><img src="" alt="deutsch">de</a>
+                                    <ul class="sub">
+                                        <li><a href="/en/" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a></li>
+                                        <li><a href="/ru/" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a></li>
+
+                                        {% if conf.enable_es %}
+                                        <li><a href="/es/" class="china"><img src="{% static 'img/china.png' %}" alt="spanish">es</a></li>
+                                        {% endif %}
+
+                                        {% if conf.enable_zh %}
+                                        <li><a href="/zh/" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a></li>
+                                        {% endif %}
                                     </ul>
                                 </li>
                             {% endif %}

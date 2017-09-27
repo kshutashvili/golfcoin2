@@ -129,6 +129,13 @@ class SiteConfiguration(SingletonModel):
     faq_block_title = models.CharField("Заголовок для блока 'FAQ'",
                                        max_length=128,
                                        default="FAQ")
+    # lang settings
+    enable_es = models.BooleanField("Включить Испанский язык",
+                                    default=False)
+    enable_de = models.BooleanField("Включить Немецкий язык",
+                                    default=False)
+    enable_zh = models.BooleanField("Включить Китайский язык",
+                                    default=False)
 
     class Meta:
         verbose_name = "Конфигурация сайта"
