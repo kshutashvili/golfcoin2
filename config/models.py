@@ -136,6 +136,8 @@ class SiteConfiguration(SingletonModel):
                                     default=False)
     enable_zh = models.BooleanField("Включить Китайский язык",
                                     default=False)
+    # how block
+    how_block_video = models.URLField("Ссылка на видео для блока 'How it works'")
 
     class Meta:
         verbose_name = "Конфигурация сайта"

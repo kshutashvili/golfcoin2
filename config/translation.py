@@ -20,7 +20,8 @@ class SiteConfigurationTranslationOptions(TranslationOptions):
               'team_block_title',
               'advisor_block_title',
               'partners_block_title',
-              'faq_block_title')
+              'faq_block_title',
+              'how_block_video')
 
 
 class TeammateTranslationOptions(TranslationOptions):

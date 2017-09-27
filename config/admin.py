@@ -83,6 +83,12 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "about_address",
                                "about_block_html_id")
                   }),
+                 ("Блок 'How it works'", {
+                    'classes': ('collapse',),
+                    "fields": ("how_block_video",
+                               "how_block_video_en",
+                               "how_block_video_ru",
+                               "how_block_video_zh",)}),
                  ("Блок 'План проекта'", {
                     'classes': ('collapse',),
                     "fields": ("project_plan_html_id",
