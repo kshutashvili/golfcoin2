@@ -311,121 +311,25 @@
     <!-- block8 end -->
 
     <!-- block9 start -->
-
+    {% if conf.faq.all|length > 0 %}
     <section class="block9">
         <div class="container">
-            <h2 class="block9__title">FAQ</h2>
+            <h2 class="block9__title">{{ conf.faq_block_title }}</h2>
 
             <div class="accordion">
+                {% for faq in conf.faq.all %}
                 <section class="accordion__item">
-                    <h2 class="title">1. Платеж отображается как успешный, но деньги до сих пор не поступили. Что делать?</h2>
+                    <h2 class="title">{{ faq.question }}</h2>
                     <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea cowwmmodo conseqeuat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non prowiident, sunt in culpa qui officia deserunt mollit anim
-                        id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                        vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-                        quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-                        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                        {{ faq.answer }}
                     </div>
                 </section>
-                <section class="accordion__item">
-                    <h2 class="title">2. Можно ли оплатить товары или услуги, если у меня есть квитанция и/ или я знаю реквизиты организации?</h2>
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea cowwmmodo conseqeuat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non prowiident, sunt in culpa qui officia deserunt mollit anim
-                        id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                        vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-                        quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-                        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                    </div>
-                </section>
-                <section class="accordion__item">
-                    <h2 class="title">3. Как прекратить обработку моих персональных данных?</h2>
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea cowwmmodo conseqeuat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non prowiident, sunt in culpa qui officia deserunt mollit anim
-                        id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                        vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-                        quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-                        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                    </div>
-                </section>
-                <section class="accordion__item">
-                    <h2 class="title">4. Я сменил номер телефона, что делать?</h2>
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea cowwmmodo conseqeuat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non prowiident, sunt in culpa qui officia deserunt mollit anim
-                        id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                        vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-                        quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-                        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                    </div>
-                </section>
-                <section class="accordion__item">
-                    <h2 class="title">5. Сколько времени будут решать мою проблему?</h2>
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea cowwmmodo conseqeuat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non prowiident, sunt in culpa qui officia deserunt mollit anim
-                        id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                        vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-                        quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-                        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                    </div>
-                </section>
-                <section class="accordion__item">
-                    <h2 class="title">6. Что будет с кошельком, если я сменю оператора сотовой связи?</h2>
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea cowwmmodo conseqeuat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non prowiident, sunt in culpa qui officia deserunt mollit anim
-                        id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                        vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-                        quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-                        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                    </div>
-                </section>
-                <section class="accordion__item">
-                    <h2 class="title">7. Как оплатить с помощью Приват24?</h2>
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea cowwmmodo conseqeuat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non prowiident, sunt in culpa qui officia deserunt mollit anim
-                        id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                        vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-                        quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-                        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                    </div>
-                </section>
+                {% endfor %}
             </div>
 
         </div>
     </section>
+    {% endif %}
 
     <!-- block9 end -->
 

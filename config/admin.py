@@ -5,7 +5,7 @@ from solo.admin import SingletonModelAdmin
 
 from django.contrib import admin
 
-from .models import SiteConfiguration, Teammate, Advisor, Partner
+from .models import SiteConfiguration, Teammate, Advisor, Partner, AnswerQuestion
 
 
 
@@ -25,6 +25,12 @@ class PartnerInline(admin.StackedInline):
     model = Partner
     extra = 1
     insert_after = 'partners_block_title_zh'
+
+
+class AnswerQuestionInline(admin.StackedInline):
+    model = AnswerQuestion
+    extra = 1
+    insert_after = 'faq_block_title_zh'
 
 
 @admin.register(SiteConfiguration)
@@ -130,6 +136,12 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "partners_block_title_en",
                                "partners_block_title_ru",
                                "partners_block_title_zh",)}),
+                 ("Блок 'FAQ'", {
+                    'classes': ('collapse',),
+                    "fields": ("faq_block_title",
+                               "faq_block_title_en",
+                               "faq_block_title_ru",
+                               "faq_block_title_zh",)}),
                  ("Контакты", {
                     'classes': ('collapse',),
                     "fields": ("main_email",)
@@ -142,6 +154,6 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "social_twi",
                                "social_telegram")
                     }),)
-    inlines = [TeammateInline, AdvisorInline, PartnerInline]
+    inlines = [TeammateInline, AdvisorInline, PartnerInline, AnswerQuestionInline]
     change_form_template = 'admin/custom/change_form.html'
 

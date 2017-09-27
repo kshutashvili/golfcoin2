@@ -126,6 +126,10 @@ class SiteConfiguration(SingletonModel):
     partners_block_title = models.CharField("Заголовок для блока 'Our partners'",
                                            max_length=128,
                                            default="Our partners")
+    # block FAQ
+    faq_block_title = models.CharField("Заголовок для блока 'FAQ'",
+                                       max_length=128,
+                                       default="FAQ")
 
     class Meta:
         verbose_name = "Конфигурация сайта"
@@ -189,3 +193,19 @@ class Partner(models.Model):
 
     def __unicode__(self):
         return self.description
+
+
+class AnswerQuestion(models.Model):
+    config = models.ForeignKey(SiteConfiguration,
+                               verbose_name="Настройки сайта",
+                               related_name="faq")
+    question = models.CharField("Вопрос",
+                                max_length=128)
+    answer = models.TextField("Ответ")
+
+    class Meta:
+        verbose_name = "Вопрос-Ответ"
+        verbose_name_plural = "Вопросы-Ответы"
+
+    def __unicode__(self):
+        return self.question
