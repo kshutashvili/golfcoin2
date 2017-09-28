@@ -113,6 +113,15 @@ class SiteConfiguration(SingletonModel):
     project_plan_text6 = models.CharField("План 6 (текст)",
                                           max_length=128,
                                           blank=True)
+    # block details
+    details_img_1 = models.ImageField("Первое изображение для блока 'Details'",
+                                      upload_to='details',
+                                      blank=True,
+                                      null=True)
+    details_img_2 = models.ImageField("Второе изображение для блока 'Details'",
+                                      upload_to='details',
+                                      blank=True,
+                                      null=True)
     # block team
     team_block_title = models.CharField("Заголовок для блока 'Team'",
                                         max_length=128,

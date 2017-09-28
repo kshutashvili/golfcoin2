@@ -155,6 +155,21 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                 "project_plan_text6_zh",
                                 "project_plan_date6"),)
                     }),
+                 ("Блок 'Details'", {
+                    'classes': ('collapse',),
+                    "fields": (("details_img_1",
+                               "details_img_1_en",
+                               "details_img_1_ru",
+                               "details_img_1_de",
+                               "details_img_1_es",
+                               "details_img_1_zh"),
+
+                               ("details_img_2",
+                               "details_img_2_en",
+                               "details_img_2_ru",
+                               "details_img_2_de",
+                               "details_img_2_es",
+                               "details_img_2_zh"))}),
                  ("Блок 'Команда'", {
                     'classes': ('collapse',),
                     "fields": ("team_block_title",

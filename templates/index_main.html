@@ -392,14 +392,19 @@
     <!-- block5 end -->
 
     <!-- block6 start -->
-
+    {% if conf.details_img_1 or conf.details_img_2 %}
     <section class="block6">
         <div class="container">
             <h2 class="block6__title">{% trans 'Details' %}</h2>
-            <img class="img" src="{% static 'img/details1.png' %}" alt="details1">
-            <img class="img" src="{% static 'img/details2.png' %}" alt="details2">
+            {% if conf.details_img_1 %}
+            <img class="img" src="{{ conf.details_img_1.url }}" alt="details1">
+            {% endif %}
+            {% if conf.details_img_2 %}
+            <img class="img" src="{{ conf.details_img_2.url }}" alt="details2">
+            {% endif %}
         </div>
     </section>
+    {% endif %}
 
     <!-- block6 end -->
 
