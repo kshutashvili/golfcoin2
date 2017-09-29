@@ -5,7 +5,8 @@ from solo.admin import SingletonModelAdmin
 
 from django.contrib import admin
 
-from .models import SiteConfiguration, Teammate, Advisor, Partner, AnswerQuestion
+from .models import (SiteConfiguration, Teammate, Advisor, Partner,
+                     AnswerQuestion, Discount)
 
 
 
@@ -31,6 +32,12 @@ class AnswerQuestionInline(admin.StackedInline):
     model = AnswerQuestion
     extra = 1
     insert_after = 'faq_block_title_zh'
+
+
+class DiscountInline(admin.StackedInline):
+    model = Discount
+    extra = 1
+    insert_after = 'discount_block_text_zh'
 
 
 @admin.register(SiteConfiguration)
@@ -95,6 +102,22 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "about_address",
                                "about_block_html_id")
                   }),
+                 ("Блок 'Discount'", {
+                    'classes': ('collapse',),
+                    "fields": ("discount_block_text",
+                               "discount_block_text_en",
+                               "discount_block_text_ru",
+                               "discount_block_text_de",
+                               "discount_block_text_es",
+                               "discount_block_text_zh",)}),
+                 ("Текст над формой входа", {
+                    'classes': ('collapse',),
+                    "fields": ("login_form_text",
+                               "login_form_text_en",
+                               "login_form_text_ru",
+                               "login_form_text_de",
+                               "login_form_text_es",
+                               "login_form_text_zh",)}),
                  ("Блок 'How it works'", {
                     'classes': ('collapse',),
                     "fields": ("how_block_video",
@@ -157,7 +180,8 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                     }),
                  ("Блок 'Details'", {
                     'classes': ('collapse',),
-                    "fields": (("details_img_1",
+                    "fields": ("details_block_html_id",
+                              ("details_img_1",
                                "details_img_1_en",
                                "details_img_1_ru",
                                "details_img_1_de",
@@ -172,7 +196,8 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "details_img_2_zh"))}),
                  ("Блок 'Команда'", {
                     'classes': ('collapse',),
-                    "fields": ("team_block_title",
+                    "fields": ("team_block_html_id",
+                               "team_block_title",
                                "team_block_title_en",
                                "team_block_title_ru",
                                "team_block_title_de",
@@ -180,7 +205,8 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "team_block_title_zh",)}),
                  ("Блок 'Советники'", {
                     'classes': ('collapse',),
-                    "fields": ("advisor_block_title",
+                    "fields": ("advisor_block_html_id",
+                               "advisor_block_title",
                                "advisor_block_title_en",
                                "advisor_block_title_ru",
                                "advisor_block_title_de",
@@ -188,7 +214,8 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "advisor_block_title_zh",)}),
                  ("Блок 'Партнеры'", {
                     'classes': ('collapse',),
-                    "fields": ("partners_block_title",
+                    "fields": ("partners_block_html_id",
+                               "partners_block_title",
                                "partners_block_title_en",
                                "partners_block_title_ru",
                                "partners_block_title_de",
@@ -196,12 +223,22 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "partners_block_title_zh",)}),
                  ("Блок 'FAQ'", {
                     'classes': ('collapse',),
-                    "fields": ("faq_block_title",
+                    "fields": ("faq_block_html_id",
+                               "faq_block_title",
                                "faq_block_title_en",
                                "faq_block_title_ru",
                                "faq_block_title_de",
                                "faq_block_title_es",
                                "faq_block_title_zh",)}),
+                 ("Блок 'Subscribe'", {
+                    'classes': ('collapse',),
+                    "fields": ("subscribe_block_html_id",
+                               "subscribe_block_title",
+                               "subscribe_block_title_en",
+                               "subscribe_block_title_ru",
+                               "subscribe_block_title_de",
+                               "subscribe_block_title_es",
+                               "subscribe_block_title_zh",)}),
                  ("Контакты", {
                     'classes': ('collapse',),
                     "fields": ("main_email",)
@@ -212,8 +249,11 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "social_fb",
                                "social_insta",
                                "social_twi",
-                               "social_telegram")
-                    }),)
-    inlines = [TeammateInline, AdvisorInline, PartnerInline, AnswerQuestionInline]
+                               "social_telegram")}),)
+    inlines = [TeammateInline,
+               AdvisorInline,
+               PartnerInline,
+               AnswerQuestionInline,
+               DiscountInline]
     change_form_template = 'admin/custom/change_form.html'
 

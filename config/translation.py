@@ -1,6 +1,7 @@
 from modeltranslation.translator import translator, TranslationOptions
 
-from .models import SiteConfiguration, Teammate, Advisor, Partner, AnswerQuestion
+from .models import (SiteConfiguration, Teammate, Advisor, Partner,
+                     AnswerQuestion, Discount)
 
 
 class SiteConfigurationTranslationOptions(TranslationOptions):
@@ -23,7 +24,10 @@ class SiteConfigurationTranslationOptions(TranslationOptions):
               'faq_block_title',
               'how_block_video',
               'details_img_1',
-              'details_img_2')
+              'details_img_2',
+              'subscribe_block_title',
+              'discount_block_text',
+              'login_form_text')
 
 
 class TeammateTranslationOptions(TranslationOptions):
@@ -42,8 +46,13 @@ class AnswerQuestionTranslationOptions(TranslationOptions):
     fields = ('question', 'answer')
 
 
+class DiscountQuestionTranslationOptions(TranslationOptions):
+    fields = ('discount_text', )
+
+
 translator.register(SiteConfiguration, SiteConfigurationTranslationOptions)
 translator.register(Teammate, TeammateTranslationOptions)
 translator.register(Advisor, AdvisorTranslationOptions)
 translator.register(Partner, PartnerTranslationOptions)
 translator.register(AnswerQuestion, AnswerQuestionTranslationOptions)
+translator.register(Discount, DiscountQuestionTranslationOptions)
