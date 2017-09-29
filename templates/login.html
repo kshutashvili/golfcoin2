@@ -1,0 +1,20 @@
+{% extends "base_up.html" %}
+{% load i18n %}
+
+{% block title %}{% trans 'Login' %}{% endblock %}
+
+{% block content %}
+
+    <!-- login form start -->
+    <form class="login-form" id="login-form" method="POST">
+        {% csrf_token %}
+        <p class="title">{% trans 'Login' %}</p>
+        <p class="caption">{% trans "Haven't an account?" %} <a href="{% url 'signup' %}">{% trans 'Sign Up' %}</a></p>
+        <input type="text" class="input" name="username" placeholder="{% trans 'E-mail' %}">
+        <input type="password" class="input" name="password" placeholder="{% trans 'Password' %}">
+        <input type="submit" class="submit" value="{% trans 'Login' %}">
+        <a href="#!" class="forgot-password">{% trans 'I forgot my password' %}</a>
+    </form>
+    <!-- login form start -->
+
+{% endblock %}

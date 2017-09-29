@@ -232,9 +232,15 @@
 
                 </ul>
                 <div class="auth">
-                    <a href="#!" class="sign-up">{% trans 'Sign Up' %}</a>
+                    {% if not request.user.is_authenticated %}
+                    <a href="{% url 'signup' %}" class="sign-up">{% trans 'Sign Up' %}</a>
                     <div class="line"></div>
-                    <a href="#!" class="login">{% trans 'Login' %}</a>
+                    <a href="{% url 'login' %}" class="login">{% trans  'Login' %}</a>
+                    {% else %}
+                    <a href="{% url 'profile' %}" class="sign-up">{% trans 'Profile' %}</a>
+                    <div class="line"></div>
+                    <a href="{% url 'logout' %}" class="login">{% trans 'logout' %}</a>
+                    {% endif %}
                 </div>
             </div>
             <h1 class="header__title">{{ conf.main_block_title }}</h1>

@@ -1,0 +1,156 @@
+{% extends "base_up.html" %}
+{% load i18n %}
+
+{% block title %}{% trans 'LK' %}{% endblock %}
+
+{% block content %}
+    <!-- lk section start -->
+
+    <section class="lk-section">
+        <div class="container">
+            <h2 class="lk-section__title">Your account</h2>
+            <p class="lk-section__tokens-caption">Yours golfcoin tokens: 653</p>
+            <p class="lk-section__changes-saved">Changes saved</p>
+
+            <div class="lk-section__content">
+
+                <div class="account-info">
+                    <form class="lk-account-form">
+                        <p class="input-wrap ">
+                            <label for="name">Name</label>
+                            <input type="text" class="name" id="name" name="name" value="Michael">
+                        </p>
+                        <p class="input-wrap">
+                            <label for="surname">Surname</label>
+                            <input type="text" class="" id="surname" name="surname" value="Eventon">
+                        </p>
+                        <p class="input-wrap">
+                            <label for="address">Address</label>
+                            <input type="text" class="" id="address" name="address" value="Kiev, Solomenskaya 3">
+                        </p>
+                        <p class="input-wrap">
+                            <label for="phone_number">Phone number</label>
+                            <input type="text" class="" id="phone_number" name="phone_number" value="+38063549854">
+                        </p>
+                        <p class="input-wrap">
+                            <label for="email">E-mail</label>
+                            <input type="text" class="" id="email" name="email" value="support@golfcoin.club">
+                        </p>
+                        <p class="input-wrap">
+                            <label for="password">Password</label>
+                            <input type="text" class="password" id="password" name="password" value="214141">
+                        </p>
+                    </form>
+                </div>
+
+                <div class="history">
+                    <p class="history__title">History of your transactions</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td>Date</td>
+                                <td>Number of tokens</td>
+                                <td>Sum</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>23.08.17</td>
+                                <td>502</td>
+                                <td>6863$</td>
+                            </tr>
+                            <tr>
+                                <td>23.08.17</td>
+                                <td>502</td>
+                                <td>6863$</td>
+                            </tr>
+                            <tr>
+                                <td>23.08.17</td>
+                                <td>502</td>
+                                <td>6863$</td>
+                            </tr>
+                            <tr>
+                                <td>23.08.17</td>
+                                <td>502</td>
+                                <td>6863$</td>
+                            </tr>
+                            <tr>
+                                <td>23.08.17</td>
+                                <td>502</td>
+                                <td>6863$</td>
+                            </tr>
+                            <tr>
+                                <td>23.08.17</td>
+                                <td>502</td>
+                                <td>6863$</td>
+                            </tr>
+                            <tr>
+                                <td>23.08.17</td>
+                                <td>502</td>
+                                <td>6863$</td>
+                            </tr>
+                            <tr>
+                                <td>23.08.17</td>
+                                <td>502</td>
+                                <td>6863$</td>
+                            </tr>
+                            <tr>
+                                <td>23.08.17</td>
+                                <td>502</td>
+                                <td>6863$</td>
+                            </tr>
+                            <tr>
+                                <td>23.08.17</td>
+                                <td>502</td>
+                                <td>6863$</td>
+                            </tr>
+                            <tr>
+                                <td>23.08.17</td>
+                                <td>502</td>
+                                <td>6863$</td>
+                            </tr>
+                            <tr>
+                                <td>23.08.17</td>
+                                <td>502</td>
+                                <td>6863$</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <h2 class="lk-section__title lk-section__title--donations">Make a donation and get tokens</h2>
+            <form class="donation-form" id="donation-form">
+                <div class="step-one">
+                    <p class="step-title">Step 1. Choose your payment method</p>
+                    <input type="radio" class="radio-input" id="buy_for_btc" name="payment_method" value="btc">
+                    <label for="buy_for_btc" class="radio-label">Купить за BTC</label>
+                    <input type="radio" class="radio-input" id="buy_for_ltc" name="payment_method" value="ltc">
+                    <label for="buy_for_ltc" class="radio-label">Купить за LTC</label>
+                    <input type="radio" class="radio-input" id="buy_for_etc" name="payment_method" value="etc">
+                    <label for="buy_for_etc" class="radio-label">Купить за ETC</label>
+                </div>
+
+                <div class="step-two">
+                    <p class="step-title">Step 2. Оплатите покупку на этот адрес</p>
+                    <input type="text" class="input-address" name="address" value="">
+                    <a href="#!" class="copy-address">Copy address</a>
+                    <label for="e20_wallet" class="e20_wallet">Address you E20 wallet</label>
+                    <input type="text" class="e20-wallet-input" id="e20_wallet" name="e20_wallet" value="">
+                    <p class="required-field">*This field is required</p>
+                </div>
+
+                <div class="step-three">
+                    <p class="step-title">Step 3. Enter the transaction number you sent the BTC</p>
+                    <input type="text" class="transaction_address" name="transaction_address" value="">
+                    <input type="submit" class="submit" value="Send">
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- lk section end -->
+
+{% endblock %}

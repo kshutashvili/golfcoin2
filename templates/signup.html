@@ -1,0 +1,24 @@
+{% extends "base_up.html" %}
+{% load i18n %}
+
+{% block title %}{% trans 'Sign up' %}{% endblock %}
+
+{% block content %}
+    <!-- singup form start -->
+    <form class="signup-form" id="signup-form" method="POST">
+        {% csrf_token %}
+        <p class="title">{% trans 'Sign up' %}</p>
+        <p class="caption">{% trans 'Already have an account?' %} <a href="{% url 'login' %}">{% trans 'Login' %}</a></p>
+        <input type="text" class="input" name="first_name" placeholder="{% trans 'Name' %}">
+        <input type="text" class="input" name="last_name" placeholder="{% trans 'Surname' %}">
+        <input type="text" class="input" name="email" placeholder="{% trans 'E-mail' %}">
+        <div class="password-wrap">
+            <input type="password" class="input" id="password1" name="password1" placeholder="{% trans 'Password' %}">
+            <a href="#!" class="eye active"></a>
+        </div>
+        <input type="password" class="input" name="password2" placeholder="{% trans 'Password Again' %}">
+        <input type="submit" class="submit" value="{% trans 'Sign up' %}">
+    </form>
+    <!-- singup form end -->
+
+{% endblock %}

@@ -19,7 +19,9 @@ from django.conf.urls.i18n import i18n_patterns
 from django.conf import settings
 from django.conf.urls.static import static
 
-from config.views import IndexView
+from config.views import (IndexView, SignupView,
+                          logout_view, CustomLoginView,
+                          PersonalProfileView)
 from subscriptions.views import SubscriptionView
 
 
@@ -27,6 +29,10 @@ urlpatterns = i18n_patterns(
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^admin/', admin.site.urls),
     url(r'^$', IndexView.as_view(), name="index"),
+    url(r'^signup/$', SignupView.as_view(), name="signup"),
+    url(r'^login/$', CustomLoginView.as_view(), name="login"),
+    url(r'^logout/$', logout_view, name="logout"),
+    url(r'^profile/$', PersonalProfileView.as_view(), name='profile'),
     url(r'^subscription/$', SubscriptionView.as_view(), name='subscription'),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
