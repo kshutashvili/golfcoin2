@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from solo.models import SingletonModel
+from ckeditor.fields import RichTextField
 
 from django.db import models
 
@@ -37,8 +38,8 @@ class SiteConfiguration(SingletonModel):
     about_title = models.CharField("Заголовок блока 'О нас'",
                                    max_length=128,
                                    default='What is Golfcoin?')
-    about_text = models.TextField("Текст блока 'О нас'",
-                                  blank=True)
+    about_text = RichTextField("Текст блока 'О нас'",
+                               blank=True)
     about_address = models.CharField("Адрес в блоке 'О нас'",
                                      max_length=128)
     about_block_html_id = models.CharField("Идентификатор HTML",

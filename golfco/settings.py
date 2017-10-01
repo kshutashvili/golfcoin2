@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'modeltranslation',
     'rosetta',
     'embed_video',
+    'ckeditor',
     # own
     'users',
     'config',

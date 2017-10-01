@@ -293,8 +293,8 @@
     <section class="block3" id="{{ conf.about_block_html_id }}">
         <div class="container">
             <h2 class="block3__title">{{ conf.about_title }}</h2>
-            <p class="block3__info">{{ conf.about_text }}
-            </p>
+            <div class="block3__info">{{ conf.about_text|safe }}
+            </div>
             <div class="discount-block">
                 <p class="discount-block__title">{{ conf.discount_block_text }}</p>
                 <div class="discount-block__benefits">
