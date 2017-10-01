@@ -27,7 +27,10 @@ class SiteConfigurationTranslationOptions(TranslationOptions):
               'details_img_2',
               'subscribe_block_title',
               'discount_block_text',
-              'login_form_text')
+              'login_form_text',
+              'details_block_title',
+              'how_block_block_title',
+              'social_block_title')
 
 
 class TeammateTranslationOptions(TranslationOptions):

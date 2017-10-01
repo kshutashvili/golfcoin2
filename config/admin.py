@@ -120,7 +120,13 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "login_form_text_zh",)}),
                  ("Блок 'How it works'", {
                     'classes': ('collapse',),
-                    "fields": ("how_block_video",
+                    "fields": ("how_block_block_title",
+                               "how_block_block_title_en",
+                               "how_block_block_title_ru",
+                               "how_block_block_title_de",
+                               "how_block_block_title_es",
+                               "how_block_block_title_zh",
+                               "how_block_video",
                                "how_block_video_en",
                                "how_block_video_ru",
                                "how_block_video_de",
@@ -181,6 +187,12 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                  ("Блок 'Details'", {
                     'classes': ('collapse',),
                     "fields": ("details_block_html_id",
+                               "details_block_title",
+                               "details_block_title_en",
+                               "details_block_title_ru",
+                               "details_block_title_de",
+                               "details_block_title_es",
+                               "details_block_title_zh",
                               ("details_img_1",
                                "details_img_1_en",
                                "details_img_1_ru",
@@ -241,7 +253,13 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "subscribe_block_title_zh",)}),
                  ("Контакты", {
                     'classes': ('collapse',),
-                    "fields": ("main_email",)
+                    "fields": ("main_email",
+                               "social_block_title",
+                               "social_block_title_en",
+                               "social_block_title_ru",
+                               "social_block_title_de",
+                               "social_block_title_es",
+                               "social_block_title_zh")
                     }),
                  ("Социальные сети", {
                     'classes': ('collapse',),

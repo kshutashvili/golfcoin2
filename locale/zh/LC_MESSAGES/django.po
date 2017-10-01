@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-26 16:32+0000\n"
+"POT-Creation-Date: 2017-10-01 15:31+0000\n"
 "PO-Revision-Date: 2017-09-27 12:17+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,154 +18,188 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Translated-Using: django-rosetta 0.7.13\n"
 
-#: golfco/settings.py:129
+#: golfco/settings.py:130
 msgid "Английский"
 msgstr ""
 
-#: golfco/settings.py:130
+#: golfco/settings.py:131
 msgid "Русский"
 msgstr ""
 
-#: golfco/settings.py:131
+#: golfco/settings.py:132
+msgid "Испанский"
+msgstr ""
+
+#: golfco/settings.py:133
+msgid "Немецкий"
+msgstr ""
+
+#: golfco/settings.py:134
 msgid "Китайский"
 msgstr ""
 
-#: templates/index.html:107 templates/index_main.html:83
-#: templates/index_main.html:177 templates/index_main.html:478
+#: templates/base_up.html:237 templates/index.html:236
+#: templates/index_main.html:236 templates/index_main.html:329
+#: templates/index_main.html:523 templates/login.html:12
 msgid "Sign Up"
 msgstr ""
 
-#: templates/index.html:109 templates/index_main.html:85
-#: templates/index_main.html:179 templates/index_main.html:480
+#: templates/base_up.html:239 templates/index.html:238
+#: templates/index_main.html:238 templates/index_main.html:331
+#: templates/index_main.html:525 templates/login.html:4 templates/login.html:11
+#: templates/login.html:15 templates/signup.html:11
 msgid "Login"
 msgstr ""
 
-#: templates/index.html:112
+#: templates/base_up.html:241 templates/index.html:240
+#: templates/index_main.html:240
+msgid "Profile"
+msgstr ""
+
+#: templates/base_up.html:243 templates/index.html:242
+#: templates/index_main.html:242
+msgid "logout"
+msgstr ""
+
+#: templates/index.html:246
 msgid "We integrates the blockchain of 60 million golfers"
 msgstr ""
 
-#: templates/index.html:113
+#: templates/index.html:247
 #, python-format
 msgid "Discount for early investors up to 40%%"
 msgstr ""
 
-#: templates/index.html:115 templates/index_main.html:91
+#: templates/index.html:249 templates/index_main.html:249
 msgid "Start Pre-ICO"
 msgstr ""
 
-#: templates/index.html:116 templates/index_main.html:92
-msgid "Whitepapper"
+#: templates/index.html:250 templates/index_main.html:250
+#, fuzzy
+#| msgid "Whitepapper"
+msgid "Whitepaper"
 msgstr "Whitepaper"
 
-#: templates/index.html:123 templates/index_main.html:99
+#: templates/index.html:257 templates/index_main.html:257
 msgid "Days"
 msgstr ""
 
-#: templates/index.html:127 templates/index_main.html:103
+#: templates/index.html:261 templates/index_main.html:261
 msgid "Hours"
 msgstr ""
 
-#: templates/index.html:131 templates/index_main.html:107
+#: templates/index.html:265 templates/index_main.html:265
 msgid "Minutes"
 msgstr ""
 
-#: templates/index.html:135 templates/index_main.html:111
+#: templates/index.html:269 templates/index_main.html:269
 msgid "Seconds"
 msgstr ""
 
-#: templates/index_main.html:125
+#: templates/index_main.html:283
 msgid "raised"
 msgstr ""
 
-#: templates/index_main.html:125
+#: templates/index_main.html:283
 msgid "from"
 msgstr ""
 
-#: templates/index_main.html:126
+#: templates/index_main.html:284
 msgid "participants"
 msgstr ""
 
-#: templates/index_main.html:141 templates/index_main.html:450
-msgid "Discount for early investors"
-msgstr ""
-
-#: templates/index_main.html:145 templates/index_main.html:149
-#: templates/index_main.html:153 templates/index_main.html:454
-#: templates/index_main.html:458 templates/index_main.html:462
-msgid "In the first"
-msgstr ""
-
-#: templates/index_main.html:145 templates/index_main.html:149
-#: templates/index_main.html:153 templates/index_main.html:454
-#: templates/index_main.html:458 templates/index_main.html:462
-msgid "days"
-msgstr ""
-
-#: templates/index_main.html:159
+#: templates/index_main.html:311
 msgid "Copy address"
 msgstr ""
 
-#: templates/index_main.html:163
+#: templates/index_main.html:315
 msgid "you have read, understand and agree to our"
 msgstr ""
 
-#: templates/index_main.html:163
+#: templates/index_main.html:315
 msgid "terms and conditions"
 msgstr ""
 
-#: templates/index_main.html:164
-msgid ""
-"you will only send ETH from a compatible wallet (not from any exchange)"
+#: templates/index_main.html:316
+msgid "you will only send ETH from a compatible wallet (not from any exchange)"
 msgstr ""
 
-#: templates/index_main.html:164
+#: templates/index_main.html:316
 msgid "more details"
 msgstr ""
 
-#: templates/index_main.html:167 templates/index_main.html:468
+#: templates/index_main.html:319 templates/index_main.html:513
 msgid "Other payment methods"
 msgstr ""
 
-#: templates/index_main.html:175 templates/index_main.html:476
-msgid "To pay for other types of crypto currency (BTC, ETC, LTC etc)"
-msgstr ""
-
-#: templates/index_main.html:175 templates/index_main.html:476
-msgid "Please sign up or log in to your account"
-msgstr ""
-
-#: templates/index_main.html:178 templates/index_main.html:479
+#: templates/index_main.html:330 templates/index_main.html:524
 msgid "or"
 msgstr ""
 
-#: templates/index_main.html:191
-msgid "How it works"
-msgstr ""
-
-#: templates/index_main.html:243
-msgid "Details"
-msgstr ""
-
-#: templates/index_main.html:465
+#: templates/index_main.html:510
 msgid "Show the address for donating ETH"
 msgstr ""
 
-#: templates/index_main.html:466
+#: templates/index_main.html:511
 msgid "By clicking you acknowledge"
 msgstr ""
 
-#: templates/index_main.html:466
+#: templates/index_main.html:511
 msgid "terms of agreement"
 msgstr ""
 
-#: templates/index_main.html:492
-msgid "Get the most latest news"
-msgstr ""
-
-#: templates/index_main.html:497
+#: templates/index_main.html:542
 msgid "This field is required"
 msgstr ""
 
-#: templates/index_main.html:501
-msgid "Join Us"
+#: templates/login.html:12
+msgid "Haven't an account?"
+msgstr ""
+
+#: templates/login.html:13 templates/signup.html:14
+msgid "E-mail"
+msgstr ""
+
+#: templates/login.html:14 templates/signup.html:16
+msgid "Password"
+msgstr ""
+
+#: templates/login.html:16
+msgid "I forgot my password"
+msgstr ""
+
+#: templates/personal_profile.html:4
+msgid "LK"
+msgstr ""
+
+#: templates/signup.html:4 templates/signup.html:10 templates/signup.html:20
+msgid "Sign up"
+msgstr ""
+
+#: templates/signup.html:11
+msgid "Already have an account?"
+msgstr ""
+
+#: templates/signup.html:12
+msgid "Name"
+msgstr ""
+
+#: templates/signup.html:13
+msgid "Surname"
+msgstr ""
+
+#: templates/signup.html:19
+msgid "Password Again"
+msgstr ""
+
+#: users/models.py:11
+msgid "email address"
+msgstr ""
+
+#: users/models.py:14
+msgid "username"
+msgstr ""
+
+#: users/models.py:16
+msgid "150 characters or fewer. Letters, digits and @/./+/-/_ only."
 msgstr ""

@@ -45,6 +45,9 @@ class SiteConfiguration(SingletonModel):
                                            max_length=16,
                                            default='about')
     # footer socials
+    social_block_title = models.CharField("Заголовок блока 'Контакты'",
+                                          max_length=32,
+                                          default="Join Us")
     social_in = models.CharField('Ссылка Linkedin',
                                  max_length=64,
                                  blank=True,
@@ -117,6 +120,9 @@ class SiteConfiguration(SingletonModel):
     details_block_html_id = models.CharField("Идентификатор HTML",
                                              max_length=16,
                                              default='details')
+    details_block_title = models.CharField("Заголовок блока 'Detail'",
+                                           max_length=32,
+                                           default="Details")
     details_img_1 = models.ImageField("Первое изображение для блока 'Details'",
                                       upload_to='details',
                                       blank=True,
@@ -164,6 +170,9 @@ class SiteConfiguration(SingletonModel):
     how_block_html_id = models.CharField("Идентификатор HTML",
                                          max_length=16,
                                          default='how-it-works')
+    how_block_block_title = models.CharField("Заголовок блока 'How it works'",
+                                             max_length=32,
+                                             default="How it works")
     how_block_video = models.URLField("Ссылка на видео для блока 'How it works'")
     # subscribe block
     subscribe_block_html_id = models.CharField("Идентификатор HTML",

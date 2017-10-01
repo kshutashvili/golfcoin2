@@ -340,7 +340,7 @@
 
     <section class="block4" id="{{ conf.how_block_html_id }}">
         <div class="container video embed-responsive embed-responsive-16by9">
-            <h2 class="block4__title">{% trans 'How it works' %}</h2>
+            <h2 class="block4__title">{{ conf.how_block_block_title }}</h2>
             <div class="video embed-responsive embed-responsive-16by9" style="text-align:center;">
                 {% video conf.how_block_video %}
             </div>
@@ -395,7 +395,7 @@
     {% if conf.details_img_1 or conf.details_img_2 %}
     <section class="block6" id="{{ conf.details_block_html_id }}">
         <div class="container">
-            <h2 class="block6__title">{% trans 'Details' %}</h2>
+            <h2 class="block6__title">{{ conf.details_block_title }}</h2>
             {% if conf.details_img_1 %}
             <img class="img" src="{{ conf.details_img_1.url }}" alt="details1">
             {% endif %}
@@ -534,7 +534,7 @@
 
     <section class="block11" id="{{ conf.subscribe_block_html_id }}">
         <div class="container">
-            <h2 class="block11__title">{% trans 'Get the most latest news' %}</h2>
+            <h2 class="block11__title">{{ conf.subscribe_block_title }}</h2>
             <form class="subscribe-form" id="subscribe-form" method="POST" action="{% url 'subscription' %}">
                 {{ subscribe_form.name }}
                 {{ subscribe_form.email }}
@@ -543,7 +543,7 @@
                 <input type="submit" class="submit" value="Subscribe">
             </form>
             <div class="join-us-block">
-                <p class="join-us-block__title">{% trans 'Join Us' %}</p>
+                <p class="join-us-block__title">{{ conf.social_block_title }}</p>
                 <div class="socials">
                     <a href="#!" class="link facebook"></a>
                     <a href="#!" class="link in"></a>
