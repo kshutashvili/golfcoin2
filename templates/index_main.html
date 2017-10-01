@@ -520,9 +520,9 @@
             <div class="pay-other-types-block">
                 <p class="pay-other-types-block__title">{{ conf.login_form_text|linebreaksbr }}</p>
                 <div class="pay-other-types-block__btns-wrap">
-                    <a href="#!">{% trans 'Sign Up' %}</a>
+                    <a href="{% url 'signup' %}">{% trans 'Sign Up' %}</a>
                     <p class="or">{% trans 'or' %}</p>
-                    <a href="#!">{% trans 'Login' %}</a>
+                    <a href="{% url 'login' %">{% trans 'Login' %}</a>
                 </div>
             </div>
         </div>
