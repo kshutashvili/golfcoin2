@@ -24,107 +24,6 @@
         <div class="container">
             <div class="top-line">
                 <a href="#!" class="logo"></a>
-                <ul class="menu">
-                    {% for item in menu %}
-                        <li><a class="link" href="{% if item.link %}{{ item.link }}{% else %}#{% endif %}">{{ item.name }}</a></li>
-                    {% endfor %}
-
-                    {% get_current_language as LANGUAGE_CODE %}
-
-                    {% if LANGUAGE_CODE == 'en' %}
-                        <li class="lang">
-                            <a href="#!" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a>
-                            <ul class="sub">
-                                <li><a href="/ru/" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a></li>
-                                {% if conf.enable_zh %}
-                                <li><a href="/zh/" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a></li>
-                                {% endif %}
-
-                                {% if conf.enable_de %}
-                                <li><a href="/de/" class="china"><img src="{% static 'img/china.png' %}" alt="deutsch">de</a></li>
-                                {% endif %}
-
-                                {% if conf.enable_es %}
-                                <li><a href="/es/" class="china"><img src="{% static 'img/china.png' %}" alt="spanish">es</a></li>
-                                {% endif %}
-                            </ul>
-                        </li>
-                    {% endif %}
-
-                    {% if LANGUAGE_CODE == 'ru' %}
-                        <li class="lang">
-                            <a href="#!" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a>
-                            <ul class="sub">
-                                <li><a href="/en/" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a></li>
-                                {% if conf.enable_zh %}
-                                <li><a href="/zh/" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a></li>
-                                {% endif %}
-
-                                {% if conf.enable_de %}
-                                <li><a href="/de/" class="china"><img src="{% static 'img/china.png' %}" alt="deutsch">de</a></li>
-                                {% endif %}
-
-                                {% if conf.enable_es %}
-                                <li><a href="/es/" class="china"><img src="{% static 'img/china.png' %}" alt="spanish">es</a></li>
-                                {% endif %}
-                            </ul>
-                        </li>
-                    {% endif %}
-
-                    {% if LANGUAGE_CODE == 'zh' %}
-                        <li class="lang">
-                            <a href="#!" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a>
-                            <ul class="sub">
-                                <li><a href="/en/" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a></li>
-                                <li><a href="/ru/" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a></li>
-
-                                {% if conf.enable_de %}
-                                <li><a href="/de/" class="china"><img src="{% static 'img/china.png' %}" alt="deutsch">de</a></li>
-                                {% endif %}
-
-                                {% if conf.enable_es %}
-                                <li><a href="/es/" class="china"><img src="{% static 'img/china.png' %}" alt="spanish">es</a></li>
-                                {% endif %}
-                            </ul>
-                        </li>
-                    {% endif %}
-
-                    {% if LANGUAGE_CODE == 'es' %}
-                        <li class="lang">
-                            <a href="#!" class="china"><img src="" alt="spanish">es</a>
-                            <ul class="sub">
-                                <li><a href="/en/" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a></li>
-                                <li><a href="/ru/" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a></li>
-
-                                {% if conf.enable_de %}
-                                <li><a href="/de/" class="china"><img src="{% static 'img/china.png' %}" alt="deutsch">de</a></li>
-                                {% endif %}
-
-                                {% if conf.enable_zh %}
-                                <li><a href="/zh/" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a></li>
-                                {% endif %}
-                            </ul>
-                        </li>
-                    {% endif %}
-
-                    {% if LANGUAGE_CODE == 'de' %}
-                        <li class="lang">
-                            <a href="#!" class="china"><img src="" alt="deutsch">de</a>
-                            <ul class="sub">
-                                <li><a href="/en/" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a></li>
-                                <li><a href="/ru/" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a></li>
-
-                                {% if conf.enable_es %}
-                                <li><a href="/es/" class="china"><img src="{% static 'img/china.png' %}" alt="spanish">es</a></li>
-                                {% endif %}
-
-                                {% if conf.enable_zh %}
-                                <li><a href="/zh/" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a></li>
-                                {% endif %}
-                            </ul>
-                        </li>
-                    {% endif %}
-                </ul>
                 <ul class="mb-menu">
                     <li class="open"><i class="fa fa-bars" aria-hidden="true"></i>
                         <ul class="submenu">
@@ -242,9 +141,110 @@
                     <a href="{% url 'logout' %}" class="login">{% trans 'logout' %}</a>
                     {% endif %}
                 </div>
+                <ul class="menu">
+                    {% for item in menu %}
+                        <li><a class="link" href="{% if item.link %}{{ item.link }}{% else %}#{% endif %}">{{ item.name }}</a></li>
+                    {% endfor %}
+
+                    {% get_current_language as LANGUAGE_CODE %}
+
+                    {% if LANGUAGE_CODE == 'en' %}
+                        <li class="lang">
+                            <a href="#!" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a>
+                            <ul class="sub">
+                                <li><a href="/ru/" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a></li>
+                                {% if conf.enable_zh %}
+                                <li><a href="/zh/" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a></li>
+                                {% endif %}
+
+                                {% if conf.enable_de %}
+                                <li><a href="/de/" class="china"><img src="{% static 'img/china.png' %}" alt="deutsch">de</a></li>
+                                {% endif %}
+
+                                {% if conf.enable_es %}
+                                <li><a href="/es/" class="china"><img src="{% static 'img/china.png' %}" alt="spanish">es</a></li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                    {% endif %}
+
+                    {% if LANGUAGE_CODE == 'ru' %}
+                        <li class="lang">
+                            <a href="#!" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a>
+                            <ul class="sub">
+                                <li><a href="/en/" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a></li>
+                                {% if conf.enable_zh %}
+                                <li><a href="/zh/" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a></li>
+                                {% endif %}
+
+                                {% if conf.enable_de %}
+                                <li><a href="/de/" class="china"><img src="{% static 'img/china.png' %}" alt="deutsch">de</a></li>
+                                {% endif %}
+
+                                {% if conf.enable_es %}
+                                <li><a href="/es/" class="china"><img src="{% static 'img/china.png' %}" alt="spanish">es</a></li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                    {% endif %}
+
+                    {% if LANGUAGE_CODE == 'zh' %}
+                        <li class="lang">
+                            <a href="#!" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a>
+                            <ul class="sub">
+                                <li><a href="/en/" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a></li>
+                                <li><a href="/ru/" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a></li>
+
+                                {% if conf.enable_de %}
+                                <li><a href="/de/" class="china"><img src="{% static 'img/china.png' %}" alt="deutsch">de</a></li>
+                                {% endif %}
+
+                                {% if conf.enable_es %}
+                                <li><a href="/es/" class="china"><img src="{% static 'img/china.png' %}" alt="spanish">es</a></li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                    {% endif %}
+
+                    {% if LANGUAGE_CODE == 'es' %}
+                        <li class="lang">
+                            <a href="#!" class="china"><img src="" alt="spanish">es</a>
+                            <ul class="sub">
+                                <li><a href="/en/" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a></li>
+                                <li><a href="/ru/" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a></li>
+
+                                {% if conf.enable_de %}
+                                <li><a href="/de/" class="china"><img src="{% static 'img/china.png' %}" alt="deutsch">de</a></li>
+                                {% endif %}
+
+                                {% if conf.enable_zh %}
+                                <li><a href="/zh/" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a></li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                    {% endif %}
+
+                    {% if LANGUAGE_CODE == 'de' %}
+                        <li class="lang">
+                            <a href="#!" class="china"><img src="" alt="deutsch">de</a>
+                            <ul class="sub">
+                                <li><a href="/en/" class="uk"><img src="{% static 'img/uk.png' %}" alt="uk">en</a></li>
+                                <li><a href="/ru/" class="rus"><img src="{% static 'img/rus.png' %}" alt="rus">ru</a></li>
+
+                                {% if conf.enable_es %}
+                                <li><a href="/es/" class="china"><img src="{% static 'img/china.png' %}" alt="spanish">es</a></li>
+                                {% endif %}
+
+                                {% if conf.enable_zh %}
+                                <li><a href="/zh/" class="china"><img src="{% static 'img/china.png' %}" alt="china">ch</a></li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                    {% endif %}
+                </ul>
             </div>
-            <h1 class="header__title">{% trans 'We integrates the blockchain of 60 million golfers' %}</h1>
-            <h2 class="header__subtitle">{% trans 'Discount for early investors up to 40%' %}</h2>
+            <h1 class="header__title">{{ conf.main_block_title }}</h1>
+            <h2 class="header__subtitle">{{ conf.main_block_subtitle }}</h2>
             <div class="header__btns">
                 <a href="{% if conf.main_block_start_link %}{{ conf.main_block_start_link }}{% else %}#{% endif %}" class="btn start">{% trans 'Start Pre-ICO' %}</a>
                 <a href="{% if conf.main_block_whitepaper_link %}{{ conf.main_block_whitepaper_link.url }}{% else %}#{% endif %}" class="btn whitepapper" target="_blank">{% trans 'Whitepaper' %}</a>
