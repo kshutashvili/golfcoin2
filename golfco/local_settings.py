@@ -1,10 +1,15 @@
-ALLOWED_HOSTS = ['localhost']
+# DEBUG = True
 
-DEBUG = True
+ALLOWED_HOSTS = ['golfcoin.club']
 
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = "phonxis@gmail.com"
-EMAIL_HOST_PASSWORD = "#3410288P"
-EMAIL_USE_TLS = True
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'golfco',
+        'USER': 'golfco',
+        'PASSWORD': '&UITk!lhvd',
+        'HOST': '/var/run/mysqld/mysqld.sock',
+        'ATOMIC_REQUESTS': True,
+    }
+}
+
