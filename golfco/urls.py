@@ -19,9 +19,10 @@ from django.conf.urls.i18n import i18n_patterns
 from django.conf import settings
 from django.conf.urls.static import static
 
+from django.contrib.auth import views as auth_views
 from config.views import (IndexView, SignupView,
                           logout_view, CustomLoginView,
-                          PersonalProfileView)
+                          PersonalProfileView, check_email)
 from subscriptions.views import SubscriptionView
 
 
@@ -34,6 +35,13 @@ urlpatterns = i18n_patterns(
     url(r'^logout/$', logout_view, name="logout"),
     url(r'^profile/$', PersonalProfileView.as_view(), name='profile'),
     url(r'^subscription/$', SubscriptionView.as_view(), name='subscription'),
+    url(r'^check_email/$', check_email, name='check_email'),
+    url(r'^password_reset/$', auth_views.password_reset, name='password_reset'),
+    url(r'^password_reset/done/$', auth_views.password_reset_done, name='password_reset_done'),
+    url(r'^reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
+        auth_views.password_reset_confirm, name='password_reset_confirm'),
+    url(r'^reset/done/$', auth_views.password_reset_complete, name='password_reset_complete'),
+
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if 'rosetta' in settings.INSTALLED_APPS:

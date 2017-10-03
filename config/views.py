@@ -5,13 +5,15 @@ from django.conf import settings
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, FormView
-from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth import login, authenticate, logout, get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView
+from django.http.response import JsonResponse, HttpResponseBadRequest
 
+from django.utils.translation import ugettext_lazy as _
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import never_cache
-from django.views.decorators.csrf import csrf_protect
+from django.views.decorators.csrf import csrf_protect, csrf_exempt
 from django.views.decorators.debug import sensitive_post_parameters
 
 
@@ -19,8 +21,6 @@ from subscriptions.forms import SubscriptionForm
 from .models import SiteConfiguration
 from .mixins import MenuContextMixin
 from .forms import SignUpForm
-
-# Create your views here.
 
 
 class IndexView(MenuContextMixin, TemplateView):
@@ -78,3 +78,19 @@ def logout_view(request):
 
 class PersonalProfileView(MenuContextMixin, TemplateView):
     template_name = "personal_profile.html"
+
+
+@csrf_exempt
+def check_email(request):
+
+    if not request.is_ajax():
+        return HttpResponseBadRequest()
+
+    User = get_user_model()
+
+    if User.objects.filter(email__iexact=request.POST.get('email')).count() > 0:
+        ret = _("This email address is already registered")
+    else:
+        ret = "true"
+
+    return JsonResponse(ret, safe=False)

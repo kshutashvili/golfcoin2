@@ -5,20 +5,54 @@
 
 {% block content %}
     <!-- singup form start -->
-    <form class="signup-form" id="signup-form" method="POST">
+    <form class="signup-form" id="signup-form" method="POST" data-check-email-url="{% url 'check_email' %}">
         {% csrf_token %}
         <p class="title">{% trans 'Sign up' %}</p>
         <p class="caption">{% trans 'Already have an account?' %} <a href="{% url 'login' %}">{% trans 'Login' %}</a></p>
-        <input type="text" class="input" name="first_name" placeholder="{% trans 'Name' %}">
-        <input type="text" class="input" name="last_name" placeholder="{% trans 'Surname' %}">
-        <input type="text" class="input" name="email" placeholder="{% trans 'E-mail' %}">
+        <input type="text" class="input{% if form.first_name.errors %} error{% endif %}" name="first_name" placeholder="{% trans 'Name' %}">
+        <input type="text" class="input{% if form.last_name.errors %} error{% endif %}" name="last_name" placeholder="{% trans 'Surname' %}">
+        <input type="text" class="input{% if form.email.errors %} error{% endif %}" name="email" placeholder="{% trans 'E-mail' %}">
         <div class="password-wrap">
-            <input type="password" class="input" id="password1" name="password1" placeholder="{% trans 'Password' %}">
-            <a href="#!" class="eye active"></a>
+            <input type="password" class="input{% if form.password1.errors %} error{% endif %}" id="password1" name="password1" placeholder="{% trans 'Password' %}">
+            <a href="#!" id="eye" class="eye active"></a>
         </div>
-        <input type="password" class="input" name="password2" placeholder="{% trans 'Password Again' %}">
+        <input type="password" class="input{% if form.password2.errors %} error{% endif %}" name="password2" placeholder="{% trans 'Password Again' %}">
         <input type="submit" class="submit" value="{% trans 'Sign up' %}">
     </form>
     <!-- singup form end -->
 
+{% endblock %}
+
+{% block extrajs %}
+  <script type="text/javascript">
+    function stopDefAction(evt) {
+        evt.preventDefault();
+    }
+
+    document.getElementById('eye').addEventListener(
+        'click', stopDefAction, false
+    );
+
+    function show() {
+        var p = document.getElementById('password1');
+        p.setAttribute('type', 'text');
+    }
+
+    function hide() {
+        var p = document.getElementById('password1');
+        p.setAttribute('type', 'password');
+    }
+
+    var pwShown = 0;
+
+    document.getElementById("eye").addEventListener("click", function () {
+        if (pwShown == 0) {
+            pwShown = 1;
+            show();
+        } else {
+            pwShown = 0;
+            hide();
+        }
+    }, false);
+  </script>
 {% endblock %}
