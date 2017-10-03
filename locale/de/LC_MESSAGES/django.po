@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-03 15:48+0300\n"
+"POT-Creation-Date: 2017-10-03 21:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: config/views.py:91
+#: config/forms.py:38
+msgid "Provided password is incorrect"
+msgstr ""
+
+#: config/views.py:100
+msgid "Changes saved"
+msgstr ""
+
+#: config/views.py:115 config/views.py:134
 msgid "This email address is already registered"
 msgstr ""
 
@@ -153,11 +161,12 @@ msgstr ""
 msgid "Invalid e-mail and/or password provided"
 msgstr ""
 
-#: templates/login.html:16 templates/signup.html:14
+#: templates/login.html:16 templates/personal_profile.html:57
+#: templates/signup.html:14
 msgid "E-mail"
 msgstr ""
 
-#: templates/login.html:17
+#: templates/login.html:17 templates/personal_profile.html:61
 #: templates/registration/password_reset_confirm.html:14
 #: templates/signup.html:16
 msgid "Password"
@@ -171,6 +180,26 @@ msgstr ""
 msgid "LK"
 msgstr ""
 
+#: templates/personal_profile.html:15
+msgid "Save changes"
+msgstr ""
+
+#: templates/personal_profile.html:41 templates/signup.html:12
+msgid "Name"
+msgstr ""
+
+#: templates/personal_profile.html:45 templates/signup.html:13
+msgid "Surname"
+msgstr ""
+
+#: templates/personal_profile.html:49 users/models.py:50
+msgid "Address"
+msgstr ""
+
+#: templates/personal_profile.html:53 users/models.py:54
+msgid "Phone number"
+msgstr ""
+
 #: templates/registration/password_reset_complete.html:4
 #: templates/registration/password_reset_confirm.html:4
 #: templates/registration/password_reset_done.html:4
@@ -179,7 +208,7 @@ msgstr ""
 msgid "Password recovery"
 msgstr ""
 
-#: templates/registration/password_reset_complete.html:9
+#: templates/registration/password_reset_complete.html:10
 #, python-format
 msgid ""
 "Your password has been set. You may go ahead and <a href=\"%(login_url)s"
@@ -256,14 +285,6 @@ msgstr ""
 
 #: templates/signup.html:11
 msgid "Already have an account?"
-msgstr ""
-
-#: templates/signup.html:12
-msgid "Name"
-msgstr ""
-
-#: templates/signup.html:13
-msgid "Surname"
 msgstr ""
 
 #: users/models.py:40

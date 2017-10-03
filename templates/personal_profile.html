@@ -10,36 +10,58 @@
         <div class="container">
             <h2 class="lk-section__title">Your account</h2>
             <p class="lk-section__tokens-caption">Yours golfcoin tokens: 653</p>
-            <p class="lk-section__changes-saved">Changes saved</p>
+
+            <p class="lk-section__changes-saved">
+                <label for="submit-form" class="radio-label" tabindex="0">{% trans 'Save changes' %}</label>
+                {% if form.errors %}
+                    {% for error in form.non_field_errors %}
+                        <p class="caption error_message">{{ error }}</p>
+                    {% endfor %}
+                    {% for field in form %}
+                        {% if field.errors %}
+                            <p class="caption error_message">{{ field.errors }}</p>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class="lk-section__changes-saved">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+
+            </p>
 
             <div class="lk-section__content">
 
                 <div class="account-info">
-                    <form class="lk-account-form">
+                    <form id="lk-account-form" class="lk-account-form" method="POST" data-check-email-url="{% url 'check_email_profile' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="form_name" value="user_form"/>
                         <p class="input-wrap ">
-                            <label for="name">Name</label>
-                            <input type="text" class="name" id="name" name="name" value="Michael">
+                            <label for="first_name">{% trans 'Name' %}</label>
+                            <input type="text" class="" id="first_name" name="first_name" value="{{ form.first_name.value }}"/>
                         </p>
                         <p class="input-wrap">
-                            <label for="surname">Surname</label>
-                            <input type="text" class="" id="surname" name="surname" value="Eventon">
+                            <label for="last_name">{% trans 'Surname' %}</label>
+                            <input type="text" class="" id="last_name" name="last_name" value="{{ form.last_name.value }}"/>
                         </p>
                         <p class="input-wrap">
-                            <label for="address">Address</label>
-                            <input type="text" class="" id="address" name="address" value="Kiev, Solomenskaya 3">
+                            <label for="address">{% trans 'Address' %}</label>
+                            <input type="text" class="" id="address" name="address" value="{{ form.address.value|default_if_none:"" }}"/>
                         </p>
                         <p class="input-wrap">
-                            <label for="phone_number">Phone number</label>
-                            <input type="text" class="" id="phone_number" name="phone_number" value="+38063549854">
+                            <label for="phone_number">{% trans 'Phone number' %}</label>
+                            <input type="text" class="" id="phone_number" name="phone_number" value="{{ form.phone_number.value|default_if_none:"" }}"/>
                         </p>
                         <p class="input-wrap">
-                            <label for="email">E-mail</label>
-                            <input type="text" class="" id="email" name="email" value="support@golfcoin.club">
+                            <label for="email">{% trans 'E-mail' %}</label>
+                            <input type="text" class="" id="email" name="email" value="{{ form.email.value }}"/>
                         </p>
                         <p class="input-wrap">
-                            <label for="password">Password</label>
-                            <input type="text" class="password" id="password" name="password" value="214141">
+                            <label for="verify_password">{% trans 'Password' %}</label>
+                            <input type="password" class="password" id="verify_password" name="verify_password"/>
                         </p>
+                        <input type="submit" id="submit-form" class="hidden"/>
                     </form>
                 </div>
 

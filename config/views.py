@@ -8,6 +8,7 @@ from django.views.generic import TemplateView, FormView
 from django.contrib.auth import login, authenticate, logout, get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView
+from django.contrib import messages
 from django.http.response import JsonResponse, HttpResponseBadRequest
 
 from django.utils.translation import ugettext_lazy as _
@@ -19,7 +20,7 @@ from django.views.decorators.debug import sensitive_post_parameters
 
 from subscriptions.forms import SubscriptionForm
 from .models import SiteConfiguration
-from .forms import SignUpForm
+from .forms import SignUpForm, CustomUserChangeForm
 
 
 class IndexView(TemplateView):
@@ -78,6 +79,29 @@ def logout_view(request):
 class PersonalProfileView(TemplateView):
     template_name = "personal_profile.html"
 
+    def get_context_data(self, **kwargs):
+        ctx = super(PersonalProfileView, self).get_context_data(**kwargs)
+
+        if 'form' not in ctx:
+            ctx['form'] = CustomUserChangeForm(self.request,
+                                               instance=self.request.user)
+
+        return ctx
+
+    def post(self, request, *args, **kwargs):
+
+        if request.POST.get('form_name') == 'user_form':
+            form = CustomUserChangeForm(request,
+                                        request.POST,
+                                        instance=request.user)
+
+        if form.is_valid():
+            form.save()
+            messages.info(request, _("Changes saved"))
+            return redirect('profile')
+        else:
+            return self.render_to_response(self.get_context_data(form=form))
+
 
 @csrf_exempt
 def check_email(request):
@@ -88,6 +112,25 @@ def check_email(request):
     User = get_user_model()
 
     if User.objects.filter(email__iexact=request.POST.get('email')).count() > 0:
+        ret = _("This email address is already registered")
+    else:
+        ret = "true"
+
+    return JsonResponse(ret, safe=False)
+
+
+@login_required
+@csrf_exempt
+def check_email_profile(request):
+
+    if not request.is_ajax():
+        return HttpResponseBadRequest()
+
+    User = get_user_model()
+
+    if User.objects\
+            .filter(email__iexact=request.POST.get('email'))\
+            .exclude(pk=request.user.pk).count() > 0:
         ret = _("This email address is already registered")
     else:
         ret = "true"

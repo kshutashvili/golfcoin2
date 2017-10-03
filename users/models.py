@@ -47,4 +47,13 @@ class User(AbstractUser):
         null=True
     )
 
+    address = models.CharField(_("Address"),
+                               max_length=255,
+                               blank=True,
+                               null=True)
+    phone_number = models.CharField(_("Phone number"),
+                                    max_length=25,
+                                    blank=True,
+                                    null=True)
+
     objects = CustomUserManager()
