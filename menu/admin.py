@@ -8,4 +8,4 @@ from .models import MenuItem
 
 @admin.register(MenuItem)
 class MenuItemAdmin(admin.ModelAdmin):
-    pass
+    exclude = ('name', )
