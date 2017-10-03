@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-01 15:31+0000\n"
+"POT-Creation-Date: 2017-10-03 15:48+0300\n"
 "PO-Revision-Date: 2017-10-01 15:30+0000\n"
 "Last-Translator:   <phonxis@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,135 +21,130 @@ msgstr ""
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Translated-Using: django-rosetta 0.7.13\n"
 
-#: golfco/settings.py:130
-msgid "Английский"
-msgstr ""
-
-#: golfco/settings.py:131
-msgid "Русский"
+#: config/views.py:91
+msgid "This email address is already registered"
 msgstr ""
 
 #: golfco/settings.py:132
-msgid "Испанский"
+msgid "Английский"
 msgstr ""
 
 #: golfco/settings.py:133
-msgid "Немецкий"
+msgid "Русский"
 msgstr ""
 
 #: golfco/settings.py:134
+msgid "Испанский"
+msgstr ""
+
+#: golfco/settings.py:135
+msgid "Немецкий"
+msgstr ""
+
+#: golfco/settings.py:136
 msgid "Китайский"
 msgstr ""
 
-#: templates/base_up.html:237 templates/index.html:236
-#: templates/index_main.html:236 templates/index_main.html:329
-#: templates/index_main.html:523 templates/login.html:12
+#: templates/base_up.html:86 templates/index.html:61
+#: templates/index_main.html:62 templates/index_main.html:179
+#: templates/index_main.html:373 templates/login.html:12
 msgid "Sign Up"
 msgstr ""
 
-#: templates/base_up.html:239 templates/index.html:238
-#: templates/index_main.html:238 templates/index_main.html:331
-#: templates/index_main.html:525 templates/login.html:4 templates/login.html:11
-#: templates/login.html:15 templates/signup.html:11
+#: templates/base_up.html:88 templates/index.html:63
+#: templates/index_main.html:64 templates/index_main.html:181
+#: templates/index_main.html:375 templates/login.html:4 templates/login.html:11
+#: templates/login.html:18 templates/signup.html:11
 msgid "Login"
 msgstr ""
 
-#: templates/base_up.html:241 templates/index.html:240
-#: templates/index_main.html:240
+#: templates/base_up.html:90 templates/index.html:65
+#: templates/index_main.html:66
 msgid "Profile"
 msgstr ""
 
-#: templates/base_up.html:243 templates/index.html:242
-#: templates/index_main.html:242
+#: templates/base_up.html:92 templates/index.html:67
+#: templates/index_main.html:68
 msgid "logout"
 msgstr ""
 
-#: templates/index.html:246
-msgid "We integrates the blockchain of 60 million golfers"
-msgstr ""
-
-#: templates/index.html:247
-#, python-format
-msgid "Discount for early investors up to 40%%"
-msgstr ""
-
-#: templates/index.html:249 templates/index_main.html:249
+#: templates/index.html:98 templates/index_main.html:99
 msgid "Start Pre-ICO"
 msgstr ""
 
-#: templates/index.html:250 templates/index_main.html:250
+#: templates/index.html:99 templates/index_main.html:100
 msgid "Whitepaper"
 msgstr ""
 
-#: templates/index.html:257 templates/index_main.html:257
+#: templates/index.html:106 templates/index_main.html:107
 msgid "Days"
 msgstr "Дней"
 
-#: templates/index.html:261 templates/index_main.html:261
+#: templates/index.html:110 templates/index_main.html:111
 msgid "Hours"
 msgstr "Часов"
 
-#: templates/index.html:265 templates/index_main.html:265
+#: templates/index.html:114 templates/index_main.html:115
 msgid "Minutes"
 msgstr "Минут"
 
-#: templates/index.html:269 templates/index_main.html:269
+#: templates/index.html:118 templates/index_main.html:119
 msgid "Seconds"
 msgstr "Секунд"
 
-#: templates/index_main.html:283
+#: templates/index_main.html:133
 msgid "raised"
 msgstr "получено"
 
-#: templates/index_main.html:283
+#: templates/index_main.html:133
 msgid "from"
 msgstr "от"
 
-#: templates/index_main.html:284
+#: templates/index_main.html:134
 msgid "participants"
 msgstr "инвесторов"
 
-#: templates/index_main.html:311
+#: templates/index_main.html:161
 msgid "Copy address"
 msgstr ""
 
-#: templates/index_main.html:315
+#: templates/index_main.html:165
 msgid "you have read, understand and agree to our"
 msgstr ""
 
-#: templates/index_main.html:315
+#: templates/index_main.html:165
 msgid "terms and conditions"
 msgstr ""
 
-#: templates/index_main.html:316
+#: templates/index_main.html:166
 msgid "you will only send ETH from a compatible wallet (not from any exchange)"
 msgstr ""
 
-#: templates/index_main.html:316
+#: templates/index_main.html:166
 msgid "more details"
 msgstr ""
 
-#: templates/index_main.html:319 templates/index_main.html:513
+#: templates/index_main.html:169 templates/index_main.html:363
 msgid "Other payment methods"
 msgstr ""
 
-#: templates/index_main.html:330 templates/index_main.html:524
+#: templates/index_main.html:180 templates/index_main.html:374
 msgid "or"
 msgstr ""
 
-#: templates/index_main.html:510
+#: templates/index_main.html:360
 msgid "Show the address for donating ETH"
 msgstr ""
 
-#: templates/index_main.html:511
+#: templates/index_main.html:361
 msgid "By clicking you acknowledge"
 msgstr ""
 
-#: templates/index_main.html:511
+#: templates/index_main.html:361
 msgid "terms of agreement"
 msgstr ""
 
-#: templates/index_main.html:542
+#: templates/index_main.html:392
 msgid "This field is required"
 msgstr ""
 
@@ -157,20 +152,105 @@ msgstr ""
 msgid "Haven't an account?"
 msgstr ""
 
-#: templates/login.html:13 templates/signup.html:14
+#: templates/login.html:14
+msgid "Invalid e-mail and/or password provided"
+msgstr ""
+
+#: templates/login.html:16 templates/signup.html:14
 msgid "E-mail"
 msgstr ""
 
-#: templates/login.html:14 templates/signup.html:16
+#: templates/login.html:17
+#: templates/registration/password_reset_confirm.html:14
+#: templates/signup.html:16
 msgid "Password"
 msgstr ""
 
-#: templates/login.html:16
+#: templates/login.html:19
 msgid "I forgot my password"
 msgstr ""
 
 #: templates/personal_profile.html:4
 msgid "LK"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:4
+#: templates/registration/password_reset_confirm.html:4
+#: templates/registration/password_reset_done.html:4
+#: templates/registration/password_reset_form.html:4
+#: templates/registration/password_reset_form.html:10
+msgid "Password recovery"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:9
+#, python-format
+msgid ""
+"Your password has been set. You may go ahead and <a href=\"%(login_url)s"
+"\">login</a> now."
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:11
+#: templates/registration/password_reset_confirm.html:18
+msgid "Change password"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:12
+msgid "Enter new password in the form below"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:17
+#: templates/signup.html:19
+msgid "Password Again"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:23
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.\n"
+"            Please request a new password reset."
+msgstr ""
+
+#: templates/registration/password_reset_done.html:9
+msgid ""
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered.\n"
+"                You should receive them shortly."
+msgstr ""
+
+#: templates/registration/password_reset_done.html:13
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with,\n"
+"                and check your spam folder."
+msgstr ""
+
+#: templates/registration/password_reset_email.html:4
+#, python-format
+msgid ""
+"\n"
+"To initiate the password reset process for your Golfcoin Account,\n"
+"click the link below:\n"
+"\n"
+"%(protocol)s://%(domain)s%(login_url)s\n"
+"\n"
+"If clicking the link above doesn't work, please copy and paste the URL in a "
+"new browser\n"
+"window instead.\n"
+"\n"
+"Sincerely,\n"
+"The Golfcoin Team\n"
+msgstr ""
+
+#: templates/registration/password_reset_form.html:12
+msgid "Get new password"
+msgstr ""
+
+#: templates/registration/password_reset_form.html:13
+msgid "I remembered the password"
+msgstr ""
+
+#: templates/registration/password_reset_subject.txt:2
+msgid "Golfcoin password reset"
 msgstr ""
 
 #: templates/signup.html:4 templates/signup.html:10 templates/signup.html:20
@@ -189,18 +269,14 @@ msgstr ""
 msgid "Surname"
 msgstr ""
 
-#: templates/signup.html:19
-msgid "Password Again"
-msgstr ""
-
-#: users/models.py:11
+#: users/models.py:40
 msgid "email address"
 msgstr ""
 
-#: users/models.py:14
+#: users/models.py:43
 msgid "username"
 msgstr ""
 
-#: users/models.py:16
+#: users/models.py:45
 msgid "150 characters or fewer. Letters, digits and @/./+/-/_ only."
 msgstr ""

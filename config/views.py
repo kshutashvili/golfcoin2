@@ -19,11 +19,10 @@ from django.views.decorators.debug import sensitive_post_parameters
 
 from subscriptions.forms import SubscriptionForm
 from .models import SiteConfiguration
-from .mixins import MenuContextMixin
 from .forms import SignUpForm
 
 
-class IndexView(MenuContextMixin, TemplateView):
+class IndexView(TemplateView):
     def __init__(self, **kwargs):
         config = SiteConfiguration.get_solo()
         if config.show_site:
@@ -39,7 +38,7 @@ class IndexView(MenuContextMixin, TemplateView):
         return context
 
 
-class SignupView(MenuContextMixin, FormView):
+class SignupView(FormView):
     template_name = "signup.html"
     form_class = SignUpForm
 
@@ -61,7 +60,7 @@ class SignupView(MenuContextMixin, FormView):
         return super(SignupView, self).dispatch(request, *args, **kwargs)
 
 
-class CustomLoginView(MenuContextMixin, LoginView):
+class CustomLoginView(LoginView):
     template_name = "login.html"
     redirect_authenticated_user = True
     success_url = reverse_lazy('profile')
@@ -76,7 +75,7 @@ def logout_view(request):
     return redirect('index')
 
 
-class PersonalProfileView(MenuContextMixin, TemplateView):
+class PersonalProfileView(TemplateView):
     template_name = "personal_profile.html"
 
 
