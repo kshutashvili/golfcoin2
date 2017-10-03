@@ -40,8 +40,8 @@
                                 <a href="#!" class="{{ LANGUAGE_CODE }}"><img src="{% static img_name %}" alt="{{ LANGUAGE_CODE }}">{{ LANGUAGE_CODE }}</a>
                                 {% endwith %}
                                 <ul class="sub">
-                                    {% if LANGUAGE_CODE != "en" %}<li><a href="{% translate_url en %}" class="uk"><img src="{% static 'img/en.png' %}" alt="uk">en</a></li>{% endif %}
-                                    {% if LANGUAGE_CODE != "ru" %}<li><a href="{% translate_url ru %}" class="rus"><img src="{% static 'img/ru.png' %}" alt="rus">ru</a></li>{% endif %}
+                                    {% if LANGUAGE_CODE != "en" %}<li><a href="{% translate_url en %}" class="en"><img src="{% static 'img/en.png' %}" alt="en">en</a></li>{% endif %}
+                                    {% if LANGUAGE_CODE != "ru" %}<li><a href="{% translate_url ru %}" class="ru"><img src="{% static 'img/ru.png' %}" alt="ru">ru</a></li>{% endif %}
                                     {% if LANGUAGE_CODE != "zh" and conf.enable_zh %}
                                     <li><a href="{% translate_url zh %}" class="zh"><img src="{% static 'img/zh.png' %}" alt="zh">zh</a></li>
                                     {% endif %}
@@ -78,8 +78,8 @@
                         <a href="#!" class="{{ LANGUAGE_CODE }}"><img src="{% static img_name %}" alt="{{ LANGUAGE_CODE }}">{{ LANGUAGE_CODE }}</a>
                         {% endwith %}
                         <ul class="sub">
-                            {% if LANGUAGE_CODE != "en" %}<li><a href="{% translate_url en %}" class="uk"><img src="{% static 'img/en.png' %}" alt="uk">en</a></li>{% endif %}
-                            {% if LANGUAGE_CODE != "ru" %}<li><a href="{% translate_url ru %}" class="rus"><img src="{% static 'img/ru.png' %}" alt="rus">ru</a></li>{% endif %}
+                            {% if LANGUAGE_CODE != "en" %}<li><a href="{% translate_url en %}" class="en"><img src="{% static 'img/en.png' %}" alt="en">en</a></li>{% endif %}
+                            {% if LANGUAGE_CODE != "ru" %}<li><a href="{% translate_url ru %}" class="ru"><img src="{% static 'img/ru.png' %}" alt="ru">ru</a></li>{% endif %}
                             {% if LANGUAGE_CODE != "zh" and conf.enable_zh %}
                             <li><a href="{% translate_url zh %}" class="zh"><img src="{% static 'img/zh.png' %}" alt="zh">zh</a></li>
                             {% endif %}
