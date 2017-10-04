@@ -1,5 +1,6 @@
 {% extends "base_up.html" %}
 {% load i18n %}
+{% load solo_tags %}
 
 {% block title %}{% trans 'LK' %}{% endblock %}
 
@@ -8,16 +9,16 @@
 
     <section class="lk-section">
         <div class="container">
-            <h2 class="lk-section__title">Your account</h2>
-            <p class="lk-section__tokens-caption">Yours golfcoin tokens: 653</p>
+            <h2 class="lk-section__title">{% trans 'Your account' %}</h2>
+            <p class="lk-section__tokens-caption">{% trans 'Yours golfcoin tokens' %}: <span id="tokens-count">653</span></p>
 
             <p class="lk-section__changes-saved">
-                <label for="submit-form" class="radio-label" tabindex="0">{% trans 'Save changes' %}</label>
-                {% if form.errors %}
-                    {% for error in form.non_field_errors %}
+                <label for="submit-account-form" class="radio-label" tabindex="0">{% trans 'Save changes' %}</label>
+                {% if account_form.errors %}
+                    {% for error in account_form.non_field_errors %}
                         <p class="caption error_message">{{ error }}</p>
                     {% endfor %}
-                    {% for field in form %}
+                    {% for field in account_form %}
                         {% if field.errors %}
                             {% for error in field.errors %}
                                 <p class="caption error_message">{{ error }}</p>
@@ -38,26 +39,25 @@
                 <div class="account-info">
                     <form id="lk-account-form" class="lk-account-form" method="POST" data-check-email-url="{% url 'check_email_profile' %}">
                         {% csrf_token %}
-                        <input type="hidden" name="form_name" value="user_form"/>
                         <p class="input-wrap ">
                             <label for="first_name">{% trans 'Name' %}</label>
-                            <input type="text" class="" id="first_name" name="first_name" value="{{ form.first_name.value }}"/>
+                            <input type="text" class="" id="first_name" name="first_name" value="{{ account_form.first_name.value }}"/>
                         </p>
                         <p class="input-wrap">
                             <label for="last_name">{% trans 'Surname' %}</label>
-                            <input type="text" class="" id="last_name" name="last_name" value="{{ form.last_name.value }}"/>
+                            <input type="text" class="" id="last_name" name="last_name" value="{{ account_form.last_name.value }}"/>
                         </p>
                         <p class="input-wrap">
-                            <label for="address">{% trans 'Address' %}</label>
-                            <input type="text" class="" id="address" name="address" value="{{ form.address.value|default_if_none:"" }}"/>
+                            <label for="id_address">{% trans 'Address' %}</label>
+                            <input type="text" class="" id="id_address" name="address" value="{{ account_form.address.value|default_if_none:"" }}"/>
                         </p>
                         <p class="input-wrap">
                             <label for="phone_number">{% trans 'Phone number' %}</label>
-                            <input type="text" class="" id="phone_number" name="phone_number" value="{{ form.phone_number.value|default_if_none:"" }}"/>
+                            <input type="text" class="" id="phone_number" name="phone_number" value="{{ account_form.phone_number.value|default_if_none:"" }}"/>
                         </p>
                         <p class="input-wrap">
                             <label for="email">{% trans 'E-mail' %}</label>
-                            <input type="text" class="" id="email" name="email" value="{{ form.email.value }}"/>
+                            <input type="text" class="" id="email" name="email" value="{{ account_form.email.value }}"/>
                         </p>
                         <p class="input-wrap">
                             <label for="password1">{% trans 'New password' %}</label>
@@ -71,114 +71,83 @@
                             <label for="verify_password">{% trans 'Current password' %}</label>
                             <input type="password" class="password" id="verify_password" name="verify_password"/>
                         </p>
-                        <input type="submit" id="submit-form" class="hidden"/>
+                        <input type="submit" id="submit-account-form" name="submit" class="hidden" value="account_form"/>
                     </form>
                 </div>
 
                 <div class="history">
-                    <p class="history__title">History of your transactions</p>
+                    <p class="history__title">{% trans 'History of your transactions' %}</p>
                     <table class="table">
                         <thead>
                             <tr>
-                                <td>Date</td>
-                                <td>Number of tokens</td>
-                                <td>Sum</td>
+                                <td>{% trans 'Date' %}</td>
+                                <td>{% trans 'Method' %}</td>
+                                <td>{% trans 'Number of tokens' %}</td>
+                                <td>{% trans 'Sum' %}</td>
                             </tr>
                         </thead>
                         <tbody>
+                            {% for tx in request.user.donations.all %}
                             <tr>
-                                <td>23.08.17</td>
-                                <td>502</td>
-                                <td>6863$</td>
+                                <td>{{ tx.created_dt|date:"d.m.Y" }}</td>
+                                <td><a href="{{ tx.tx_link }}">{{ tx.payment_method }}</a></td>
+                                <td>TBD</td>
+                                <td>TBD</td>
                             </tr>
+                            {% empty %}
                             <tr>
-                                <td>23.08.17</td>
-                                <td>502</td>
-                                <td>6863$</td>
+                                <td id="no-transactions" colspan="4">{% trans 'No transactions yet' %}</td>
                             </tr>
-                            <tr>
-                                <td>23.08.17</td>
-                                <td>502</td>
-                                <td>6863$</td>
-                            </tr>
-                            <tr>
-                                <td>23.08.17</td>
-                                <td>502</td>
-                                <td>6863$</td>
-                            </tr>
-                            <tr>
-                                <td>23.08.17</td>
-                                <td>502</td>
-                                <td>6863$</td>
-                            </tr>
-                            <tr>
-                                <td>23.08.17</td>
-                                <td>502</td>
-                                <td>6863$</td>
-                            </tr>
-                            <tr>
-                                <td>23.08.17</td>
-                                <td>502</td>
-                                <td>6863$</td>
-                            </tr>
-                            <tr>
-                                <td>23.08.17</td>
-                                <td>502</td>
-                                <td>6863$</td>
-                            </tr>
-                            <tr>
-                                <td>23.08.17</td>
-                                <td>502</td>
-                                <td>6863$</td>
-                            </tr>
-                            <tr>
-                                <td>23.08.17</td>
-                                <td>502</td>
-                                <td>6863$</td>
-                            </tr>
-                            <tr>
-                                <td>23.08.17</td>
-                                <td>502</td>
-                                <td>6863$</td>
-                            </tr>
-                            <tr>
-                                <td>23.08.17</td>
-                                <td>502</td>
-                                <td>6863$</td>
-                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>
 
             </div>
-
-            <h2 class="lk-section__title lk-section__title--donations">Make a donation and get tokens</h2>
-            <form class="donation-form" id="donation-form">
+            {% get_solo 'config.DonationAddresses' as addresses %}
+            <h2 class="lk-section__title lk-section__title--donations">{% trans 'Make a donation and get tokens' %}</h2>
+            {% if donation_form.errors %}
+                {% for error in donation_form.non_field_errors %}
+                    <p class="caption error_message">{{ error }}</p>
+                {% endfor %}
+                {% for field in donation_form %}
+                    {% if field.errors %}
+                        {% for error in field.errors %}
+                            <p class="caption error_message">{{ error }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            <form class="donation-form" id="donation-form" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="form_name" value="user_form"/>
                 <div class="step-one">
-                    <p class="step-title">Step 1. Choose your payment method</p>
-                    <input type="radio" class="radio-input" id="buy_for_btc" name="payment_method" value="btc">
-                    <label for="buy_for_btc" class="radio-label">Купить за BTC</label>
-                    <input type="radio" class="radio-input" id="buy_for_ltc" name="payment_method" value="ltc">
-                    <label for="buy_for_ltc" class="radio-label">Купить за LTC</label>
-                    <input type="radio" class="radio-input" id="buy_for_etc" name="payment_method" value="etc">
-                    <label for="buy_for_etc" class="radio-label">Купить за ETC</label>
+                    <p class="step-title">{% trans 'Step 1. Choose your payment method' %}</p>
+                    <input type="radio" class="radio-input" id="buy_for_eth" name="payment_method" value="ETH" {% if donation_form.payment_method.value|default:"ETH" == "ETH" %}checked{% endif %}/>
+                    <label for="buy_for_eth" class="radio-label" data-address="{{ addresses.eth_address }}" data-code="the ETH">{% trans 'Buy with ETH' %}</label>
+                    <input type="radio" class="radio-input" id="buy_for_btc" name="payment_method" value="BTC" {% if donation_form.payment_method.value|default:"ETH" == "BTC" %}checked{% endif %}/>
+                    <label for="buy_for_btc" class="radio-label" data-address="{{ addresses.btc_address }}" data-code="the BTC">{% trans 'Buy with BTC' %}</label>
+                    <input type="radio" class="radio-input" id="buy_for_ltc" name="payment_method" value="LTC" {% if donation_form.payment_method.value|default:"ETH" == "LTC" %}checked{% endif %}/>
+                    <label for="buy_for_ltc" class="radio-label" data-address="{{ addresses.ltc_address }}" data-code="the LTC">{% trans 'Buy with LTC' %}</label>
+                    <input type="radio" class="radio-input" id="buy_for_etc" name="payment_method" value="ETC" {% if donation_form.payment_method.value|default:"ETH" == "ETC" %}checked{% endif %}/>
+                    <label for="buy_for_etc" class="radio-label" data-address="{{ addresses.etc_address }}" data-code="the ETC">{% trans 'Buy with ETC' %}</label>
                 </div>
 
                 <div class="step-two">
-                    <p class="step-title">Step 2. Оплатите покупку на этот адрес</p>
-                    <input type="text" class="input-address" name="address" value="">
-                    <a href="#!" class="copy-address">Copy address</a>
-                    <label for="e20_wallet" class="e20_wallet">Address you E20 wallet</label>
-                    <input type="text" class="e20-wallet-input" id="e20_wallet" name="e20_wallet" value="">
+                    <p class="step-title">{% trans 'Step 2. Transfer your money to this address' %}</p>
+                    <input type="text" class="input-address" name="donation_address" id="donation_address" value="{% if donation_form.address.value %}{{ donation_form.address.value }}{% else %}{{ addresses.eth_address }}{% endif %}" readonly/>
+                    <a href="#!" class="copy-address" data-clipboard-target="#address">{% trans 'Copy address' %}</a>
+                    <label for="e20_wallet" class="e20_wallet">{% trans 'Enter your E20 wallet address' %}</label>
+                    <input type="text" class="e20-wallet-input" id="e20_wallet" name="e20_wallet" value="{{ donation_form.e20_wallet.value|default:"" }}">
                     <p class="required-field">*This field is required</p>
                 </div>
 
                 <div class="step-three">
-                    <p class="step-title">Step 3. Enter the transaction number you sent the BTC</p>
-                    <input type="text" class="transaction_address" name="transaction_address" value="">
-                    <input type="submit" class="submit" value="Send">
+                    <p class="step-title">{% trans 'Step 3. Enter the transaction number you sent' %} <span id="code">the {{ donation_form.payment_method.value|default:"ETH" }}</span></p>
+                    <input type="text" class="transaction_address" name="tx_id" value="{{ donation_form.tx_id.value|default:"" }}"/>
                 </div>
-
+                <label for="submit-donation-form" class="radio-label" tabindex="0">{% trans 'Send' %}</label>
+                <input type="submit" id="submit-donation-form" name="submit" class="hidden" value="donation_form"/>
             </form>
         </div>
     </section>

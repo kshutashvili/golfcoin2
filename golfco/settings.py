@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'config',
     'menu',
     'subscriptions',
+    'donations',
 ]
 
 MIDDLEWARE = [

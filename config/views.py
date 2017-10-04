@@ -21,6 +21,7 @@ from django.views.decorators.debug import sensitive_post_parameters
 from subscriptions.forms import SubscriptionForm
 from .models import SiteConfiguration
 from .forms import SignUpForm, CustomUserChangeForm
+from donations.forms import DonationForm
 
 
 class IndexView(TemplateView):
@@ -82,25 +83,38 @@ class PersonalProfileView(TemplateView):
     def get_context_data(self, **kwargs):
         ctx = super(PersonalProfileView, self).get_context_data(**kwargs)
 
-        if 'form' not in ctx:
-            ctx['form'] = CustomUserChangeForm(self.request,
-                                               instance=self.request.user)
+        if 'account_form' not in ctx:
+            ctx['account_form'] = CustomUserChangeForm(self.request,
+                                                       instance=self.request.user)
+
+        if 'donation_form' not in ctx:
+            ctx['donation_form'] = DonationForm(self.request)
 
         return ctx
 
     def post(self, request, *args, **kwargs):
 
-        if request.POST.get('form_name') == 'user_form':
+        form = None
+        ctx_kwargs = {"form": form}
+
+        if request.POST.get('submit', '') == 'account_form':
             form = CustomUserChangeForm(request,
                                         request.POST,
                                         instance=request.user)
+            message = _("Changes saved")
+            ctx_kwargs = {"account_form": form}
+        elif request.POST.get('submit', '') == 'donation_form':
+            form = DonationForm(request,
+                                request.POST)
+            message = _("Data sent")
+            ctx_kwargs = {"donation_form": form}
 
-        if form.is_valid():
+        if form and form.is_valid():
             form.save()
-            messages.info(request, _("Changes saved"))
+            messages.info(request, message)
             return redirect('profile')
         else:
-            return self.render_to_response(self.get_context_data(form=form))
+            return self.render_to_response(self.get_context_data(**ctx_kwargs))
 
 
 @csrf_exempt

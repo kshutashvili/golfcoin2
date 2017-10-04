@@ -6,7 +6,7 @@ from solo.admin import SingletonModelAdmin
 from django.contrib import admin
 
 from .models import (SiteConfiguration, Teammate, Advisor, Partner,
-                     AnswerQuestion, Discount)
+                     AnswerQuestion, Discount, DonationAddresses)
 
 
 class TeammateInline(admin.StackedInline):
@@ -248,3 +248,7 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                DiscountInline]
     change_form_template = 'admin/custom/change_form.html'
 
+
+@admin.register(DonationAddresses)
+class DonationAddressesAdmin(SingletonModelAdmin):
+    pass
