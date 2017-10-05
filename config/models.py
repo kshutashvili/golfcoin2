@@ -191,6 +191,15 @@ class SiteConfiguration(SingletonModel):
     login_form_text = models.TextField("Текст формы входа",
                                        default="To pay for other types of crypto currency (BTC, ETC, LTC etc)\n"\
                                                "Please sign up or log in to your account")
+    # terms, condition and privacy policy
+    terms_and_conditions = models.FileField("Документ Terms & Conditions",
+                                            upload_to="documents",
+                                            blank=True,
+                                            null=True)
+    privacy_policy = models.FileField("Документ Privacy Policy",
+                                      upload_to="documents",
+                                      blank=True,
+                                      null=True)
 
     class Meta:
         verbose_name = "Конфигурация сайта"
@@ -278,10 +287,10 @@ class Discount(models.Model):
                                related_name="discounts")
     discount = models.CharField("Размер скидки",
                                 max_length=5,
-                                default="40%")
+                                blank=True)
     discount_text = models.CharField("Текст к скидке",
                                      max_length=64,
-                                     default="In the first 7 days")
+                                     blank=True)
 
     class Meta:
         verbose_name = "Скидка"

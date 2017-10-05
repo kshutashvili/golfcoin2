@@ -6,6 +6,7 @@
 {% block title %}{% trans 'LK' %}{% endblock %}
 
 {% block content %}
+{% get_solo 'config.SiteConfiguration' as conf %}
     <!-- lk section start -->
 
     <section class="lk-section">
@@ -105,6 +106,15 @@
                 </div>
 
             </div>
+
+            <div class="discount-block">
+                <p class="term-title">
+                    {% trans 'Ознакомтесь с' %}
+                    <a href="{% if conf.privacy_policy %}{{ conf.privacy_policy.url }}{% else %}#!{% endif %}" target="_blank">{% trans 'privacy policy ' %}</a>
+                    {% trans 'и' %}
+                    <a href="{% if conf.terms_and_conditions %}{{ conf.terms_and_conditions.url }}{% else %}#!{% endif %}" target="_blank">{% trans 'terms and conditions' %}</a></p>
+            </div>
+
             {% get_solo 'config.DonationAddresses' as addresses %}
             <h2 class="lk-section__title lk-section__title--donations">{% trans 'Make a donation and get tokens' %}</h2>
             {% if donation_form.errors %}
@@ -122,6 +132,7 @@
             <form class="donation-form" id="donation-form" method="POST">
                 {% csrf_token %}
                 <input type="hidden" name="form_name" value="user_form"/>
+
                 <div class="step-one">
                     <p class="step-title">{% trans 'Step 1. Choose your payment method' %}</p>
                     <input type="radio" class="radio-input" id="buy_for_eth" name="payment_method" value="ETH" {% if donation_form.payment_method.value|default:"ETH" == "ETH" %}checked{% endif %}/>

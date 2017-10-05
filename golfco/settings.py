@@ -28,7 +28,7 @@ SECRET_KEY = 'tr%7(4oqx$w^%+n6ya0xh=64p3yqj%h!!4z8%#4y7j^nuq+(+q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['golfcoin.club']
 
 
 # Application definition

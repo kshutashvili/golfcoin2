@@ -234,6 +234,18 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "social_block_title_es",
                                "social_block_title_zh")
                     }),
+                 ("Документы 'Terms & Condition, Privacy Policy'", {
+                    'classes': ('collapse',),
+                    "fields": ("terms_and_conditions_en",
+                               "terms_and_conditions_ru",
+                               "terms_and_conditions_de",
+                               "terms_and_conditions_es",
+                               "terms_and_conditions_zh",
+                               "privacy_policy_en",
+                               "privacy_policy_ru",
+                               "privacy_policy_de",
+                               "privacy_policy_es",
+                               "privacy_policy_zh",)}),
                  ("Социальные сети", {
                     'classes': ('collapse',),
                     "fields": ("social_in",
