@@ -1,9 +1,11 @@
 {% extends "base_up.html" %}
 {% load i18n %}
+{% load solo_tags %}
 
 {% block title %}{% trans 'LK' %}{% endblock %}
 
 {% block content %}
+{% get_solo 'config.SiteConfiguration' as conf %}
     <!-- lk section start -->
 
     <section class="lk-section">
@@ -118,6 +120,14 @@
                     </table>
                 </div>
 
+            </div>
+
+            <div class="discount-block">
+                <p class="term-title">
+                    {% trans 'Ознакомтесь с' %}
+                    <a href="{% if conf.privacy_policy %}{{ conf.privacy_policy.url }}{% else %}#!{% endif %}" target="_blank">{% trans 'privacy policy ' %}</a>
+                    {% trans 'и' %}
+                    <a href="{% if conf.terms_and_conditions %}{{ conf.terms_and_conditions.url }}{% else %}#!{% endif %}" target="_blank">{% trans 'terms and conditions' %}</a></p>
             </div>
 
             <h2 class="lk-section__title lk-section__title--donations">Make a donation and get tokens</h2>

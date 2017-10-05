@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-03 15:48+0300\n"
-"PO-Revision-Date: 2017-09-27 12:17+0000\n"
-"Last-Translator:   <>\n"
+"POT-Creation-Date: 2017-10-05 11:50+0000\n"
+"PO-Revision-Date: 2017-10-05 08:40+0000\n"
+"Last-Translator:   <phonxis@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -43,14 +43,14 @@ msgid "Китайский"
 msgstr ""
 
 #: templates/base_up.html:86 templates/index.html:61
-#: templates/index_main.html:62 templates/index_main.html:179
-#: templates/index_main.html:373 templates/login.html:12
+#: templates/index_main.html:62 templates/index_main.html:176
+#: templates/index_main.html:371 templates/login.html:12
 msgid "Sign Up"
 msgstr ""
 
 #: templates/base_up.html:88 templates/index.html:63
-#: templates/index_main.html:64 templates/index_main.html:181
-#: templates/index_main.html:375 templates/login.html:4 templates/login.html:11
+#: templates/index_main.html:64 templates/index_main.html:178
+#: templates/index_main.html:373 templates/login.html:4 templates/login.html:11
 #: templates/login.html:18 templates/signup.html:11
 msgid "Login"
 msgstr ""
@@ -67,7 +67,7 @@ msgstr ""
 
 #: templates/index.html:98 templates/index_main.html:99
 msgid "Start Pre-ICO"
-msgstr ""
+msgstr "CH ICO"
 
 #: templates/index.html:99 templates/index_main.html:100
 #, fuzzy
@@ -107,43 +107,35 @@ msgstr ""
 msgid "Copy address"
 msgstr ""
 
-#: templates/index_main.html:165
-msgid "you have read, understand and agree to our"
-msgstr ""
-
-#: templates/index_main.html:165
-msgid "terms and conditions"
-msgstr ""
-
-#: templates/index_main.html:166
-msgid "you will only send ETH from a compatible wallet (not from any exchange)"
-msgstr ""
-
-#: templates/index_main.html:166
-msgid "more details"
-msgstr ""
-
-#: templates/index_main.html:169 templates/index_main.html:363
-msgid "Other payment methods"
-msgstr ""
-
-#: templates/index_main.html:180 templates/index_main.html:374
-msgid "or"
-msgstr ""
-
-#: templates/index_main.html:360
-msgid "Show the address for donating ETH"
-msgstr ""
-
-#: templates/index_main.html:361
+#: templates/index_main.html:163 templates/index_main.html:358
 msgid "By clicking you acknowledge"
 msgstr ""
 
-#: templates/index_main.html:361
-msgid "terms of agreement"
+#: templates/index_main.html:163 templates/index_main.html:358
+msgid "privacy policy"
 msgstr ""
 
-#: templates/index_main.html:392
+#: templates/index_main.html:164 templates/index_main.html:359
+msgid "You have read, understand and agree to our"
+msgstr ""
+
+#: templates/index_main.html:164 templates/index_main.html:359
+msgid "terms and conditions"
+msgstr ""
+
+#: templates/index_main.html:166 templates/index_main.html:361
+msgid "Other payment methods"
+msgstr ""
+
+#: templates/index_main.html:177 templates/index_main.html:372
+msgid "or"
+msgstr ""
+
+#: templates/index_main.html:357
+msgid "Show the address for donating ETH"
+msgstr ""
+
+#: templates/index_main.html:390
 msgid "This field is required"
 msgstr ""
 
