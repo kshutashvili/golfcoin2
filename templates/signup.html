@@ -22,37 +22,3 @@
     <!-- singup form end -->
 
 {% endblock %}
-
-{% block extrajs %}
-  <script type="text/javascript">
-    function stopDefAction(evt) {
-        evt.preventDefault();
-    }
-
-    document.getElementById('eye').addEventListener(
-        'click', stopDefAction, false
-    );
-
-    function show() {
-        var p = document.getElementById('password1');
-        p.setAttribute('type', 'text');
-    }
-
-    function hide() {
-        var p = document.getElementById('password1');
-        p.setAttribute('type', 'password');
-    }
-
-    var pwShown = 0;
-
-    document.getElementById("eye").addEventListener("click", function () {
-        if (pwShown == 0) {
-            pwShown = 1;
-            show();
-        } else {
-            pwShown = 0;
-            hide();
-        }
-    }, false);
-  </script>
-{% endblock %}

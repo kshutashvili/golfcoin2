@@ -5,6 +5,7 @@ from solo.models import SingletonModel
 from ckeditor.fields import RichTextField
 
 from django.db import models
+from django.utils.translation import ugettext_lazy as _, ugettext
 
 
 class SiteConfiguration(SingletonModel):
@@ -297,3 +298,17 @@ class Discount(models.Model):
 
     def __unicode__(self):
         return "{}: {}".format(self.discount, self.discount_text)
+
+
+class DonationAddresses(SingletonModel):
+
+    eth_address = models.CharField(_("Адрес ETH"), max_length=50)
+    btc_address = models.CharField(_("Адрес BTC"), max_length=50)
+    ltc_address = models.CharField(_("Адрес LTC"), max_length=50)
+    etc_address = models.CharField(_("Адрес ETC"), max_length=50)
+
+    class Meta:
+        verbose_name = _("Адреса для покупки токенов")
+
+    def __unicode__(self):
+        return ugettext("Адреса для покупки токенов")

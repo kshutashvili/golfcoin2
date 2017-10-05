@@ -8,6 +8,7 @@ from django.views.generic import TemplateView, FormView
 from django.contrib.auth import login, authenticate, logout, get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView
+from django.contrib import messages
 from django.http.response import JsonResponse, HttpResponseBadRequest
 
 from django.utils.translation import ugettext_lazy as _
@@ -19,7 +20,9 @@ from django.views.decorators.debug import sensitive_post_parameters
 
 from subscriptions.forms import SubscriptionForm
 from .models import SiteConfiguration
-from .forms import SignUpForm
+from .forms import SignUpForm, CustomUserChangeForm
+from donations.forms import DonationForm
+from donations.utils import get_token_balance
 
 
 class IndexView(TemplateView):
@@ -78,6 +81,48 @@ def logout_view(request):
 class PersonalProfileView(TemplateView):
     template_name = "personal_profile.html"
 
+    def get_context_data(self, **kwargs):
+        ctx = super(PersonalProfileView, self).get_context_data(**kwargs)
+
+        if 'account_form' not in ctx:
+            ctx['account_form'] = CustomUserChangeForm(self.request,
+                                                       instance=self.request.user)
+
+        if 'donation_form' not in ctx:
+            ctx['donation_form'] = DonationForm(self.request)
+
+        # get tokens count
+        try:
+            ctx['token_balance'] = get_token_balance(self.request.user)
+        except:
+            ctx['token_balance'] = 0
+
+        return ctx
+
+    def post(self, request, *args, **kwargs):
+
+        form = None
+        ctx_kwargs = {"form": form}
+
+        if request.POST.get('submit', '') == 'account_form':
+            form = CustomUserChangeForm(request,
+                                        request.POST,
+                                        instance=request.user)
+            message = _("Changes saved")
+            ctx_kwargs = {"account_form": form}
+        elif request.POST.get('submit', '') == 'donation_form':
+            form = DonationForm(request,
+                                request.POST)
+            message = _("Data sent")
+            ctx_kwargs = {"donation_form": form}
+
+        if form and form.is_valid():
+            form.save()
+            messages.info(request, message)
+            return redirect('profile')
+        else:
+            return self.render_to_response(self.get_context_data(**ctx_kwargs))
+
 
 @csrf_exempt
 def check_email(request):
@@ -88,6 +133,25 @@ def check_email(request):
     User = get_user_model()
 
     if User.objects.filter(email__iexact=request.POST.get('email')).count() > 0:
+        ret = _("This email address is already registered")
+    else:
+        ret = "true"
+
+    return JsonResponse(ret, safe=False)
+
+
+@login_required
+@csrf_exempt
+def check_email_profile(request):
+
+    if not request.is_ajax():
+        return HttpResponseBadRequest()
+
+    User = get_user_model()
+
+    if User.objects\
+            .filter(email__iexact=request.POST.get('email'))\
+            .exclude(pk=request.user.pk).count() > 0:
         ret = _("This email address is already registered")
     else:
         ret = "true"

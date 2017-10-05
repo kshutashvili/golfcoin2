@@ -19,27 +19,107 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Translated-Using: django-rosetta 0.7.13\n"
 
-#: config/views.py:91
+#: config/forms.py:22
+msgid "The two password fields didn't match."
+msgstr ""
+
+#: config/forms.py:45
+msgid "Current password is incorrect"
+msgstr ""
+
+#: config/models.py:296
+msgid "Адрес ETH"
+msgstr ""
+
+#: config/models.py:297
+msgid "Адрес BTC"
+msgstr ""
+
+#: config/models.py:298
+msgid "Адрес LTC"
+msgstr ""
+
+#: config/models.py:299
+msgid "Адрес ETC"
+msgstr ""
+
+#: config/models.py:302 config/models.py:305
+msgid "Адреса для покупки токенов"
+msgstr ""
+
+#: config/views.py:104
+msgid "Changes saved"
+msgstr ""
+
+#: config/views.py:109
+msgid "Data sent"
+msgstr ""
+
+#: config/views.py:129 config/views.py:148
 msgid "This email address is already registered"
 msgstr ""
 
-#: golfco/settings.py:132
-msgid "Английский"
+#: donations/models.py:14 donations/models.py:72
+msgid "Пользователь"
+msgstr ""
+
+#: donations/models.py:17 donations/models.py:61
+msgid "Адрес для получения токенов"
+msgstr ""
+
+#: donations/models.py:21 donations/models.py:75
+msgid "Дата создания"
+msgstr ""
+
+#: donations/models.py:25
+msgid "Адрес пользователя"
+msgstr ""
+
+#: donations/models.py:26
+msgid "Адреса пользователей"
+msgstr ""
+
+#: donations/models.py:54
+msgid "Тип оплаты"
+msgstr ""
+
+#: donations/models.py:58
+msgid "Адрес оплаты"
+msgstr ""
+
+#: donations/models.py:65
+msgid "Номер транзакции"
+msgstr ""
+
+#: donations/models.py:79
+msgid "Транзакция"
+msgstr ""
+
+#: donations/models.py:80
+msgid "Транзакции"
+msgstr ""
+
+#: donations/validators.py:9
+msgid "Enter a valid ethereum address"
 msgstr ""
 
 #: golfco/settings.py:133
-msgid "Русский"
+msgid "Английский"
 msgstr ""
 
 #: golfco/settings.py:134
-msgid "Испанский"
+msgid "Русский"
 msgstr ""
 
 #: golfco/settings.py:135
-msgid "Немецкий"
+msgid "Испанский"
 msgstr ""
 
 #: golfco/settings.py:136
+msgid "Немецкий"
+msgstr ""
+
+#: golfco/settings.py:137
 msgid "Китайский"
 msgstr ""
 
@@ -102,7 +182,7 @@ msgstr "от"
 msgid "participants"
 msgstr "инвесторов"
 
-#: templates/index_main.html:161
+#: templates/index_main.html:161 templates/personal_profile.html:139
 msgid "Copy address"
 msgstr ""
 
@@ -146,7 +226,8 @@ msgstr ""
 msgid "Invalid e-mail and/or password provided"
 msgstr ""
 
-#: templates/login.html:16 templates/signup.html:14
+#: templates/login.html:16 templates/personal_profile.html:59
+#: templates/signup.html:14
 msgid "E-mail"
 msgstr ""
 
@@ -160,8 +241,112 @@ msgstr ""
 msgid "I forgot my password"
 msgstr ""
 
-#: templates/personal_profile.html:4
+#: templates/personal_profile.html:5
 msgid "LK"
+msgstr ""
+
+#: templates/personal_profile.html:12
+msgid "Your account"
+msgstr ""
+
+#: templates/personal_profile.html:13
+msgid "Yours golfcoin tokens"
+msgstr ""
+
+#: templates/personal_profile.html:16
+msgid "Save changes"
+msgstr ""
+
+#: templates/personal_profile.html:43 templates/signup.html:12
+msgid "Name"
+msgstr ""
+
+#: templates/personal_profile.html:47 templates/signup.html:13
+msgid "Surname"
+msgstr ""
+
+#: templates/personal_profile.html:51 users/models.py:50
+msgid "Address"
+msgstr ""
+
+#: templates/personal_profile.html:55 users/models.py:54
+msgid "Phone number"
+msgstr ""
+
+#: templates/personal_profile.html:63
+msgid "New password"
+msgstr ""
+
+#: templates/personal_profile.html:67
+msgid "New password confirmation"
+msgstr ""
+
+#: templates/personal_profile.html:71
+msgid "Current password"
+msgstr ""
+
+#: templates/personal_profile.html:79
+msgid "History of your transactions"
+msgstr ""
+
+#: templates/personal_profile.html:83
+msgid "Date"
+msgstr ""
+
+#: templates/personal_profile.html:84
+msgid "Method"
+msgstr ""
+
+#: templates/personal_profile.html:85
+msgid "Number of tokens"
+msgstr ""
+
+#: templates/personal_profile.html:86
+msgid "Sum"
+msgstr ""
+
+#: templates/personal_profile.html:99
+msgid "No transactions yet"
+msgstr ""
+
+#: templates/personal_profile.html:108
+msgid "Make a donation and get tokens"
+msgstr ""
+
+#: templates/personal_profile.html:125
+msgid "Step 1. Choose your payment method"
+msgstr ""
+
+#: templates/personal_profile.html:127
+msgid "Buy with ETH"
+msgstr ""
+
+#: templates/personal_profile.html:129
+msgid "Buy with BTC"
+msgstr ""
+
+#: templates/personal_profile.html:131
+msgid "Buy with LTC"
+msgstr ""
+
+#: templates/personal_profile.html:133
+msgid "Buy with ETC"
+msgstr ""
+
+#: templates/personal_profile.html:137
+msgid "Step 2. Transfer your money to this address"
+msgstr ""
+
+#: templates/personal_profile.html:140
+msgid "Enter your E20 wallet address"
+msgstr ""
+
+#: templates/personal_profile.html:146
+msgid "Step 3. Enter the transaction number you sent"
+msgstr ""
+
+#: templates/personal_profile.html:149
+msgid "Send"
 msgstr ""
 
 #: templates/registration/password_reset_complete.html:4
@@ -172,7 +357,7 @@ msgstr ""
 msgid "Password recovery"
 msgstr ""
 
-#: templates/registration/password_reset_complete.html:9
+#: templates/registration/password_reset_complete.html:10
 #, python-format
 msgid ""
 "Your password has been set. You may go ahead and <a "
@@ -245,14 +430,6 @@ msgstr ""
 
 #: templates/signup.html:11
 msgid "Already have an account?"
-msgstr ""
-
-#: templates/signup.html:12
-msgid "Name"
-msgstr ""
-
-#: templates/signup.html:13
-msgid "Surname"
 msgstr ""
 
 #: users/models.py:40
