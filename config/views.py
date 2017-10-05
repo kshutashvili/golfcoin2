@@ -22,6 +22,7 @@ from subscriptions.forms import SubscriptionForm
 from .models import SiteConfiguration
 from .forms import SignUpForm, CustomUserChangeForm
 from donations.forms import DonationForm
+from donations.utils import get_token_balance
 
 
 class IndexView(TemplateView):
@@ -89,6 +90,12 @@ class PersonalProfileView(TemplateView):
 
         if 'donation_form' not in ctx:
             ctx['donation_form'] = DonationForm(self.request)
+
+        # get tokens count
+        try:
+            ctx['token_balance'] = get_token_balance(self.request.user)
+        except:
+            ctx['token_balance'] = 0
 
         return ctx
 
