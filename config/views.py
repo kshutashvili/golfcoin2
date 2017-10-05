@@ -91,12 +91,6 @@ class PersonalProfileView(TemplateView):
         if 'donation_form' not in ctx:
             ctx['donation_form'] = DonationForm(self.request)
 
-        # get tokens count
-        try:
-            ctx['token_balance'] = get_token_balance(self.request.user)
-        except:
-            ctx['token_balance'] = 0
-
         return ctx
 
     def post(self, request, *args, **kwargs):
@@ -157,3 +151,15 @@ def check_email_profile(request):
         ret = "true"
 
     return JsonResponse(ret, safe=False)
+
+
+@login_required
+def get_tokens_count(request):
+
+    if not request.is_ajax():
+        return HttpResponseBadRequest()
+
+    # get tokens count
+    tokens_count = get_token_balance(request.user)
+
+    return JsonResponse({'tokensCount': tokens_count})

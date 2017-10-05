@@ -11,7 +11,7 @@
     <section class="lk-section">
         <div class="container">
             <h2 class="lk-section__title">{% trans 'Your account' %}</h2>
-            <p class="lk-section__tokens-caption">{% trans 'Yours golfcoin tokens' %}: <span id="tokens-count">{{ token_balance }}</span></p>
+            <p class="lk-section__tokens-caption">{% trans 'Yours golfcoin tokens' %}: <span id="tokens-count" data-url="{% url 'tokens_count' %}">0</span></p>
 
             <p class="lk-section__changes-saved">
                 <label for="submit-account-form" class="radio-label" tabindex="0">{% trans 'Save changes' %}</label>

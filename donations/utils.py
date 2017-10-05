@@ -24,9 +24,12 @@ def get_token_balance(user):
     token_contract = get_token_contract(web3)
 
     for address in user.addresses.all():
-        balance += web3.fromWei(
-            token_contract.call().balanceOf(address.e20_wallet),
-            'ether'
-        )
+        try:
+            balance += web3.fromWei(
+                token_contract.call().balanceOf(address.e20_wallet),
+                'ether'
+            )
+        except:
+            pass
 
     return balance
