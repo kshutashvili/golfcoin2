@@ -115,9 +115,6 @@
                     <a href="{% if conf.terms_and_conditions %}{{ conf.terms_and_conditions.url }}{% else %}#!{% endif %}" target="_blank">{% trans 'terms and conditions' %}</a></p>
             </div>
 
-            <h2 class="lk-section__title lk-section__title--donations">Make a donation and get tokens</h2>
-            <form class="donation-form" id="donation-form">
-
             {% get_solo 'config.DonationAddresses' as addresses %}
             <h2 class="lk-section__title lk-section__title--donations">{% trans 'Make a donation and get tokens' %}</h2>
             {% if donation_form.errors %}
