@@ -3220,6 +3220,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
     $form.validate({
         errorPlacement: function errorPlacement(error, element) {},
+        ignore: '#submit-account-form',
         rules: {
             first_name: {
                 required: true

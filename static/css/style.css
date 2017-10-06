@@ -3723,6 +3723,20 @@ body {
 /*px to em function end*/
 /*media start*/
 /*media end*/
+.caption {
+  margin: 12px 0 21px 0;
+  font-family: "museocanscyrl500", sans-serif;
+  font-size: 0.9375em;
+  color: #929292;
+  text-align: center; }
+  .caption a {
+    color: #929292; }
+    .caption a:hover {
+      color: #4caf50; }
+
+.error_message {
+  color: #FF0000; }
+
 .login-form {
   width: 300px;
   margin: 70px auto 373px auto; }
@@ -3731,16 +3745,6 @@ body {
     font-size: 2.1875em;
     color: #4f4f4f;
     text-align: center; }
-  .login-form .caption {
-    margin: 12px 0 21px 0;
-    font-family: "museocanscyrl500", sans-serif;
-    font-size: 0.9375em;
-    color: #929292;
-    text-align: center; }
-    .login-form .caption a {
-      color: #929292; }
-      .login-form .caption a:hover {
-        color: #4caf50; }
   .login-form .forgot-password {
     display: block;
     margin: 14px 0 0 0;
