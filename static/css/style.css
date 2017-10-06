@@ -2423,6 +2423,9 @@ body {
   max-width: 1230px;
   margin: 0 auto; }
 
+.hidden {
+  display: none; }
+
 /*variables start*/
 /*variables end*/
 /*px to em function start*/
