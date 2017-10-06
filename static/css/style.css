@@ -3193,7 +3193,8 @@ body {
       .footer__email {
         display: block;
         margin: 50px 0 0 0;
-        text-align: center; } }
+        text-align: center;
+        float: none; } }
 
 /*variables start*/
 /*variables end*/
@@ -3300,12 +3301,14 @@ body {
       .header .top-line .auth {
         display: block;
         margin: 37px 0 0 0;
-        text-align: center; } }
+        text-align: center;
+        float: none; } }
     @media only screen and (max-width: 768px) {
       .header .top-line .auth {
         display: block;
         margin: 37px 0 0 0;
-        text-align: center; } }
+        text-align: center;
+        float: none; } }
     .header .top-line .auth a {
       display: inline-block;
       vertical-align: top;
