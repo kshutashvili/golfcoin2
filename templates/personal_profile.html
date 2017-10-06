@@ -73,7 +73,7 @@
                             <label for="verify_password">{% trans 'Current password' %}</label>
                             <input type="password" class="password" id="verify_password" name="verify_password"/>
                         </p>
-                        <input type="submit" id="submit-account-form" name="submit" class="hidden" value="account_form"/>
+                        <!--<input type="submit" id="submit-account-form" name="submit" class="hidden" value="account_form"/>-->
                     </form>
                 </div>
 
@@ -157,9 +157,9 @@
                 <div class="step-three">
                     <p class="step-title">{% trans 'Step 3. Enter the transaction number you sent' %} <span id="code">the {{ donation_form.payment_method.value|default:"ETH" }}</span></p>
                     <input type="text" class="transaction_address" name="tx_id" value="{{ donation_form.tx_id.value|default:"" }}"/>
+                    <input type="submit" id="submit-donation-form" name="submit" class="submit" value="{% trans 'Send' %}"/>
                 </div>
-                <label for="submit-donation-form" class="radio-label" tabindex="0">{% trans 'Send' %}</label>
-                <input type="submit" id="submit-donation-form" name="submit" class="hidden" value="donation_form"/>
+                <!--<label for="submit-donation-form" class="radio-label" tabindex="0">{% trans 'Send' %}</label>-->
             </form>
         </div>
     </section>
