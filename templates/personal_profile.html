@@ -148,7 +148,7 @@
                 <div class="step-two">
                     <p class="step-title">{% trans 'Step 2. Transfer your money to this address' %}</p>
                     <input type="text" class="input-address" name="donation_address" id="donation_address" value="{% if donation_form.address.value %}{{ donation_form.address.value }}{% else %}{{ addresses.eth_address }}{% endif %}" readonly/>
-                    <a href="#!" class="copy-address" data-clipboard-target="#address">{% trans 'Copy address' %}</a>
+                    <a href="#!" class="copy-address" data-clipboard-target="#donation_address">{% trans 'Copy address' %}</a>
                     <label for="e20_wallet" class="e20_wallet">{% trans 'Enter your E20 wallet address' %}</label>
                     <input type="text" class="e20-wallet-input" id="e20_wallet" name="e20_wallet" value="{{ donation_form.e20_wallet.value|default:"" }}">
                     <p class="required-field">*This field is required</p>
