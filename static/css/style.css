@@ -2641,8 +2641,8 @@ body {
     .discount-block {
       width: 100%; } }
   .discount-block__title {
-    font-family: "museocanscyrl500", sans-serif;
-    font-size: 1.25em;
+    font-family: "museocanscyrl700", sans-serif;
+    font-size: 2.1875em;
     color: #5b5b5b;
     text-align: center; }
   .discount-block__benefits {
@@ -2951,8 +2951,8 @@ body {
       font-family: "museocanscyrl500", sans-serif;
       text-align: center; }
       .block7 .team-block__member .image {
-        width: 90px;
-        height: 90px;
+        width: 162px;
+        height: 162px;
         margin: 0 auto 0 auto;
         -webkit-border-radius: 50%;
         border-radius: 50%;
@@ -2965,6 +2965,25 @@ body {
       .block7 .team-block__member .position {
         margin: 4px 0 0 0;
         font-size: 0.9375em; }
+      .block7 .team-block__member .socials {
+        width: 110px;
+        margin-left: 38px; }
+      .block7 .team-block__member a {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 19px 0 0;
+        width: 31px;
+        height: 32px;
+        background-image: url("../img/socials-sprite.png");
+        background-repeat: no-repeat; }
+        .block7 .team-block__member a.facebook {
+          background-position: 0 0; }
+          .block7 .team-block__member a.facebook:hover {
+            background-position: 0 -31px; }
+        .block7 .team-block__member a.in {
+          background-position: -50px 0; }
+          .block7 .team-block__member a.in:hover {
+            background-position: -50px -31px; }
   .block7 .advisers-block {
     padding: 0 100px;
     text-align: center; }
@@ -2986,8 +3005,8 @@ body {
       font-family: "museocanscyrl500", sans-serif;
       text-align: center; }
       .block7 .advisers-block__member .image {
-        width: 90px;
-        height: 90px;
+        width: 162px;
+        height: 162px;
         margin: 0 auto 0 auto;
         -webkit-border-radius: 50%;
         border-radius: 50%;

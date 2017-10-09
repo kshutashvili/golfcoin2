@@ -224,6 +224,11 @@ class Teammate(models.Model):
     position = models.CharField("Должность",
                                 max_length=128)
 
+    social_facebook = models.CharField("Facebook",
+                                      max_length=200, blank=True, null=True)
+    social_linkedin = models.CharField("Linkedin",
+                                      max_length=200, blank=True, null=True)
+
     class Meta:
         verbose_name = "Сотрудник"
         verbose_name_plural = "Сотрудники"
