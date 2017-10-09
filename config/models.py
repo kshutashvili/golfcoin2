@@ -184,6 +184,10 @@ class SiteConfiguration(SingletonModel):
                                              max_length=64,
                                              default="Get the most latest news")
     # dicount
+    discount_block_html_id = models.CharField("Идентификатор HTML",
+                                               max_length=16,
+                                               default='presale')
+
     discount_block_text = models.CharField("Заголовок 'Discount'",
                                            max_length=64,
                                            default='Discount for early investors')
