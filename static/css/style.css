@@ -3160,6 +3160,7 @@ body {
     width: 133px;
     height: 45px;
     background-image: url("../img/header-logo.png");
+    background-size: contain;
     background-repeat: no-repeat; }
     @media only screen and (max-width: 667px) {
       .footer__logo {
@@ -3239,6 +3240,7 @@ body {
     width: 133px;
     height: 45px;
     background-image: url("../img/header-logo.png");
+    background-size: contain;
     background-repeat: no-repeat; }
     @media only screen and (max-width: 667px) {
       .header .top-line .logo {
