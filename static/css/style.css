@@ -2690,7 +2690,7 @@ body {
   .discount-block .term-title {
     margin: 8px 0 0 0;
     font-family: "museocanscyrl300", sans-serif;
-    font-size: 0.75em;
+    font-size: 1em;
     color: #5b5b5b;
     text-align: center; }
     .discount-block .term-title a {
@@ -3158,7 +3158,7 @@ body {
     vertical-align: top;
     margin: 36px 0 0 30px;
     width: 133px;
-    height: 45px;
+    height: 52px;
     background-image: url("../img/header-logo.png");
     background-size: contain;
     background-repeat: no-repeat; }
@@ -3238,7 +3238,7 @@ body {
     vertical-align: top;
     margin: 22px 0 0 30px;
     width: 133px;
-    height: 45px;
+    height: 52px;
     background-image: url("../img/header-logo.png");
     background-size: contain;
     background-repeat: no-repeat; }
