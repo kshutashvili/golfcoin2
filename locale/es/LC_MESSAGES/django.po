@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-09 15:54+0000\n"
+"POT-Creation-Date: 2017-10-11 16:44+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -102,24 +102,54 @@ msgstr ""
 msgid "Enter a valid ethereum address"
 msgstr ""
 
-#: golfco/settings.py:133
+#: golfco/settings.py:141
 msgid "Английский"
 msgstr ""
 
-#: golfco/settings.py:134
+#: golfco/settings.py:142
 msgid "Русский"
 msgstr ""
 
-#: golfco/settings.py:135
+#: golfco/settings.py:143
 msgid "Испанский"
 msgstr ""
 
-#: golfco/settings.py:136
+#: golfco/settings.py:144
 msgid "Немецкий"
 msgstr ""
 
-#: golfco/settings.py:137
+#: golfco/settings.py:145
 msgid "Китайский"
+msgstr ""
+
+#: templates/admin/base.html:30
+msgid "Welcome,"
+msgstr ""
+
+#: templates/admin/base.html:35 templates/two_factor/_base.html:21
+msgid "View site"
+msgstr ""
+
+#: templates/admin/base.html:40
+msgid "Documentation"
+msgstr ""
+
+#: templates/admin/base.html:44
+msgid "Two factor setup"
+msgstr ""
+
+#: templates/admin/base.html:47
+#: templates/registration/password_reset_confirm.html:11
+#: templates/registration/password_reset_confirm.html:18
+msgid "Change password"
+msgstr ""
+
+#: templates/admin/base.html:49 templates/two_factor/_base.html:25
+msgid "Log out"
+msgstr ""
+
+#: templates/admin/base.html:59
+msgid "Home"
 msgstr ""
 
 #: templates/base_up.html:33 templates/index.html:61
@@ -380,11 +410,6 @@ msgid ""
 "\">login</a> now."
 msgstr ""
 
-#: templates/registration/password_reset_confirm.html:11
-#: templates/registration/password_reset_confirm.html:18
-msgid "Change password"
-msgstr ""
-
 #: templates/registration/password_reset_confirm.html:12
 msgid "Enter new password in the form below"
 msgstr ""
@@ -450,6 +475,10 @@ msgstr ""
 
 #: templates/signup.html:11
 msgid "Already have an account?"
+msgstr ""
+
+#: templates/two_factor/_base.html:24
+msgid "Return to Admin"
 msgstr ""
 
 #: users/models.py:40
