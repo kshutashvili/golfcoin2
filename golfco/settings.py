@@ -14,6 +14,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 from django.utils.translation import ugettext_lazy as _
+from django.core.urlresolvers import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -46,6 +47,10 @@ INSTALLED_APPS = [
     'rosetta',
     'embed_video',
     'ckeditor',
+    'django_otp',
+    'django_otp.plugins.otp_static',
+    'django_otp.plugins.otp_totp',
+    'two_factor',
     # own
     'users',
     'config',
@@ -61,6 +66,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django_otp.middleware.OTPMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -107,6 +113,8 @@ DATABASES = {
 
 AUTH_USER_MODEL = 'users.User'
 LOGIN_REDIRECT_URL = '/profile/'
+LOGIN_URL = 'two_factor:login'
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {

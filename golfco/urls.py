@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.contrib.auth.decorators import user_passes_test
+from django.core.urlresolvers import RegexURLPattern
 from django.conf.urls.i18n import i18n_patterns
 from django.conf import settings
 from django.conf.urls.static import static
+
 
 from django.contrib.auth import views as auth_views
 from config.views import (IndexView, SignupView,
@@ -25,11 +28,29 @@ from config.views import (IndexView, SignupView,
                           PersonalProfileView, check_email,
                           check_email_profile, get_tokens_count)
 from subscriptions.views import SubscriptionView
+from two_factor.urls import urlpatterns as two_factor_urls
 
+decorators = [user_passes_test(lambda u: u.is_superuser)]
+
+
+def decorate_pattern(urlpattern):
+    callback = urlpattern.callback
+    for decorator in reversed(decorators):
+        callback = decorator(callback)
+
+    return RegexURLPattern(
+        urlpattern.regex.pattern,
+        callback,
+        urlpattern.default_args,
+        urlpattern.name
+    )
+
+two_factor_urls = [two_factor_urls[0]] + [decorate_pattern(pattern) for pattern in two_factor_urls[1:]]
 
 urlpatterns = i18n_patterns(
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^admin/', admin.site.urls),
+    url(r'', include(two_factor_urls, 'two_factor')),
     url(r'^$', IndexView.as_view(), name="index"),
     url(r'^signup/$', SignupView.as_view(), name="signup"),
     url(r'^login/$', CustomLoginView.as_view(), name="login"),
@@ -46,6 +67,7 @@ urlpatterns = i18n_patterns(
     url(r'^reset/done/$', auth_views.password_reset_complete, name='password_reset_complete'),
 
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 
 if 'rosetta' in settings.INSTALLED_APPS:
     urlpatterns += i18n_patterns(
