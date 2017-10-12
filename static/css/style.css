@@ -2925,7 +2925,8 @@ body {
 .block7 {
   margin: 147px 0 0 0;
   padding: 0 0 46px 0;
-  background-image: url("../img/bg_team.png"); }
+  background-image: url("../img/bg_team.png");
+  background-size: cover; }
   @media only screen and (max-width: 1024px) {
     .block7 {
       background-size: cover;
@@ -2967,7 +2968,7 @@ body {
         font-size: 0.9375em; }
       .block7 .team-block__member .socials {
         width: 110px;
-        margin-left: 38px; }
+        margin-left: 40px; }
       .block7 .team-block__member a {
         display: inline-block;
         vertical-align: top;
