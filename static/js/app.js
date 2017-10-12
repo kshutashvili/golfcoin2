@@ -3849,7 +3849,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     var $submit = $('#submit-account-form');
     var $dropify = $form.find('.dropify');
 
-    $dropify.dropify();
+    $dropify.dropify({
+        tpl: {
+            filename: '<p class="dropify-filename"><span class="file-icon"></span> <span class="dropify-filename-inner">Загрузите документ</span></p>'
+        }
+    });
 
     $form.validate({
         errorPlacement: function errorPlacement(error, element) {},
@@ -3938,7 +3942,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
     $("body").off("click");
     $("body").on("click", function (e) {
-        e.preventDefault();
         if (flag) {
             $submenu.hide();
             $langBtn.removeClass("active");
