@@ -41,7 +41,7 @@
                 </div>
                 <ul class="menu">
                     {% for item in menu %}
-                        <li><a class="link" href="{% if item.link %}{{ item.link }}{% else %}#{% endif %}">{{ item.name }}</a></li>
+                        <li><a class="link" href="{% if item.link %}{% url 'index' %}{{ item.link }}{% else %}#{% endif %}">{{ item.name }}</a></li>
                     {% endfor %}
 
 
