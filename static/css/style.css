@@ -3700,6 +3700,39 @@ body {
         border: 1px solid #c0c0c0;
         -webkit-border-radius: 5px;
         border-radius: 5px; }
+    .lk-section .donation-form .step-four {
+      margin: 31px 0 0 0; }
+      .lk-section .donation-form .step-four .input-address {
+        display: block;
+        width: 251px;
+        height: 45px;
+        margin: 0 auto 0 auto;
+        font-family: "museocanscyrl500", sans-serif;
+        font-size: 0.9375em;
+        color: #5b5b5b;
+        text-align: center;
+        border: 1px solid #c0c0c0;
+        -webkit-border-radius: 5px;
+        border-radius: 5px; }
+      .lk-section .donation-form .step-four .e20-wallet-input {
+        display: block;
+        width: 251px;
+        height: 43px;
+        margin: 0 auto 0 auto;
+        font-family: "museocanscyrl500", sans-serif;
+        font-size: 0.9375em;
+        color: #5b5b5b;
+        text-align: center;
+        border: 1px solid #c0c0c0;
+        -webkit-border-radius: 5px;
+        border-radius: 5px; }
+      .lk-section .donation-form .step-four .required-field {
+        width: 251px;
+        margin: 6px auto 10px auto;
+        font-family: "museocanscyrl300", sans-serif;
+        font-size: 0.75em;
+        color: #5b5b5b;
+        text-align: center; }
     .lk-section .donation-form .submit {
       cursor: pointer;
       display: block;

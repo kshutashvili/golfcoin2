@@ -149,16 +149,17 @@
                     <p class="step-title">{% trans 'Step 2. Transfer your money to this address' %}</p>
                     <input type="text" class="input-address" name="donation_address" id="donation_address" value="{% if donation_form.address.value %}{{ donation_form.address.value }}{% else %}{{ addresses.eth_address }}{% endif %}" readonly/>
                     <a href="#!" class="copy-address" data-clipboard-target="#donation_address">{% trans 'Copy address' %}</a>
-                    <label for="e20_wallet" class="e20_wallet">{% trans 'Enter your E20 wallet address' %}</label>
+                </div>
+                <div class="step-three">
+                    <p class="step-title">{% trans 'Step 3. Enter the transaction number you sent' %} <span id="code">the {{ donation_form.payment_method.value|default:"ETH" }}</span></p>
+                    <input type="text" class="transaction_address" name="tx_id" value="{{ donation_form.tx_id.value|default:"" }}"/>
+                </div>
+                <div class="step-four">
+                    <p class="step-title">{% trans 'Step 4. Enter your E20 wallet address' %}</p>
                     <input type="text" class="e20-wallet-input" id="e20_wallet" name="e20_wallet" value="{{ donation_form.e20_wallet.value|default:"" }}">
                     <p class="required-field">*This field is required</p>
                 </div>
 
-                <div class="step-three">
-                    <p class="step-title">{% trans 'Step 3. Enter the transaction number you sent' %} <span id="code">the {{ donation_form.payment_method.value|default:"ETH" }}</span></p>
-                    <input type="text" class="transaction_address" name="tx_id" value="{{ donation_form.tx_id.value|default:"" }}"/>
-                    <input type="submit" id="submit-donation-form" name="submit" class="hidden" value="{% trans 'Send' %}"/>
-                </div>
                 <label for="submit-donation-form" class="radio-label" tabindex="0">{% trans 'Send' %}</label>
             </form>
         </div>
