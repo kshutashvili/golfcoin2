@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-11 16:44+0300\n"
+"POT-Creation-Date: 2017-10-13 10:24+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,35 +26,39 @@ msgstr ""
 msgid "Current password is incorrect"
 msgstr ""
 
-#: config/models.py:314
+#: config/models.py:209
+msgid "Document scan rules"
+msgstr ""
+
+#: config/models.py:318
 msgid "Адрес ETH"
 msgstr ""
 
-#: config/models.py:315
+#: config/models.py:319
 msgid "Адрес BTC"
 msgstr ""
 
-#: config/models.py:316
+#: config/models.py:320
 msgid "Адрес LTC"
 msgstr ""
 
-#: config/models.py:317
+#: config/models.py:321
 msgid "Адрес ETC"
 msgstr ""
 
-#: config/models.py:320 config/models.py:323
+#: config/models.py:324 config/models.py:327
 msgid "Адреса для покупки токенов"
 msgstr ""
 
-#: config/views.py:105
+#: config/views.py:106
 msgid "Changes saved"
 msgstr ""
 
-#: config/views.py:110
+#: config/views.py:111
 msgid "Data sent"
 msgstr ""
 
-#: config/views.py:130 config/views.py:149
+#: config/views.py:131 config/views.py:150
 msgid "This email address is already registered"
 msgstr ""
 
@@ -215,7 +219,7 @@ msgstr ""
 msgid "participants"
 msgstr ""
 
-#: templates/index_main.html:161 templates/personal_profile.html:151
+#: templates/index_main.html:161 templates/personal_profile.html:209
 msgid "Copy address"
 msgstr ""
 
@@ -232,7 +236,7 @@ msgid "You have read, understand and agree to our"
 msgstr ""
 
 #: templates/index_main.html:164 templates/index_main.html:369
-#: templates/personal_profile.html:115
+#: templates/personal_profile.html:173
 msgid "terms and conditions"
 msgstr ""
 
@@ -299,11 +303,11 @@ msgstr ""
 msgid "Surname"
 msgstr ""
 
-#: templates/personal_profile.html:53 users/models.py:50
+#: templates/personal_profile.html:53 users/models.py:51
 msgid "Address"
 msgstr ""
 
-#: templates/personal_profile.html:57 users/models.py:54
+#: templates/personal_profile.html:57 users/models.py:55
 msgid "Phone number"
 msgstr ""
 
@@ -319,79 +323,139 @@ msgstr ""
 msgid "Current password"
 msgstr ""
 
-#: templates/personal_profile.html:81
-msgid "History of your transactions"
+#: templates/personal_profile.html:80 templates/personal_profile.html:98
+#: templates/personal_profile.html:116
+msgid "Document scan copy"
 msgstr ""
 
-#: templates/personal_profile.html:85
-msgid "Date"
+#: templates/personal_profile.html:81 templates/personal_profile.html:99
+#: templates/personal_profile.html:117
+msgid "Drag and drop a file here or click"
 msgstr ""
 
-#: templates/personal_profile.html:86
-msgid "Method"
+#: templates/personal_profile.html:82 templates/personal_profile.html:100
+#: templates/personal_profile.html:118
+msgid "Drag and drop or click to replace"
 msgstr ""
 
-#: templates/personal_profile.html:87
-msgid "Number of tokens"
-msgstr ""
-
-#: templates/personal_profile.html:88
-msgid "Sum"
-msgstr ""
-
-#: templates/personal_profile.html:101
-msgid "No transactions yet"
-msgstr ""
-
-#: templates/personal_profile.html:112
-msgid "Ознакомтесь с"
-msgstr ""
-
-#: templates/personal_profile.html:113
-msgid "privacy policy "
-msgstr ""
-
-#: templates/personal_profile.html:114
-msgid "и"
-msgstr ""
-
+#: templates/personal_profile.html:83 templates/personal_profile.html:101
 #: templates/personal_profile.html:119
-msgid "Make a donation and get tokens"
+msgid "Remove"
 msgstr ""
 
-#: templates/personal_profile.html:137
-msgid "Step 1. Choose your payment method"
+#: templates/personal_profile.html:84 templates/personal_profile.html:102
+#: templates/personal_profile.html:120
+msgid "Ooops, something wrong happened"
+msgstr ""
+
+#: templates/personal_profile.html:85 templates/personal_profile.html:103
+#: templates/personal_profile.html:121
+msgid "The file size is too big ({{ value }} max)."
+msgstr ""
+
+#: templates/personal_profile.html:86 templates/personal_profile.html:104
+#: templates/personal_profile.html:122
+msgid "The file is not allowed ({{ value }} only)."
+msgstr ""
+
+#: templates/personal_profile.html:87 templates/personal_profile.html:105
+#: templates/personal_profile.html:123
+msgid "The image width is too small ({{ value }}}px min)."
+msgstr ""
+
+#: templates/personal_profile.html:88 templates/personal_profile.html:106
+#: templates/personal_profile.html:124
+msgid "The image width is too big ({{ value }}}px max)."
+msgstr ""
+
+#: templates/personal_profile.html:89 templates/personal_profile.html:107
+#: templates/personal_profile.html:125
+msgid "The image height is too small ({{ value }}}px min)."
+msgstr ""
+
+#: templates/personal_profile.html:90 templates/personal_profile.html:108
+#: templates/personal_profile.html:126
+msgid "The image height is too big ({{ value }}px max)."
+msgstr ""
+
+#: templates/personal_profile.html:91 templates/personal_profile.html:109
+#: templates/personal_profile.html:127
+msgid "The image format is not allowed ({{ value }} only)."
 msgstr ""
 
 #: templates/personal_profile.html:139
-msgid "Buy with ETH"
-msgstr ""
-
-#: templates/personal_profile.html:141
-msgid "Buy with BTC"
+msgid "History of your transactions"
 msgstr ""
 
 #: templates/personal_profile.html:143
-msgid "Buy with LTC"
+msgid "Date"
+msgstr ""
+
+#: templates/personal_profile.html:144
+msgid "Method"
 msgstr ""
 
 #: templates/personal_profile.html:145
+msgid "Number of tokens"
+msgstr ""
+
+#: templates/personal_profile.html:146
+msgid "Sum"
+msgstr ""
+
+#: templates/personal_profile.html:159
+msgid "No transactions yet"
+msgstr ""
+
+#: templates/personal_profile.html:170
+msgid "Ознакомтесь с"
+msgstr ""
+
+#: templates/personal_profile.html:171
+msgid "privacy policy "
+msgstr ""
+
+#: templates/personal_profile.html:172
+msgid "и"
+msgstr ""
+
+#: templates/personal_profile.html:177
+msgid "Make a donation and get tokens"
+msgstr ""
+
+#: templates/personal_profile.html:195
+msgid "Step 1. Choose your payment method"
+msgstr ""
+
+#: templates/personal_profile.html:197
+msgid "Buy with ETH"
+msgstr ""
+
+#: templates/personal_profile.html:199
+msgid "Buy with BTC"
+msgstr ""
+
+#: templates/personal_profile.html:201
+msgid "Buy with LTC"
+msgstr ""
+
+#: templates/personal_profile.html:203
 msgid "Buy with ETC"
 msgstr ""
 
-#: templates/personal_profile.html:149
+#: templates/personal_profile.html:207
 msgid "Step 2. Transfer your money to this address"
 msgstr ""
 
-#: templates/personal_profile.html:152
-msgid "Enter your E20 wallet address"
-msgstr ""
-
-#: templates/personal_profile.html:158
+#: templates/personal_profile.html:212
 msgid "Step 3. Enter the transaction number you sent"
 msgstr ""
 
-#: templates/personal_profile.html:160 templates/personal_profile.html:162
+#: templates/personal_profile.html:216
+msgid "Step 4. Enter your E20 wallet address"
+msgstr ""
+
+#: templates/personal_profile.html:221
 msgid "Send"
 msgstr ""
 
@@ -481,14 +545,43 @@ msgstr ""
 msgid "Return to Admin"
 msgstr ""
 
-#: users/models.py:40
+#: users/admin.py:20
+msgid "Contacts"
+msgstr ""
+
+#: users/admin.py:23
+msgid "Document scans"
+msgstr ""
+
+#: users/fields.py:38
+#, python-format
+msgid "Please keep filesize under %s. Current filesize %s"
+msgstr ""
+
+#: users/fields.py:40
+msgid "Filetype not supported."
+msgstr ""
+
+#: users/models.py:41
 msgid "email address"
 msgstr ""
 
-#: users/models.py:43
+#: users/models.py:44
 msgid "username"
 msgstr ""
 
-#: users/models.py:45
+#: users/models.py:46
 msgid "150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr ""
+
+#: users/models.py:60
+msgid "Document scan 1"
+msgstr ""
+
+#: users/models.py:70
+msgid "Document scan 2"
+msgstr ""
+
+#: users/models.py:80
+msgid "Document scan 3"
 msgstr ""
