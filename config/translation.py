@@ -37,7 +37,7 @@ class SiteConfigurationTranslationOptions(TranslationOptions):
 
 
 class TeammateTranslationOptions(TranslationOptions):
-    fields = ('name', 'position')
+    fields = ('name', 'position', 'experience')
 
 
 class AdvisorTranslationOptions(TranslationOptions):
