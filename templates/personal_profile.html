@@ -92,7 +92,7 @@
                             data-allowed-file-extensions="pdf png jpg jpeg"
                             data-max-file-size="2M"
                             data-height="150"
-                            {% if account_form.document_1.value %}data-show-remove="false" data-default-file="{{ account_form.instance.document_1.url }}"  disabled="disabled"{% endif %}/>
+                            {% if account_form.document_1.value %}data-show-remove="false" data-default-file="{{ account_form.instance.document_1_url }}"  disabled="disabled"{% endif %}/>
                         </p>
                         <p class="input-wrap">
                             <label for="document_2" class="label-disabled">{% trans 'Document scan copy' %} 2</label>
@@ -110,7 +110,7 @@
                             data-allowed-file-extensions="pdf png jpg jpeg"
                             data-max-file-size="2M"
                             data-height="150"
-                            {% if account_form.document_2.value %}data-show-remove="false" data-default-file="{{ account_form.instance.document_2.url }}"  disabled="disabled"{% endif %}/>
+                            {% if account_form.document_2.value %}data-show-remove="false" data-default-file="{{ account_form.instance.document_2_url }}"  disabled="disabled"{% endif %}/>
                         </p>
                         <p class="input-wrap">
                             <label for="document_3" class="label-disabled">{% trans 'Document scan copy' %} 3</label>
@@ -128,7 +128,7 @@
                             data-allowed-file-extensions="pdf png jpg jpeg"
                             data-max-file-size="2M"
                             data-height="150"
-                            {% if account_form.document_3.value %}data-show-remove="false" data-default-file="{{ account_form.instance.document_3.url }}" disabled="disabled"{% endif %}/>
+                            {% if account_form.document_3.value %}data-show-remove="false" data-default-file="{{ account_form.instance.document_3_url }}" disabled="disabled"{% endif %}/>
                         </p>
                         <input type="hidden" name="submit" value="account_form">
                         <input type="submit" id="submit-account-form" class="hidden" />

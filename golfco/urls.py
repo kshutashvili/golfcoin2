@@ -29,6 +29,7 @@ from config.views import (IndexView, SignupView,
                           check_email_profile, get_tokens_count)
 from subscriptions.views import SubscriptionView
 from two_factor.urls import urlpatterns as two_factor_urls
+from users.views import document_view
 
 decorators = [user_passes_test(lambda u: u.is_superuser)]
 
@@ -65,6 +66,9 @@ urlpatterns = i18n_patterns(
     url(r'^reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
         auth_views.password_reset_confirm, name='password_reset_confirm'),
     url(r'^reset/done/$', auth_views.password_reset_complete, name='password_reset_complete'),
+    url(r'document/(?P<filename>[^/]+)/$',
+        document_view,
+        name='document_view'),
 
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
