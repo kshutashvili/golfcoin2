@@ -1,10 +1,22 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import os
+from django.db.models.fields.files import FieldFile
 from django.db.models import FileField
 from django.forms import forms
 from django.template.defaultfilters import filesizeformat
+from django.shortcuts import reverse
 from django.utils.translation import ugettext_lazy as _
+
+
+class ProtectedFieldFile(FieldFile):
+
+    @property
+    def url(self):
+        self._require_file()
+        return reverse('document_view',
+                       args=[os.path.basename(self.name)])
 
 
 class ContentTypeRestrictedFileField(FileField):
@@ -21,6 +33,8 @@ class ContentTypeRestrictedFileField(FileField):
             250MB - 214958080
             500MB - 429916160
     """
+    attr_class = ProtectedFieldFile
+
     def __init__(self, *args, **kwargs):
         self.content_types = kwargs.pop("content_types", [])
         self.max_upload_size = kwargs.pop("max_upload_size", 0)

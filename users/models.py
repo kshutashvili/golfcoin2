@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-import os
 from django.db import models
 from django.contrib.auth.models import BaseUserManager, AbstractUser
 from django.utils.translation import ugettext_lazy as _
 from .fields import ContentTypeRestrictedFileField
-from django.shortcuts import reverse
 
 
 class CustomUserManager(BaseUserManager):
@@ -91,18 +89,3 @@ class User(AbstractUser):
                                                 )
 
     objects = CustomUserManager()
-
-    @property
-    def document_1_url(self):
-        return reverse('document_view',
-                       args=[os.path.basename(self.document_1.file.name)])
-
-    @property
-    def document_2_url(self):
-        return reverse('document_view',
-                       args=[os.path.basename(self.document_2.file.name)])
-
-    @property
-    def document_3_url(self):
-        return reverse('document_view',
-                       args=[os.path.basename(self.document_3.file.name)])
