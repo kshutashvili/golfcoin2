@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django import forms
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.forms import UserChangeForm
@@ -13,6 +12,7 @@ class MyUserChangeForm(UserChangeForm):
 
     class Meta(UserChangeForm.Meta):
         model = User
+        field_classes = {}
 
 
 class MyUserAdmin(UserAdmin):

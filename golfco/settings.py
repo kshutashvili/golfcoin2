@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'menu',
     'subscriptions',
     'donations',
+    'django_cleanup',
 ]
 
 MIDDLEWARE = [
