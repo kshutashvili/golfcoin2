@@ -3806,7 +3806,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
     var $form = $("#donation-form");
     var $submit = $form.find("#submit-donation-form");
-    var $radio = $form.find('.radio-label :not(.submit-btn)');
+    var $radio = $form.find('.radio-label:not(.submit-btn)');
     var $address = $form.find('#donation_address');
     var $code = $form.find('#code');
     var $copyAddress = $form.find('.copy-address');
