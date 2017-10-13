@@ -246,6 +246,14 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "privacy_policy_de",
                                "privacy_policy_es",
                                "privacy_policy_zh",)}),
+                 ("Правила для загрузки документов", {
+                     'classes': ('collapse',),
+                     "fields": (
+                         "documents_rules_en",
+                         "documents_rules_ru",
+                         "documents_rules_de",
+                         "documents_rules_es",
+                         "documents_rules_zh",)}),
                  ("Социальные сети", {
                     'classes': ('collapse',),
                     "fields": ("social_in",

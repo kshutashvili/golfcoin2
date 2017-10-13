@@ -66,5 +66,5 @@ class CustomUserChangeForm(forms.ModelForm):
     class Meta:
         fields = ('first_name', 'last_name', 'verify_password',
                   'email', 'address', 'phone_number', 'password1',
-                  'password2')
+                  'password2', 'document_1', 'document_2', 'document_3')
         model = User

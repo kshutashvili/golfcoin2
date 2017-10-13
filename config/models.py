@@ -205,6 +205,10 @@ class SiteConfiguration(SingletonModel):
                                       blank=True,
                                       null=True)
 
+    # documents instruction
+    documents_rules = RichTextField(_("Document scan rules"),
+                                    blank=True)
+
     class Meta:
         verbose_name = "Конфигурация сайта"
 

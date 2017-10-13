@@ -3981,6 +3981,21 @@ body {
         width: 100%; }
         .lk-section__content .account-info .lk-account-form .input-wrap {
           margin: 0 0 10px 0; }
+          .lk-section__content .account-info .lk-account-form .input-wrap .dropify-wrapper {
+            padding: 0;
+            margin: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border: 1px solid #c0c0c0;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            outline: none;
+            font-family: "museocanscyrl500", sans-serif;
+            font-size: 0.9375em; }
+            .lk-section__content .account-info .lk-account-form .input-wrap .dropify-wrapper .dropify-preview {
+              padding: 0; }
+            .lk-section__content .account-info .lk-account-form .input-wrap .dropify-wrapper .dropify-infos .dropify-infos-inner {
+              padding: 0; }
           .lk-section__content .account-info .lk-account-form .input-wrap label {
             display: block;
             font-family: "museocanscyrl500", sans-serif;

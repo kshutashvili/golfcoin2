@@ -32,7 +32,8 @@ class SiteConfigurationTranslationOptions(TranslationOptions):
               'how_block_block_title',
               'social_block_title',
               'terms_and_conditions',
-              'privacy_policy')
+              'privacy_policy',
+              'documents_rules')
 
 
 class TeammateTranslationOptions(TranslationOptions):

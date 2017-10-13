@@ -101,6 +101,7 @@ class PersonalProfileView(TemplateView):
         if request.POST.get('submit', '') == 'account_form':
             form = CustomUserChangeForm(request,
                                         request.POST,
+                                        request.FILES,
                                         instance=request.user)
             message = _("Changes saved")
             ctx_kwargs = {"account_form": form}

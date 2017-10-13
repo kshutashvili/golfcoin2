@@ -39,7 +39,7 @@
             <div class="lk-section__content">
 
                 <div class="account-info">
-                    <form id="lk-account-form" class="lk-account-form" method="POST" data-check-email-url="{% url 'check_email_profile' %}">
+                    <form id="lk-account-form" class="lk-account-form" method="POST" data-check-email-url="{% url 'check_email_profile' %}" enctype="multipart/form-data">
                         {% csrf_token %}
                         <p class="input-wrap ">
                             <label for="first_name">{% trans 'Name' %}</label>
@@ -73,8 +73,65 @@
                             <label for="verify_password">{% trans 'Current password' %}</label>
                             <input type="password" class="password" id="verify_password" name="verify_password"/>
                         </p>
-                        <input type="file" class="dropify" id="document_1" name="document_1"/>
-                        <input type="submit" id="submit-account-form" name="submit" class="hidden" value="account_form"/>
+                        <div class="input-wrap">
+                            <div class="caption">{{ conf.documents_rules|safe }}</div>
+                        </div>
+                        <p class="input-wrap">
+                            <label for="document_1" class="label-disabled">{% trans 'Document scan copy' %} 1</label>
+                            <input type="file" class="dropify" id="document_1" name="document_1" data-message-default="{% trans 'Drag and drop a file here or click' %}"
+                            data-message-replace="{% trans 'Drag and drop or click to replace' %}"
+                            data-message-remove="{% trans 'Remove' %}"
+                            data-message-error="{% trans 'Ooops, something wrong happened' %}"
+                            data-error-fileSize="{% trans 'The file size is too big ({{ value }} max).' %}"
+                            data-error-fileExtension="{% trans 'The file is not allowed ({{ value }} only).' %}"
+                            data-error-minWidth="{% trans 'The image width is too small ({{ value }}}px min).' %}"
+                            data-error-maxWidth="{% trans 'The image width is too big ({{ value }}}px max).' %}"
+                            data-error-minHeight="{% trans 'The image height is too small ({{ value }}}px min).' %}"
+                            data-error-maxHeight="{% trans 'The image height is too big ({{ value }}px max).' %}"
+                            data-error-imageFormat="{% trans 'The image format is not allowed ({{ value }} only).' %}"
+                            data-allowed-file-extensions="pdf png jpg jpeg"
+                            data-max-file-size="2M"
+                            data-height="150"
+                            {% if account_form.document_1.value %}data-show-remove="false" data-default-file="{{ account_form.instance.document_1.url }}"  disabled="disabled"{% endif %}/>
+                        </p>
+                        <p class="input-wrap">
+                            <label for="document_2" class="label-disabled">{% trans 'Document scan copy' %} 2</label>
+                            <input type="file" class="dropify" id="document_2" name="document_2" data-message-default="{% trans 'Drag and drop a file here or click' %}"
+                            data-message-replace="{% trans 'Drag and drop or click to replace' %}"
+                            data-message-remove="{% trans 'Remove' %}"
+                            data-message-error="{% trans 'Ooops, something wrong happened' %}"
+                            data-error-fileSize="{% trans 'The file size is too big ({{ value }} max).' %}"
+                            data-error-fileExtension="{% trans 'The file is not allowed ({{ value }} only).' %}"
+                            data-error-minWidth="{% trans 'The image width is too small ({{ value }}}px min).' %}"
+                            data-error-maxWidth="{% trans 'The image width is too big ({{ value }}}px max).' %}"
+                            data-error-minHeight="{% trans 'The image height is too small ({{ value }}}px min).' %}"
+                            data-error-maxHeight="{% trans 'The image height is too big ({{ value }}px max).' %}"
+                            data-error-imageFormat="{% trans 'The image format is not allowed ({{ value }} only).' %}"
+                            data-allowed-file-extensions="pdf png jpg jpeg"
+                            data-max-file-size="2M"
+                            data-height="150"
+                            {% if account_form.document_2.value %}data-show-remove="false" data-default-file="{{ account_form.instance.document_2.url }}"  disabled="disabled"{% endif %}/>
+                        </p>
+                        <p class="input-wrap">
+                            <label for="document_3" class="label-disabled">{% trans 'Document scan copy' %} 3</label>
+                            <input type="file" class="dropify" id="document_3" name="document_3" data-message-default="{% trans 'Drag and drop a file here or click' %}"
+                            data-message-replace="{% trans 'Drag and drop or click to replace' %}"
+                            data-message-remove="{% trans 'Remove' %}"
+                            data-message-error="{% trans 'Ooops, something wrong happened' %}"
+                            data-error-fileSize="{% trans 'The file size is too big ({{ value }} max).' %}"
+                            data-error-fileExtension="{% trans 'The file is not allowed ({{ value }} only).' %}"
+                            data-error-minWidth="{% trans 'The image width is too small ({{ value }}}px min).' %}"
+                            data-error-maxWidth="{% trans 'The image width is too big ({{ value }}}px max).' %}"
+                            data-error-minHeight="{% trans 'The image height is too small ({{ value }}}px min).' %}"
+                            data-error-maxHeight="{% trans 'The image height is too big ({{ value }}px max).' %}"
+                            data-error-imageFormat="{% trans 'The image format is not allowed ({{ value }} only).' %}"
+                            data-allowed-file-extensions="pdf png jpg jpeg"
+                            data-max-file-size="2M"
+                            data-height="150"
+                            {% if account_form.document_3.value %}data-show-remove="false" data-default-file="{{ account_form.instance.document_3.url }}" disabled="disabled"{% endif %}/>
+                        </p>
+                        <input type="hidden" name="submit" value="account_form">
+                        <input type="submit" id="submit-account-form" class="hidden" />
                     </form>
                 </div>
 

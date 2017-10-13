@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import BaseUserManager, AbstractUser
 from django.utils.translation import ugettext_lazy as _
+from .fields import ContentTypeRestrictedFileField
 
 
 class CustomUserManager(BaseUserManager):
@@ -55,5 +56,36 @@ class User(AbstractUser):
                                     max_length=25,
                                     blank=True,
                                     null=True)
+
+    document_1 = ContentTypeRestrictedFileField(_("Document scan 1"),
+                                                upload_to='scans',
+                                                max_upload_size=2097152,
+                                                content_types={'application/pdf',
+                                                               'image/jpeg',
+                                                               'image/jpg',
+                                                               'image/png'},
+                                                blank=True,
+                                                null=True
+                                                )
+    document_2 = ContentTypeRestrictedFileField(_("Document scan 2"),
+                                                upload_to='scans',
+                                                max_upload_size=2097152,
+                                                content_types={'application/pdf',
+                                                               'image/jpeg',
+                                                               'image/jpg',
+                                                               'image/png'},
+                                                blank=True,
+                                                null=True
+                                                )
+    document_3 = ContentTypeRestrictedFileField(_("Document scan 3"),
+                                                upload_to='scans',
+                                                max_upload_size=2097152,
+                                                content_types={'application/pdf',
+                                                               'image/jpeg',
+                                                               'image/jpg',
+                                                               'image/png'},
+                                                blank=True,
+                                                null=True
+                                                )
 
     objects = CustomUserManager()

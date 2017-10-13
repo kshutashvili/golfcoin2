@@ -3848,11 +3848,29 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     var $form = $("#lk-account-form");
     var $submit = $('#submit-account-form');
     var $dropify = $form.find('.dropify');
+    var $disabled = $form.find('.label-disabled');
+
+    $disabled.on('click', function (e) {
+        e.preventDefault();
+    });
 
     $dropify.dropify({
-        tpl: {
-            filename: '<p class="dropify-filename"><span class="file-icon"></span> <span class="dropify-filename-inner">Загрузите документ</span></p>'
+        messages: {
+            'default': $dropify.data("message-default"),
+            'replace': $dropify.data("message-replace"),
+            'remove': $dropify.data("message-remove"),
+            'error': $dropify.data("message-error")
+        },
+        error: {
+            'fileSize': $dropify.data('error-fileSize'),
+            'fileExtension': $dropify.data('error-fileExtension'),
+            'minWidth': $dropify.data('error-minWidth'),
+            'maxWidth': $dropify.data('error-maxWidth'),
+            'minHeight': $dropify.data('error-minHeight'),
+            'maxHeight': $dropify.data('error-maxHeight'),
+            'imageFormat': $dropify.data('error-imageFormat')
         }
+
     });
 
     $form.validate({
