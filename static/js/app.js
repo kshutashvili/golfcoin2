@@ -3947,12 +3947,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     $openBtn.off("click");
     $openBtn.on("click", function (e) {
         flag = true;
-        //e.preventDefault();
         e.stopPropagation();
         $submenu.toggle();
         $langBtn.off("click");
         $langBtn.on("click", function (e) {
-            //e.preventDefault();
             e.stopPropagation();
             $langBtn.toggleClass("active");
         });
