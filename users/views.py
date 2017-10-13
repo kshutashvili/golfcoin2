@@ -7,6 +7,7 @@ from django.http.response import HttpResponse, HttpResponseForbidden
 from django.utils.translation import ugettext as _
 from django.contrib.auth import get_user_model
 from django.db.models import Q
+from django.http import Http404
 
 User = get_user_model()
 
@@ -28,9 +29,13 @@ def document_view(request, filename):
         url = os.path.join('/media/', filename)
         path = os.path.join(settings.MEDIA_ROOT, filename)
         mime = magic.Magic(mime=True)
-        cont_type = mime.from_file(path)
-        response['Content-Type'] = cont_type
-        response['X-Accel-Redirect'] = url
+        try:
+            cont_type = mime.from_file(path)
+            response['Content-Type'] = cont_type
+            response['X-Accel-Redirect'] = url
+        except IOError:
+            raise Http404
+
         return response
     else:
         return HttpResponseForbidden(_("Restricted Access"))

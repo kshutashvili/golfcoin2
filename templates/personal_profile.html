@@ -189,7 +189,8 @@
             {% endif %}
             <form class="donation-form" id="donation-form" method="POST">
                 {% csrf_token %}
-                <input type="hidden" name="form_name" value="user_form"/>
+                <input type="submit" class="hidden" id="submit-donation-form"/>
+                <input type="hidden" name="submit" value="donation_form">
 
                 <div class="step-one">
                     <p class="step-title">{% trans 'Step 1. Choose your payment method' %}</p>
@@ -218,7 +219,7 @@
                     <p class="required-field">*This field is required</p>
                 </div>
 
-                <label for="submit-donation-form" class="radio-label" tabindex="0">{% trans 'Send' %}</label>
+                <label for="submit-donation-form" class="radio-label submit-btn" tabindex="0">{% trans 'Send' %}</label>
             </form>
         </div>
     </section>
