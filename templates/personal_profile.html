@@ -207,8 +207,8 @@
                     <tr>
                         <td>{{ tx.created_dt|date:"d.m.Y" }}</td>
                         <td><a href="{{ tx.tx_link }}">{{ tx.payment_method }}</a></td>
-                        <td>{{ tx.tx_sum|default_if_none:"TBD" }}</td>
-                        <td>{{ tx.tokens|default_if_none:"TBD" }}</td>
+                        <td>{{ tx.tx_sum|floatformat:"-10"|default:"TBD" }}</td>
+                        <td>{{ tx.tokens|floatformat:"-10"|default:"TBD" }}</td>
                     </tr>
                     {% empty %}
                     <tr>
