@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-13 10:24+0300\n"
+"POT-Creation-Date: 2017-10-23 08:43+0000\n"
 "PO-Revision-Date: 2017-10-05 08:40+0000\n"
 "Last-Translator:   <phonxis@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,23 +30,23 @@ msgstr ""
 msgid "Document scan rules"
 msgstr ""
 
-#: config/models.py:318
+#: config/models.py:320
 msgid "Адрес ETH"
 msgstr ""
 
-#: config/models.py:319
+#: config/models.py:321
 msgid "Адрес BTC"
 msgstr ""
 
-#: config/models.py:320
+#: config/models.py:322
 msgid "Адрес LTC"
 msgstr ""
 
-#: config/models.py:321
+#: config/models.py:323
 msgid "Адрес ETC"
 msgstr ""
 
-#: config/models.py:324 config/models.py:327
+#: config/models.py:326 config/models.py:329
 msgid "Адреса для покупки токенов"
 msgstr ""
 
@@ -106,23 +106,23 @@ msgstr ""
 msgid "Enter a valid ethereum address"
 msgstr ""
 
-#: golfco/settings.py:141
+#: golfco/settings.py:142
 msgid "Английский"
 msgstr ""
 
-#: golfco/settings.py:142
+#: golfco/settings.py:143
 msgid "Русский"
 msgstr ""
 
-#: golfco/settings.py:143
+#: golfco/settings.py:144
 msgid "Испанский"
 msgstr ""
 
-#: golfco/settings.py:144
+#: golfco/settings.py:145
 msgid "Немецкий"
 msgstr ""
 
-#: golfco/settings.py:145
+#: golfco/settings.py:146
 msgid "Китайский"
 msgstr ""
 
@@ -158,14 +158,14 @@ msgstr ""
 
 #: templates/base_up.html:33 templates/index.html:61
 #: templates/index_main.html:62 templates/index_main.html:176
-#: templates/index_main.html:381 templates/login.html:12
+#: templates/index_main.html:382 templates/login.html:12
 msgid "Sign Up"
 msgstr ""
 
 #: templates/base_up.html:35 templates/index.html:63
 #: templates/index_main.html:64 templates/index_main.html:178
-#: templates/index_main.html:383 templates/login.html:4 templates/login.html:11
-#: templates/login.html:18 templates/signup.html:11
+#: templates/index_main.html:384 templates/login.html:4
+#: templates/login.html:11 templates/login.html:18 templates/signup.html:11
 msgid "Login"
 msgstr ""
 
@@ -221,40 +221,41 @@ msgstr ""
 msgid "participants"
 msgstr ""
 
-#: templates/index_main.html:161 templates/personal_profile.html:209
+#: templates/index_main.html:161 templates/personal_profile.html:169
+#: templates/personal_profile.html:184
 msgid "Copy address"
 msgstr ""
 
-#: templates/index_main.html:163 templates/index_main.html:368
+#: templates/index_main.html:163 templates/index_main.html:369
 msgid "By clicking you acknowledge"
 msgstr ""
 
-#: templates/index_main.html:163 templates/index_main.html:368
+#: templates/index_main.html:163 templates/index_main.html:369
 msgid "privacy policy"
 msgstr ""
 
-#: templates/index_main.html:164 templates/index_main.html:369
+#: templates/index_main.html:164 templates/index_main.html:370
 msgid "You have read, understand and agree to our"
 msgstr ""
 
-#: templates/index_main.html:164 templates/index_main.html:369
-#: templates/personal_profile.html:173
+#: templates/index_main.html:164 templates/index_main.html:370
+#: templates/personal_profile.html:144
 msgid "terms and conditions"
 msgstr ""
 
-#: templates/index_main.html:166 templates/index_main.html:371
+#: templates/index_main.html:166 templates/index_main.html:372
 msgid "Other payment methods"
 msgstr ""
 
-#: templates/index_main.html:177 templates/index_main.html:382
+#: templates/index_main.html:177 templates/index_main.html:383
 msgid "or"
 msgstr ""
 
-#: templates/index_main.html:367
+#: templates/index_main.html:368
 msgid "Show the address for donating ETH"
 msgstr ""
 
-#: templates/index_main.html:400
+#: templates/index_main.html:401
 msgid "This field is required"
 msgstr ""
 
@@ -293,7 +294,7 @@ msgstr ""
 msgid "Yours golfcoin tokens"
 msgstr ""
 
-#: templates/personal_profile.html:18
+#: templates/personal_profile.html:18 templates/personal_profile.html:191
 msgid "Save changes"
 msgstr ""
 
@@ -323,6 +324,10 @@ msgstr ""
 
 #: templates/personal_profile.html:73
 msgid "Current password"
+msgstr ""
+
+#: templates/personal_profile.html:77
+msgid "Document upload rules"
 msgstr ""
 
 #: templates/personal_profile.html:80 templates/personal_profile.html:98
@@ -385,80 +390,78 @@ msgstr ""
 msgid "The image format is not allowed ({{ value }} only)."
 msgstr ""
 
-#: templates/personal_profile.html:139
-msgid "History of your transactions"
-msgstr ""
-
-#: templates/personal_profile.html:143
-msgid "Date"
-msgstr ""
-
-#: templates/personal_profile.html:144
-msgid "Method"
-msgstr ""
-
-#: templates/personal_profile.html:145
-msgid "Number of tokens"
-msgstr ""
-
-#: templates/personal_profile.html:146
-msgid "Sum"
-msgstr ""
-
-#: templates/personal_profile.html:159
-msgid "No transactions yet"
-msgstr ""
-
-#: templates/personal_profile.html:170
+#: templates/personal_profile.html:141
 msgid "Ознакомтесь с"
 msgstr ""
 
-#: templates/personal_profile.html:171
+#: templates/personal_profile.html:142
 msgid "privacy policy "
 msgstr ""
 
-#: templates/personal_profile.html:172
+#: templates/personal_profile.html:143
 msgid "и"
 msgstr ""
 
-#: templates/personal_profile.html:177
-msgid "Make a donation and get tokens"
+#: templates/personal_profile.html:148
+msgid "Buy tokens"
 msgstr ""
 
-#: templates/personal_profile.html:195
-msgid "Step 1. Choose your payment method"
+#: templates/personal_profile.html:167
+msgid "[A] If you want to pay the ETH, pay at this address:"
 msgstr ""
 
-#: templates/personal_profile.html:197
-msgid "Buy with ETH"
+#: templates/personal_profile.html:170
+msgid "You will receive tokens in your wallet."
 msgstr ""
 
-#: templates/personal_profile.html:199
+#: templates/personal_profile.html:171
+msgid ""
+"[B] Step 1. If you want to pay BTC, LTC, ETC first enter the address of your "
+"wallet (not on the stock exchange) to which the tokens will be sent:"
+msgstr ""
+
+#: templates/personal_profile.html:176
+msgid "Step 2. Choose your payment method (coins)."
+msgstr ""
+
+#: templates/personal_profile.html:178
 msgid "Buy with BTC"
 msgstr ""
 
-#: templates/personal_profile.html:201
+#: templates/personal_profile.html:180
 msgid "Buy with LTC"
 msgstr ""
 
-#: templates/personal_profile.html:203
+#: templates/personal_profile.html:182
 msgid "Buy with ETC"
 msgstr ""
 
-#: templates/personal_profile.html:207
-msgid "Step 2. Transfer your money to this address"
+#: templates/personal_profile.html:187
+msgid "Step 3. Enter the transaction number that you sent"
 msgstr ""
 
-#: templates/personal_profile.html:212
-msgid "Step 3. Enter the transaction number you sent"
+#: templates/personal_profile.html:195
+msgid "History of your transactions"
 msgstr ""
 
-#: templates/personal_profile.html:216
-msgid "Step 4. Enter your E20 wallet address"
+#: templates/personal_profile.html:199
+msgid "Date"
 msgstr ""
 
-#: templates/personal_profile.html:221
-msgid "Send"
+#: templates/personal_profile.html:200
+msgid "Method"
+msgstr ""
+
+#: templates/personal_profile.html:201
+msgid "Number of tokens"
+msgstr ""
+
+#: templates/personal_profile.html:202
+msgid "Sum"
+msgstr ""
+
+#: templates/personal_profile.html:215
+msgid "No transactions yet"
 msgstr ""
 
 #: templates/registration/password_reset_complete.html:4
@@ -547,20 +550,20 @@ msgstr ""
 msgid "Return to Admin"
 msgstr ""
 
-#: users/admin.py:20
+#: users/admin.py:22
 msgid "Contacts"
 msgstr ""
 
-#: users/admin.py:23
+#: users/admin.py:25
 msgid "Document scans"
 msgstr ""
 
-#: users/fields.py:38
+#: users/fields.py:52
 #, python-format
 msgid "Please keep filesize under %s. Current filesize %s"
 msgstr ""
 
-#: users/fields.py:40
+#: users/fields.py:54
 msgid "Filetype not supported."
 msgstr ""
 
@@ -586,4 +589,8 @@ msgstr ""
 
 #: users/models.py:80
 msgid "Document scan 3"
+msgstr ""
+
+#: users/views.py:41
+msgid "Restricted Access"
 msgstr ""
