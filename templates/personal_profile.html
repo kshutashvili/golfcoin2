@@ -198,8 +198,8 @@
                     <tr>
                         <td>{% trans 'Date' %}</td>
                         <td>{% trans 'Method' %}</td>
-                        <td>{% trans 'Number of tokens' %}</td>
                         <td>{% trans 'Sum' %}</td>
+                        <td>{% trans 'Number of tokens' %}</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -207,8 +207,8 @@
                     <tr>
                         <td>{{ tx.created_dt|date:"d.m.Y" }}</td>
                         <td><a href="{{ tx.tx_link }}">{{ tx.payment_method }}</a></td>
-                        <td>TBD</td>
-                        <td>TBD</td>
+                        <td>{{ tx.tx_sum|default_if_none:"TBD" }}</td>
+                        <td>{{ tx.tokens|default_if_none:"TBD" }}</td>
                     </tr>
                     {% empty %}
                     <tr>

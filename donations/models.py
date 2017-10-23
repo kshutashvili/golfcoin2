@@ -67,6 +67,13 @@ class Donation(models.Model):
                              blank=True,
                              null=True)
 
+    tokens = models.FloatField(_("Количество токенов"),
+                               blank=True,
+                               null=True)
+    tx_sum = models.FloatField(_("Сумма транзакции"),
+                               blank=True,
+                               null=True)
+
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
                              blank=True,
                              verbose_name=_("Пользователь"),
