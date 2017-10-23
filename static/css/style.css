@@ -3953,6 +3953,10 @@ body {
     font-size: 1.25em;
     color: #5b5b5b;
     text-align: center; }
+    .lk-section__tokens-caption .tokens-count {
+      font-family: "museocanscyrl500", sans-serif;
+      font-size: 0.75em;
+      color: #929292; }
   .lk-section__changes-saved {
     margin: 22px 0 0 0;
     font-family: "museocanscyrl500", sans-serif;
@@ -4027,58 +4031,6 @@ body {
                 background-image: url("../img/edit-green.png"); }
               .lk-section__content .account-info .lk-account-form .input-wrap input.name:focus {
                 background-image: url("../img/edit-green.png"); }
-    .lk-section__content .history {
-      float: left;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      width: 300px;
-      margin: 36px 0 0 42px;
-      padding: 16px 22px 19px 22px;
-      -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-      background-color: #fbfbfb; }
-      @media only screen and (max-width: 652px) {
-        .lk-section__content .history {
-          float: none;
-          margin: 0 auto 0 auto; } }
-      .lk-section__content .history__title {
-        margin: 0 0 15px 0;
-        font-family: "museocanscyrl500", sans-serif;
-        font-size: 1.0625em;
-        color: #4f4f4f;
-        text-align: center; }
-      .lk-section__content .history .table {
-        width: 100%; }
-        .lk-section__content .history .table thead tr {
-          font-family: "museocanscyrl500", sans-serif;
-          font-size: 0.9375em;
-          color: #929292;
-          line-height: 1.6; }
-          .lk-section__content .history .table thead tr td:nth-child(1) {
-            text-align: left; }
-          .lk-section__content .history .table thead tr td:nth-child(2) {
-            text-align: center; }
-          .lk-section__content .history .table thead tr td:nth-child(3) {
-            text-align: center; }
-          .lk-section__content .history .table thead tr td:nth-child(4) {
-            text-align: right; }
-        .lk-section__content .history .table tbody tr {
-          font-family: "museocanscyrl500", sans-serif;
-          font-size: 0.9375em;
-          color: #5b5b5b;
-          text-align: center;
-          line-height: 1.6; }
-          .lk-section__content .history .table tbody tr td:nth-child(1) {
-            text-align: left; }
-          .lk-section__content .history .table tbody tr td:nth-child(4) {
-            text-align: right; }
-          .lk-section__content .history .table tbody tr td a {
-            color: #4caf50;
-            text-align: center;
-            text-decoration: none; }
-            .lk-section__content .history .table tbody tr td a:hover {
-              color: #50b554;
-              text-decoration: underline; }
   .lk-section .donation-form {
     width: 570px;
     margin: 23px auto 0 auto;
@@ -4086,6 +4038,25 @@ body {
     @media only screen and (max-width: 569px) {
       .lk-section .donation-form {
         width: 100%; } }
+    .lk-section .donation-form .copy-address {
+      display: block;
+      width: 350px;
+      margin: 5px auto 0 auto;
+      font-family: "museocanscyrl300", sans-serif;
+      font-size: 0.75em;
+      color: #929292;
+      text-align: center;
+      text-decoration: none; }
+      .lk-section .donation-form .copy-address:hover {
+        color: #4caf50;
+        text-decoration: underline; }
+    .lk-section .donation-form .required-field {
+      width: 350px;
+      margin: 6px auto 0 auto;
+      font-family: "museocanscyrl300", sans-serif;
+      font-size: 0.75em;
+      color: #5b5b5b;
+      text-align: center; }
     .lk-section .donation-form .step-title {
       margin: 0 0 15px 0;
       font-family: "museocanscyrl500", sans-serif;
@@ -4099,115 +4070,63 @@ body {
         background-image: url("../img/sad.png");
         background-repeat: no-repeat;
         background-position: 95% 50%; }
-    .lk-section .donation-form .step-one .radio-input {
-      display: none; }
-      .lk-section .donation-form .step-one .radio-input:checked + .radio-label {
-        background-color: #50b554; }
-      .lk-section .donation-form .step-one .radio-input.error + .radio-label {
-        background-color: #da7777; }
+    .lk-section .donation-form .input-address {
+      display: block;
+      width: 350px;
+      height: 45px;
+      margin: 0 auto 0 auto;
+      font-family: "museocanscyrl500", sans-serif;
+      font-size: 0.875em;
+      color: #5b5b5b;
+      text-align: center;
+      border: 1px solid #c0c0c0;
+      -webkit-border-radius: 5px;
+      border-radius: 5px; }
+    .lk-section .donation-form .step-one .e20_wallet {
+      display: block;
+      width: 350px;
+      margin: 11px auto 1px auto;
+      font-family: "museocanscyrl500", sans-serif;
+      font-size: 0.875em;
+      color: #929292; }
+    .lk-section .donation-form .step-one .e20-wallet-input {
+      display: block;
+      width: 350px;
+      height: 43px;
+      margin: 0 auto 0 auto;
+      font-family: "museocanscyrl500", sans-serif;
+      font-size: 0.875em;
+      color: #5b5b5b;
+      text-align: center;
+      border: 1px solid #c0c0c0;
+      -webkit-border-radius: 5px;
+      border-radius: 5px; }
     .lk-section .donation-form .step-two {
       margin: 31px 0 0 0; }
-      .lk-section .donation-form .step-two .input-address {
-        display: block;
-        width: 251px;
-        height: 45px;
-        margin: 0 auto 0 auto;
-        font-family: "museocanscyrl500", sans-serif;
-        font-size: 0.9375em;
-        color: #5b5b5b;
-        text-align: center;
-        border: 1px solid #c0c0c0;
-        -webkit-border-radius: 5px;
-        border-radius: 5px; }
-      .lk-section .donation-form .step-two .copy-address {
-        display: block;
-        width: 251px;
-        margin: 5px auto 0 auto;
-        font-family: "museocanscyrl300", sans-serif;
-        font-size: 0.75em;
-        color: #929292;
-        text-align: center;
-        text-decoration: none; }
-        .lk-section .donation-form .step-two .copy-address:hover {
-          color: #4caf50;
-          text-decoration: underline; }
-      .lk-section .donation-form .step-two .e20_wallet {
-        display: block;
-        width: 251px;
-        margin: 11px auto 1px auto;
-        font-family: "museocanscyrl500", sans-serif;
-        font-size: 0.9375em;
-        color: #929292; }
-      .lk-section .donation-form .step-two .e20-wallet-input {
-        display: block;
-        width: 251px;
-        height: 43px;
-        margin: 0 auto 0 auto;
-        font-family: "museocanscyrl500", sans-serif;
-        font-size: 0.9375em;
-        color: #5b5b5b;
-        text-align: center;
-        border: 1px solid #c0c0c0;
-        -webkit-border-radius: 5px;
-        border-radius: 5px; }
-      .lk-section .donation-form .step-two .required-field {
-        width: 251px;
-        margin: 6px auto 0 auto;
-        font-family: "museocanscyrl300", sans-serif;
-        font-size: 0.75em;
-        color: #5b5b5b;
-        text-align: center; }
+      .lk-section .donation-form .step-two .radio-input {
+        display: none; }
+        .lk-section .donation-form .step-two .radio-input:checked + .radio-label {
+          background-color: #50b554; }
+        .lk-section .donation-form .step-two .radio-input.error + .radio-label {
+          background-color: #da7777; }
     .lk-section .donation-form .step-three {
       margin: 29px 0 15px 0; }
       .lk-section .donation-form .step-three .transaction_address {
         display: block;
-        width: 251px;
+        width: 350px;
         height: 45px;
         margin: 0 auto 0 auto;
         font-family: "museocanscyrl500", sans-serif;
-        font-size: 0.9375em;
+        font-size: 0.875em;
         color: #5b5b5b;
         text-align: center;
         border: 1px solid #c0c0c0;
         -webkit-border-radius: 5px;
         border-radius: 5px; }
-    .lk-section .donation-form .step-four {
-      margin: 31px 0 0 0; }
-      .lk-section .donation-form .step-four .input-address {
-        display: block;
-        width: 251px;
-        height: 45px;
-        margin: 0 auto 0 auto;
-        font-family: "museocanscyrl500", sans-serif;
-        font-size: 0.9375em;
-        color: #5b5b5b;
-        text-align: center;
-        border: 1px solid #c0c0c0;
-        -webkit-border-radius: 5px;
-        border-radius: 5px; }
-      .lk-section .donation-form .step-four .e20-wallet-input {
-        display: block;
-        width: 251px;
-        height: 43px;
-        margin: 0 auto 0 auto;
-        font-family: "museocanscyrl500", sans-serif;
-        font-size: 0.9375em;
-        color: #5b5b5b;
-        text-align: center;
-        border: 1px solid #c0c0c0;
-        -webkit-border-radius: 5px;
-        border-radius: 5px; }
-      .lk-section .donation-form .step-four .required-field {
-        width: 251px;
-        margin: 6px auto 10px auto;
-        font-family: "museocanscyrl300", sans-serif;
-        font-size: 0.75em;
-        color: #5b5b5b;
-        text-align: center; }
     .lk-section .donation-form .submit {
       cursor: pointer;
       display: block;
-      width: 251px;
+      width: 350px;
       height: 42px;
       margin: 13px auto 0 auto;
       font-family: "museocanscyrl500", sans-serif;
@@ -4222,6 +4141,60 @@ body {
       box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2); }
       .lk-section .donation-form .submit:hover {
         background-color: #50b554; }
+  .lk-section .history {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 570px;
+    margin: 23px auto 0 auto;
+    overflow: hidden;
+    padding: 16px 22px 19px 22px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+    background-color: #fbfbfb; }
+    @media only screen and (max-width: 569px) {
+      .lk-section .history {
+        width: 100%; } }
+    @media only screen and (max-width: 652px) {
+      .lk-section .history {
+        margin: 0 auto 0 auto; } }
+    .lk-section .history__title {
+      margin: 0 0 15px 0;
+      font-family: "museocanscyrl500", sans-serif;
+      font-size: 1.0625em;
+      color: #4f4f4f;
+      text-align: center; }
+    .lk-section .history .table {
+      width: 100%; }
+      .lk-section .history .table thead tr {
+        font-family: "museocanscyrl500", sans-serif;
+        font-size: 0.9375em;
+        color: #929292;
+        line-height: 1.6; }
+        .lk-section .history .table thead tr td:nth-child(1) {
+          text-align: left; }
+        .lk-section .history .table thead tr td:nth-child(2) {
+          text-align: center; }
+        .lk-section .history .table thead tr td:nth-child(3) {
+          text-align: center; }
+        .lk-section .history .table thead tr td:nth-child(4) {
+          text-align: right; }
+      .lk-section .history .table tbody tr {
+        font-family: "museocanscyrl500", sans-serif;
+        font-size: 0.9375em;
+        color: #5b5b5b;
+        text-align: center;
+        line-height: 1.6; }
+        .lk-section .history .table tbody tr td:nth-child(1) {
+          text-align: left; }
+        .lk-section .history .table tbody tr td:nth-child(4) {
+          text-align: right; }
+        .lk-section .history .table tbody tr td a {
+          color: #4caf50;
+          text-align: center;
+          text-decoration: none; }
+          .lk-section .history .table tbody tr td a:hover {
+            color: #50b554;
+            text-decoration: underline; }
 
 .radio-label {
   cursor: pointer;

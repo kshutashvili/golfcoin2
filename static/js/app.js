@@ -3810,6 +3810,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     var $address = $form.find('#donation_address');
     var $code = $form.find('#code');
     var $copyAddress = $form.find('.copy-address');
+    var $e20Wallet = $form.find('#e20_wallet');
 
     new Clipboard('.copy-address');
 
@@ -3818,10 +3819,15 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     });
 
     $radio.on('click', function (e) {
-        var address = $(this).data('address');
-        var code = $(this).data('code');
-        $address.val(address);
-        $code.text(code);
+        if ($e20Wallet.valid()) {
+            var address = $(this).data('address');
+            var code = $(this).data('code');
+            $address.val(address);
+            $code.text(code);
+        } else {
+            e.preventDefault();
+            $e20Wallet.focus();
+        }
     });
 
     $form.validate({
@@ -4226,7 +4232,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         $.ajax({
             url: $elem.data('url'),
             success: function success(data) {
-                $elem.text(data.tokensCount);
+                if (data.status == "ok") $elem.html(data.html);
             }
         });
     };

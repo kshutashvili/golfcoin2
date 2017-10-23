@@ -134,35 +134,6 @@
                         <input type="submit" id="submit-account-form" class="hidden" />
                     </form>
                 </div>
-
-                <div class="history">
-                    <p class="history__title">{% trans 'History of your transactions' %}</p>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <td>{% trans 'Date' %}</td>
-                                <td>{% trans 'Method' %}</td>
-                                <td>{% trans 'Number of tokens' %}</td>
-                                <td>{% trans 'Sum' %}</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for tx in request.user.donations.all %}
-                            <tr>
-                                <td>{{ tx.created_dt|date:"d.m.Y" }}</td>
-                                <td><a href="{{ tx.tx_link }}">{{ tx.payment_method }}</a></td>
-                                <td>TBD</td>
-                                <td>TBD</td>
-                            </tr>
-                            {% empty %}
-                            <tr>
-                                <td id="no-transactions" colspan="4">{% trans 'No transactions yet' %}</td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-
             </div>
 
             <div class="discount-block">
@@ -174,7 +145,7 @@
             </div>
 
             {% get_solo 'config.DonationAddresses' as addresses %}
-            <h2 class="lk-section__title lk-section__title--donations">{% trans 'Make a donation and get tokens' %}</h2>
+            <h2 class="lk-section__title lk-section__title--donations">{% trans 'Buy tokens' %}</h2>
             {% if donation_form.errors %}
                 {% for error in donation_form.non_field_errors %}
                     <p class="caption error_message">{{ error }}</p>
@@ -193,34 +164,59 @@
                 <input type="hidden" name="submit" value="donation_form">
 
                 <div class="step-one">
-                    <p class="step-title">{% trans 'Step 1. Choose your payment method' %}</p>
-                    <input type="radio" class="radio-input" id="buy_for_eth" name="payment_method" value="ETH" {% if donation_form.payment_method.value|default:"ETH" == "ETH" %}checked{% endif %}/>
-                    <label for="buy_for_eth" class="radio-label" data-address="{{ addresses.eth_address }}" data-code="the ETH">{% trans 'Buy with ETH' %}</label>
+                    <p class="step-title">{% trans '[A] If you want to pay the ETH, pay at this address:' %}</p>
+                    <input type="text" class="input-address" id="eth_address" value="{{ addresses.eth_address }}" readonly/>
+                    <a href="#!" class="copy-address" data-clipboard-target="#eth_address">{% trans 'Copy address' %}</a>
+                    <p class="step-title">{% trans 'You will receive tokens in your wallet.' %}</p>
+                    <p class="step-title">{% trans '[B] Step 1. If you want to pay BTC, LTC, ETC first enter the address of your wallet (not on the stock exchange) to which the tokens will be sent:' %}</p>
+                    <input type="text" class="e20-wallet-input" id="e20_wallet" name="e20_wallet" value="{{ donation_form.e20_wallet.value|default:"" }}">
+                </div>
+
+                <div class="step-two">
+                    <p class="step-title">{% trans 'Step 2. Choose your payment method (coins).' %}</p>
                     <input type="radio" class="radio-input" id="buy_for_btc" name="payment_method" value="BTC" {% if donation_form.payment_method.value|default:"ETH" == "BTC" %}checked{% endif %}/>
                     <label for="buy_for_btc" class="radio-label" data-address="{{ addresses.btc_address }}" data-code="the BTC">{% trans 'Buy with BTC' %}</label>
                     <input type="radio" class="radio-input" id="buy_for_ltc" name="payment_method" value="LTC" {% if donation_form.payment_method.value|default:"ETH" == "LTC" %}checked{% endif %}/>
                     <label for="buy_for_ltc" class="radio-label" data-address="{{ addresses.ltc_address }}" data-code="the LTC">{% trans 'Buy with LTC' %}</label>
                     <input type="radio" class="radio-input" id="buy_for_etc" name="payment_method" value="ETC" {% if donation_form.payment_method.value|default:"ETH" == "ETC" %}checked{% endif %}/>
                     <label for="buy_for_etc" class="radio-label" data-address="{{ addresses.etc_address }}" data-code="the ETC">{% trans 'Buy with ETC' %}</label>
-                </div>
-
-                <div class="step-two">
-                    <p class="step-title">{% trans 'Step 2. Transfer your money to this address' %}</p>
-                    <input type="text" class="input-address" name="donation_address" id="donation_address" value="{% if donation_form.address.value %}{{ donation_form.address.value }}{% else %}{{ addresses.eth_address }}{% endif %}" readonly/>
+                    <input type="text" class="input-address" name="donation_address" id="donation_address" value="{% if donation_form.address.value %}{{ donation_form.address.value }}{% endif %}" readonly/>
                     <a href="#!" class="copy-address" data-clipboard-target="#donation_address">{% trans 'Copy address' %}</a>
                 </div>
                 <div class="step-three">
-                    <p class="step-title">{% trans 'Step 3. Enter the transaction number you sent' %} <span id="code">the {{ donation_form.payment_method.value|default:"ETH" }}</span></p>
+                    <p class="step-title">{% trans 'Step 3. Enter the transaction number that you sent' %}</p>
                     <input type="text" class="transaction_address" name="tx_id" value="{{ donation_form.tx_id.value|default:"" }}"/>
-                </div>
-                <div class="step-four">
-                    <p class="step-title">{% trans 'Step 4. Enter your E20 wallet address' %}</p>
-                    <input type="text" class="e20-wallet-input" id="e20_wallet" name="e20_wallet" value="{{ donation_form.e20_wallet.value|default:"" }}">
                     <p class="required-field">*This field is required</p>
                 </div>
-
-                <label for="submit-donation-form" class="radio-label submit-btn" tabindex="0">{% trans 'Send' %}</label>
+                <label for="submit-donation-form" class="radio-label submit-btn" tabindex="0">{% trans 'Save changes' %}</label>
             </form>
+        </div>
+        <div class="history">
+            <p class="history__title">{% trans 'History of your transactions' %}</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>{% trans 'Date' %}</td>
+                        <td>{% trans 'Method' %}</td>
+                        <td>{% trans 'Number of tokens' %}</td>
+                        <td>{% trans 'Sum' %}</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for tx in request.user.donations.all %}
+                    <tr>
+                        <td>{{ tx.created_dt|date:"d.m.Y" }}</td>
+                        <td><a href="{{ tx.tx_link }}">{{ tx.payment_method }}</a></td>
+                        <td>TBD</td>
+                        <td>TBD</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td id="no-transactions" colspan="4">{% trans 'No transactions yet' %}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
     </section>
 
