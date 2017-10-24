@@ -41,7 +41,7 @@ class TeammateTranslationOptions(TranslationOptions):
 
 
 class AdvisorTranslationOptions(TranslationOptions):
-    fields = ('name',)
+    fields = ('name', 'experience')
 
 
 class PartnerTranslationOptions(TranslationOptions):

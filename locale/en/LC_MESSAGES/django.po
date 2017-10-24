@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-23 08:43+0000\n"
-"PO-Revision-Date: 2017-10-23 13:34+0000\n"
-"Last-Translator: Admin Admin <admin@localhost>\n"
+"POT-Creation-Date: 2017-10-24 15:35+0000\n"
+"PO-Revision-Date: 2017-10-23 12:55+0000\n"
+"Last-Translator: Anton Makuschenko <phonxis@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -26,27 +26,27 @@ msgstr ""
 msgid "Current password is incorrect"
 msgstr ""
 
-#: config/models.py:209
+#: config/models.py:219
 msgid "Document scan rules"
 msgstr ""
 
-#: config/models.py:320
+#: config/models.py:332
 msgid "Адрес ETH"
 msgstr ""
 
-#: config/models.py:321
+#: config/models.py:333
 msgid "Адрес BTC"
 msgstr ""
 
-#: config/models.py:322
+#: config/models.py:334
 msgid "Адрес LTC"
 msgstr ""
 
-#: config/models.py:323
+#: config/models.py:335
 msgid "Адрес ETC"
 msgstr ""
 
-#: config/models.py:326 config/models.py:329
+#: config/models.py:338 config/models.py:341
 msgid "Адреса для покупки токенов"
 msgstr ""
 
@@ -62,7 +62,7 @@ msgstr ""
 msgid "This email address is already registered"
 msgstr ""
 
-#: donations/models.py:14 donations/models.py:72
+#: donations/models.py:14 donations/models.py:79
 msgid "Пользователь"
 msgstr ""
 
@@ -70,7 +70,7 @@ msgstr ""
 msgid "Адрес для получения токенов"
 msgstr ""
 
-#: donations/models.py:21 donations/models.py:75
+#: donations/models.py:21 donations/models.py:82
 msgid "Дата создания"
 msgstr ""
 
@@ -94,16 +94,28 @@ msgstr ""
 msgid "Номер транзакции"
 msgstr ""
 
-#: donations/models.py:79
+#: donations/models.py:70
+msgid "Количество токенов"
+msgstr ""
+
+#: donations/models.py:73
+msgid "Сумма транзакции"
+msgstr ""
+
+#: donations/models.py:86
 msgid "Транзакция"
 msgstr ""
 
-#: donations/models.py:80
+#: donations/models.py:87
 msgid "Транзакции"
 msgstr ""
 
 #: donations/validators.py:9
 msgid "Enter a valid ethereum address"
+msgstr ""
+
+#: donations/views.py:25
+msgid "Enter valid ethereum address"
 msgstr ""
 
 #: golfco/settings.py:142
@@ -156,26 +168,26 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: templates/base_up.html:33 templates/index.html:61
-#: templates/index_main.html:62 templates/index_main.html:176
-#: templates/index_main.html:382 templates/login.html:12
+#: templates/header_white.html:18 templates/index.html:61
+#: templates/index_main.html:33 templates/index_main.html:183
+#: templates/index_main.html:390 templates/login.html:12
 msgid "Sign Up"
 msgstr ""
 
-#: templates/base_up.html:35 templates/index.html:63
-#: templates/index_main.html:64 templates/index_main.html:178
-#: templates/index_main.html:384 templates/login.html:4
-#: templates/login.html:11 templates/login.html:18 templates/signup.html:11
+#: templates/header_white.html:20 templates/index.html:63
+#: templates/index_main.html:35 templates/index_main.html:185
+#: templates/index_main.html:392 templates/login.html:4 templates/login.html:11
+#: templates/login.html:18 templates/signup.html:11
 msgid "Login"
 msgstr ""
 
-#: templates/base_up.html:37 templates/index.html:65
-#: templates/index_main.html:66
+#: templates/header_white.html:22 templates/index.html:65
+#: templates/index_main.html:37
 msgid "Profile"
 msgstr ""
 
-#: templates/base_up.html:39 templates/index.html:67
-#: templates/index_main.html:68
+#: templates/header_white.html:24 templates/index.html:67
+#: templates/index_main.html:39
 msgid "logout"
 msgstr ""
 
@@ -185,7 +197,7 @@ msgstr ""
 
 #: templates/index.html:98 templates/index_main.html:99
 msgid "Start Pre-ICO"
-msgstr "START ICO"
+msgstr "START preICO"
 
 #: templates/index.html:99 templates/index_main.html:100
 #, fuzzy
@@ -209,53 +221,61 @@ msgstr ""
 msgid "Seconds"
 msgstr ""
 
-#: templates/index_main.html:133
+#: templates/index_main.html:134
+msgid "Soft Cap"
+msgstr ""
+
+#: templates/index_main.html:135 templates/index_main.html:140
 msgid "raised"
 msgstr ""
 
-#: templates/index_main.html:133
+#: templates/index_main.html:135 templates/index_main.html:140
 msgid "from"
 msgstr ""
 
-#: templates/index_main.html:134
+#: templates/index_main.html:136 templates/index_main.html:141
 msgid "participants"
 msgstr ""
 
-#: templates/index_main.html:161 templates/personal_profile.html:169
+#: templates/index_main.html:139
+msgid "Hard Cap"
+msgstr ""
+
+#: templates/index_main.html:168 templates/personal_profile.html:169
 #: templates/personal_profile.html:184
 msgid "Copy address"
 msgstr ""
 
-#: templates/index_main.html:163 templates/index_main.html:369
+#: templates/index_main.html:170 templates/index_main.html:377
 msgid "By clicking you acknowledge"
 msgstr ""
 
-#: templates/index_main.html:163 templates/index_main.html:369
+#: templates/index_main.html:170 templates/index_main.html:377
 msgid "privacy policy"
 msgstr ""
 
-#: templates/index_main.html:164 templates/index_main.html:370
+#: templates/index_main.html:171 templates/index_main.html:378
 msgid "You have read, understand and agree to our"
 msgstr ""
 
-#: templates/index_main.html:164 templates/index_main.html:370
+#: templates/index_main.html:171 templates/index_main.html:378
 #: templates/personal_profile.html:144
 msgid "terms and conditions"
 msgstr ""
 
-#: templates/index_main.html:166 templates/index_main.html:372
+#: templates/index_main.html:173 templates/index_main.html:380
 msgid "Other payment methods"
 msgstr ""
 
-#: templates/index_main.html:177 templates/index_main.html:383
+#: templates/index_main.html:184 templates/index_main.html:391
 msgid "or"
 msgstr ""
 
-#: templates/index_main.html:368
+#: templates/index_main.html:376
 msgid "Show the address for donating ETH"
 msgstr ""
 
-#: templates/index_main.html:401
+#: templates/index_main.html:409
 msgid "This field is required"
 msgstr ""
 
@@ -268,13 +288,13 @@ msgid "Invalid e-mail and/or password provided"
 msgstr ""
 
 #: templates/login.html:16 templates/personal_profile.html:61
-#: templates/signup.html:14
+#: templates/signup.html:27
 msgid "E-mail"
 msgstr ""
 
 #: templates/login.html:17
 #: templates/registration/password_reset_confirm.html:14
-#: templates/signup.html:16
+#: templates/signup.html:29
 msgid "Password"
 msgstr ""
 
@@ -298,11 +318,11 @@ msgstr ""
 msgid "Save changes"
 msgstr ""
 
-#: templates/personal_profile.html:45 templates/signup.html:12
+#: templates/personal_profile.html:45 templates/signup.html:25
 msgid "Name"
 msgstr ""
 
-#: templates/personal_profile.html:49 templates/signup.html:13
+#: templates/personal_profile.html:49 templates/signup.html:26
 msgid "Surname"
 msgstr ""
 
@@ -455,11 +475,11 @@ msgid "Method"
 msgstr ""
 
 #: templates/personal_profile.html:201
-msgid "Number of tokens"
+msgid "Sum"
 msgstr ""
 
 #: templates/personal_profile.html:202
-msgid "Sum"
+msgid "Number of tokens"
 msgstr ""
 
 #: templates/personal_profile.html:215
@@ -486,7 +506,7 @@ msgid "Enter new password in the form below"
 msgstr ""
 
 #: templates/registration/password_reset_confirm.html:17
-#: templates/signup.html:19
+#: templates/signup.html:32
 msgid "Password Again"
 msgstr ""
 
@@ -536,7 +556,7 @@ msgstr ""
 msgid "Golfcoin password reset"
 msgstr ""
 
-#: templates/signup.html:4 templates/signup.html:10 templates/signup.html:20
+#: templates/signup.html:4 templates/signup.html:10 templates/signup.html:33
 msgid "Sign up"
 msgstr ""
 

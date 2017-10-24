@@ -3854,6 +3854,20 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 "use strict";
 
 (function () {
+    var $header = $(".header");
+    var $headerWhite = $(".header.white");
+    $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        if (scroll > $header.height()) {
+            $headerWhite.slideDown("slow");
+        } else {
+            $headerWhite.slideUp("slow");
+        }
+    });
+})();
+"use strict";
+
+(function () {
     "use strict";
 
     var $form = $("#lk-account-form");
