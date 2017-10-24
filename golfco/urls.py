@@ -30,6 +30,7 @@ from config.views import (IndexView, SignupView,
 from subscriptions.views import SubscriptionView
 from two_factor.urls import urlpatterns as two_factor_urls
 from users.views import document_view
+from donations.views import check_eth_address
 
 decorators = [user_passes_test(lambda u: u.is_superuser)]
 
@@ -60,6 +61,7 @@ urlpatterns = i18n_patterns(
     url(r'^subscription/$', SubscriptionView.as_view(), name='subscription'),
     url(r'^check_email/$', check_email, name='check_email'),
     url(r'^check_email_profile/$', check_email_profile, name='check_email_profile'),
+    url(r'^check_eth_address/$', check_eth_address, name='check_eth_address'),
     url(r'^get_tokens_count/$', get_tokens_count, name="tokens_count"),
     url(r'^password_reset/$', auth_views.password_reset, name='password_reset'),
     url(r'^password_reset/done/$', auth_views.password_reset_done, name='password_reset_done'),

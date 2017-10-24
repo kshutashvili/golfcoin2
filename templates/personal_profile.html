@@ -158,7 +158,7 @@
                     {% endif %}
                 {% endfor %}
             {% endif %}
-            <form class="donation-form" id="donation-form" method="POST">
+            <form class="donation-form" id="donation-form" method="POST" data-check-address-url="{% url 'check_eth_address' %}">
                 {% csrf_token %}
                 <input type="submit" class="hidden" id="submit-donation-form"/>
                 <input type="hidden" name="submit" value="donation_form">
@@ -198,8 +198,8 @@
                     <tr>
                         <td>{% trans 'Date' %}</td>
                         <td>{% trans 'Method' %}</td>
-                        <td>{% trans 'Number of tokens' %}</td>
                         <td>{% trans 'Sum' %}</td>
+                        <td>{% trans 'Number of tokens' %}</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -207,8 +207,8 @@
                     <tr>
                         <td>{{ tx.created_dt|date:"d.m.Y" }}</td>
                         <td><a href="{{ tx.tx_link }}">{{ tx.payment_method }}</a></td>
-                        <td>TBD</td>
-                        <td>TBD</td>
+                        <td>{{ tx.tx_sum|floatformat:"-10"|default:"TBD" }}</td>
+                        <td>{{ tx.tokens|floatformat:"-10"|default:"TBD" }}</td>
                     </tr>
                     {% empty %}
                     <tr>
