@@ -3421,6 +3421,9 @@ body {
       .block7 .team-block__member .position {
         margin: 4px 0 0 0;
         font-size: 0.9375em; }
+      .block7 .team-block__member .experience {
+        margin: 4px 0 0 0;
+        font-size: 0.8125em; }
       .block7 .team-block__member .socials {
         width: 110px;
         margin-left: 40px; }
@@ -3476,6 +3479,9 @@ body {
       .block7 .advisers-block__member .position {
         margin: 4px 0 0 0;
         font-size: 0.9375em; }
+      .block7 .advisers-block__member .experience {
+        margin: 4px 0 0 0;
+        font-size: 0.8125em; }
 
 /*variables start*/
 /*variables end*/

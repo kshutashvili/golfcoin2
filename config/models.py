@@ -233,7 +233,7 @@ class Teammate(models.Model):
     social_linkedin = models.CharField("Linkedin",
                                       max_length=200, blank=True, null=True)
     experience = models.CharField("Опыт работы",
-                                max_length=128, blank=True, null=True)
+                                max_length=512, blank=True, null=True)
 
     class Meta:
         verbose_name = "Сотрудник"
@@ -251,6 +251,8 @@ class Advisor(models.Model):
                               upload_to="team")
     name = models.CharField("Имя",
                             max_length=128)
+    experience = models.CharField("Опыт работы",
+                                max_length=512, blank=True, null=True)
 
     class Meta:
         verbose_name = "Советник (Advisor)"

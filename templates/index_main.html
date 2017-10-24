@@ -131,6 +131,12 @@
     <section class="block2">
         <div class="container">
             <div class="title">
+                <p>Soft Cap</p>
+                <img src="{% static 'img/ethereum.png' %}" alt="ethereum"> {{ conf.investments_eth }}+ ETH {% trans 'raised' %} <span>{% trans 'from' %}</span> <img src="{% static 'img/people.png' %}"
+                    alt="people"> {{ conf.investments_participants }}+ {% trans 'participants' %}
+            </div>
+            <div class="title">
+                <p>Hard Cap</p>
                 <img src="{% static 'img/ethereum.png' %}" alt="ethereum"> {{ conf.investments_eth }}+ ETH {% trans 'raised' %} <span>{% trans 'from' %}</span> <img src="{% static 'img/people.png' %}"
                     alt="people"> {{ conf.investments_participants }}+ {% trans 'participants' %}
             </div>
@@ -268,7 +274,7 @@
                         <div class="image" style="background-image: url({{ teammate.photo.url }})"></div>
                         <p class="name">{{ teammate.name }}</p>
                         <p class="position">{{ teammate.position }}</p>
-                        <p class="position">{{ teammate.experience }}</p>
+                        <p class="experience">{% if teammate.experience %}{{ teammate.experience }}{% else %}{% endif %}</p>
                         <div class="socials">
                         {% if teammate.social_facebook %}
                             <a href = "{{ teammate.social_facebook }}" class="link facebook">
@@ -291,6 +297,7 @@
                 <div class="advisers-block__member">
                     <div class="image" style="background-image: url({{ advisor.photo.url }})"></div>
                     <p class="name">{{ advisor.name }}</p>
+                    <p class="experience">{% if advisor.experience %}{{ advisor.experience }}{% else %}{% endif %}</p>
                 </div>
                 {% endfor %}
             </div>
