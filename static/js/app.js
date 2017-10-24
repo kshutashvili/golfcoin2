@@ -3833,16 +3833,35 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     $form.validate({
         errorPlacement: function errorPlacement(error, element) {},
         ignore: "#donation_address",
+        onkeyup: false,
         rules: {
             payment_method: {
                 required: true
             },
             e20_wallet: {
-                required: true
+                required: true,
+                remote: {
+                    url: $form.data('check-address-url'),
+                    type: 'post'
+                }
             },
             tx_id: {
                 required: true
             }
+        }
+    });
+})();
+"use strict";
+
+(function () {
+    var $header = $(".header");
+    var $headerWhite = $(".header.white");
+    $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        if (scroll > $header.height()) {
+            $headerWhite.slideDown("slow");
+        } else {
+            $headerWhite.slideUp("slow");
         }
     });
 })();
@@ -3975,7 +3994,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 (function () {
     "use strict";
 
-    var $form = $("#signup-form");
+    var $form = $("#password_reset_confirm_form");
     var $submit = $form.find(".submit");
 
     $form.validate({

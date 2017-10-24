@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-23 08:43+0000\n"
-"PO-Revision-Date: 2017-10-10 16:09+0000\n"
-"Last-Translator: Admin Admin <admin@localhost>\n"
+"PO-Revision-Date: 2017-10-23 12:55+0000\n"
+"Last-Translator: Anton Makuschenko <phonxis@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -185,7 +185,7 @@ msgstr ""
 
 #: templates/index.html:98 templates/index_main.html:99
 msgid "Start Pre-ICO"
-msgstr "START ICO"
+msgstr "START preICO"
 
 #: templates/index.html:99 templates/index_main.html:100
 #, fuzzy
@@ -416,8 +416,8 @@ msgstr ""
 
 #: templates/personal_profile.html:171
 msgid ""
-"[B] Step 1. If you want to pay BTC, LTC, ETC first enter the address of your "
-"wallet (not on the stock exchange) to which the tokens will be sent:"
+"[B] Step 1. If you want to pay BTC, LTC, ETC first enter the address of your"
+" wallet (not on the stock exchange) to which the tokens will be sent:"
 msgstr ""
 
 #: templates/personal_profile.html:176
@@ -475,8 +475,8 @@ msgstr ""
 #: templates/registration/password_reset_complete.html:10
 #, python-format
 msgid ""
-"Your password has been set. You may go ahead and <a href=\"%(login_url)s"
-"\">login</a> now."
+"Your password has been set. You may go ahead and <a "
+"href=\"%(login_url)s\">login</a> now."
 msgstr ""
 
 #: templates/registration/password_reset_confirm.html:12
@@ -490,22 +490,19 @@ msgstr ""
 
 #: templates/registration/password_reset_confirm.html:23
 msgid ""
-"The password reset link was invalid, possibly because it has already been "
-"used.\n"
+"The password reset link was invalid, possibly because it has already been used.\n"
 "            Please request a new password reset."
 msgstr ""
 
 #: templates/registration/password_reset_done.html:9
 msgid ""
-"We've emailed you instructions for setting your password, if an account "
-"exists with the email you entered.\n"
+"We've emailed you instructions for setting your password, if an account exists with the email you entered.\n"
 "                You should receive them shortly."
 msgstr ""
 
 #: templates/registration/password_reset_done.html:13
 msgid ""
-"If you don't receive an email, please make sure you've entered the address "
-"you registered with,\n"
+"If you don't receive an email, please make sure you've entered the address you registered with,\n"
 "                and check your spam folder."
 msgstr ""
 
@@ -518,8 +515,7 @@ msgid ""
 "\n"
 "%(protocol)s://%(domain)s%(login_url)s\n"
 "\n"
-"If clicking the link above doesn't work, please copy and paste the URL in a "
-"new browser\n"
+"If clicking the link above doesn't work, please copy and paste the URL in a new browser\n"
 "window instead.\n"
 "\n"
 "Sincerely,\n"
