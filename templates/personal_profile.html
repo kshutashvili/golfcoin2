@@ -158,7 +158,7 @@
                     {% endif %}
                 {% endfor %}
             {% endif %}
-            <form class="donation-form" id="donation-form" method="POST">
+            <form class="donation-form" id="donation-form" method="POST" data-check-address-url="{% url 'check_eth_address' %}">
                 {% csrf_token %}
                 <input type="submit" class="hidden" id="submit-donation-form"/>
                 <input type="hidden" name="submit" value="donation_form">

@@ -4575,16 +4575,6 @@ body {
     font-size: 2.1875em;
     color: #4f4f4f;
     text-align: center; }
-  .signup-form .caption {
-    margin: 12px 0 21px 0;
-    font-family: "museocanscyrl500", sans-serif;
-    font-size: 0.9375em;
-    color: #929292;
-    text-align: center; }
-    .signup-form .caption a {
-      color: #929292; }
-      .signup-form .caption a:hover {
-        color: #4caf50; }
   .signup-form .input {
     outline: none;
     width: 100%;
