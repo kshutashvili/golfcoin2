@@ -71,10 +71,20 @@ class SiteConfiguration(SingletonModel):
                                       blank=True,
                                       help_text='https://t.co/golfco')
     # block investments
-    investments_eth = models.IntegerField("Инвестировано ETH",
+    investments_eth_soft = models.IntegerField("Инвестировано USD/ETH (Soft Cap)",
                                           default=0)
-    investments_participants = models.IntegerField("Количество инвестировавших",
+    investments_participants_soft = models.IntegerField("Количество инвестировавших (Soft Cap)",
                                                    default=0)
+    investments_currency_soft = models.CharField("Валюта",
+                                                 max_length=10,
+                                                 default="USD")
+    investments_eth_hard = models.IntegerField("Инвестировано USD/ETH (Hard Cap)",
+                                          default=0)
+    investments_participants_hard = models.IntegerField("Количество инвестировавших (Hard Cap)",
+                                                   default=0)
+    investments_currency_hard = models.CharField("Валюта",
+                                                 max_length=10,
+                                                 default="ETH")
     # block project-plan
     project_plan_html_id = models.CharField("Идентификатор HTML",
                                             max_length=16,

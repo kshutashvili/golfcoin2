@@ -131,14 +131,14 @@
     <section class="block2">
         <div class="container">
             <div class="title">
-                <p>Soft Cap</p>
-                <img src="{% static 'img/ethereum.png' %}" alt="ethereum"> {{ conf.investments_eth }}+ ETH {% trans 'raised' %} <span>{% trans 'from' %}</span> <img src="{% static 'img/people.png' %}"
-                    alt="people"> {{ conf.investments_participants }}+ {% trans 'participants' %}
+                <p>{% trans 'Soft Cap' %}</p>
+                <img src="{% static 'img/ethereum.png' %}" alt="ethereum"> {{ conf.investments_eth_soft }}+ {{ conf.investments_currency_soft }} {% trans 'raised' %} <span>{% trans 'from' %}</span> <img src="{% static 'img/people.png' %}"
+                    alt="people"> {{ conf.investments_participants_soft }}+ {% trans 'participants' %}
             </div>
             <div class="title">
-                <p>Hard Cap</p>
-                <img src="{% static 'img/ethereum.png' %}" alt="ethereum"> {{ conf.investments_eth }}+ ETH {% trans 'raised' %} <span>{% trans 'from' %}</span> <img src="{% static 'img/people.png' %}"
-                    alt="people"> {{ conf.investments_participants }}+ {% trans 'participants' %}
+                <p>{% trans 'Hard Cap' %}</p>
+                <img src="{% static 'img/ethereum.png' %}" alt="ethereum"> {{ conf.investments_eth_hard }}+ {{ conf.investments_currency_hard }} {% trans 'raised' %} <span>{% trans 'from' %}</span> <img src="{% static 'img/people.png' %}"
+                    alt="people"> {{ conf.investments_participants_hard }}+ {% trans 'participants' %}
             </div>
         </div>
     </section>
