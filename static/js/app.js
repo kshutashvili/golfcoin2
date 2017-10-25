@@ -3854,8 +3854,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 "use strict";
 
 (function () {
-    var $header = $(".header");
-    var $headerWhite = $(".header.white");
+    var $header = $(".header.main");
+    var $headerWhite = $(".header.white.main");
     $(window).scroll(function (event) {
         var scroll = $(window).scrollTop();
         if (scroll > $header.height()) {

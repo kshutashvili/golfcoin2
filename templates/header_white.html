@@ -8,7 +8,11 @@
 {% get_solo 'config.SiteConfiguration' as conf %}
 
 
-<header class="header white" style="{% if hide %}display:none;{% else %}{% endif %}">
+{% if hide %}
+<header class="header white main" style="display:none;">
+{% else %}
+<header class="header white">
+{% endif %}
     <div class="container">
         <div class="top-line">
             {% get_current_language as LANGUAGE_CODE %}
