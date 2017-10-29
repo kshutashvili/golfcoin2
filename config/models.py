@@ -209,12 +209,19 @@ class SiteConfiguration(SingletonModel):
     documents_rules = RichTextField(_("Document scan rules"),
                                     blank=True)
 
+    # logos
+    logo_header_main = models.ImageField(_("Site header logo"),
+                                         blank=True)
+    logo_header_profile = models.ImageField(_("Profile pages header logo"),
+                                            blank=True)
+    logo_footer = models.ImageField(_("Footer logo"),
+                                    blank=True)
+
     class Meta:
         verbose_name = "Конфигурация сайта"
 
     def __unicode__(self):
         return "Конфигурация сайта"
-
 
 
 class Teammate(models.Model):

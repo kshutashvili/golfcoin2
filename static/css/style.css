@@ -3616,7 +3616,6 @@ body {
     margin: 36px 0 0 30px;
     width: 133px;
     height: 52px;
-    background-image: url("../img/header-logo.png");
     background-size: contain;
     background-repeat: no-repeat; }
     @media only screen and (max-width: 667px) {
@@ -3696,7 +3695,6 @@ body {
     margin: 22px 0 0 30px;
     width: 133px;
     height: 52px;
-    background-image: url("../img/header-logo.png");
     background-size: contain;
     background-repeat: no-repeat; }
     @media only screen and (max-width: 667px) {
@@ -3919,8 +3917,6 @@ body {
     background-color: #fbfbfb;
     -webkit-box-shadow: 0 0px 5px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0px 5px 0px rgba(0, 0, 0, 0.2); }
-    .header.white .top-line .logo {
-      background-image: url("../img/header-logo-green.png"); }
     .header.white .top-line .menu li a {
       color: #5b5b5b; }
     .header.white .top-line .menu li.lang:after {
