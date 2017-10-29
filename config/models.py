@@ -75,6 +75,16 @@ class SiteConfiguration(SingletonModel):
                                           default=0)
     investments_participants = models.IntegerField("Количество инвестировавших",
                                                    default=0)
+    softcap = models.IntegerField("Soft Cap",
+                                  default=0)
+    softcap_currency = models.CharField("Валюта (Soft Cap)",
+                                        max_length=10,
+                                        default="USD")
+    hardcap = models.IntegerField("Hard Cap",
+                                  default=0)
+    hardcap_currency = models.CharField("Валюта (Hard Cap)",
+                                        max_length=10,
+                                        default="ETH")
     # block project-plan
     project_plan_html_id = models.CharField("Идентификатор HTML",
                                             max_length=16,
@@ -240,7 +250,7 @@ class Teammate(models.Model):
     social_linkedin = models.CharField("Linkedin",
                                       max_length=200, blank=True, null=True)
     experience = models.CharField("Опыт работы",
-                                max_length=128, blank=True, null=True)
+                                max_length=512, blank=True, null=True)
 
     class Meta:
         verbose_name = "Сотрудник"
@@ -258,6 +268,8 @@ class Advisor(models.Model):
                               upload_to="team")
     name = models.CharField("Имя",
                             max_length=128)
+    experience = models.CharField("Опыт работы",
+                                max_length=512, blank=True, null=True)
 
     class Meta:
         verbose_name = "Советник (Advisor)"

@@ -78,8 +78,13 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                     }),
                  ("Блок 'Уже инвестировано'", {
                     'classes': ('collapse',),
-                    "fields": ("investments_eth",
-                               "investments_participants")}),
+                    "fields": (("investments_eth",
+                                "investments_participants"),
+                               ("softcap",
+                                "softcap_currency"),
+                               ("hardcap",
+                                "hardcap_currency")
+                               )}),
                  ("Блок 'О нас'", {
                     'classes': ('collapse',),
                     "fields": ("about_title_en",
