@@ -16,7 +16,8 @@
     <div class="container">
         <div class="top-line">
             {% get_current_language as LANGUAGE_CODE %}
-            <a href="/{{ LANGUAGE_CODE }}/" class="logo"></a>
+            {% static 'img/header-logo-green.png' as header_logo_default %}
+            <a href="/{{ LANGUAGE_CODE }}/" class="logo" style="background-image: url('{% if conf.logo_header_profile %}{{ conf.logo_header_profile.url }}{% else %}{{ header_logo_default }}{% endif %}')"></a>
             <div class="auth">
                 {% if not request.user.is_authenticated %}
                 <a href="{% url 'signup' %}" class="sign-up">{% trans 'Sign Up' %}</a>

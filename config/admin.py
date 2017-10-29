@@ -265,7 +265,13 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "social_fb",
                                "social_insta",
                                "social_twi",
-                               "social_telegram")}),)
+                               "social_telegram")}),
+                 ("Логотипы", {
+                     'classes': ('collapse', ),
+                     'fields': ('logo_header_main',
+                                'logo_header_profile',
+                                'logo_footer')
+                 }))
     inlines = [TeammateInline,
                AdvisorInline,
                PartnerInline,

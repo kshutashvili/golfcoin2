@@ -3622,7 +3622,6 @@ body {
     margin: 36px 0 0 30px;
     width: 133px;
     height: 52px;
-    background-image: url("../img/header-logo.png");
     background-size: contain;
     background-repeat: no-repeat; }
     @media only screen and (max-width: 667px) {
@@ -3702,7 +3701,6 @@ body {
     margin: 22px 0 0 30px;
     width: 133px;
     height: 52px;
-    background-image: url("../img/header-logo.png");
     background-size: contain;
     background-repeat: no-repeat; }
     @media only screen and (max-width: 667px) {
@@ -3936,8 +3934,6 @@ body {
         background-position: center center;
         height: 105px;
         padding-bottom: 0px; } }
-    .header.white .top-line .logo {
-      background-image: url("../img/header-logo-green.png"); }
     .header.white .top-line .menu li a {
       color: #5b5b5b; }
     .header.white .top-line .menu li.lang:after {

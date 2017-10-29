@@ -26,7 +26,8 @@
         <div class="container">
             <div class="top-line">
                 {% get_current_language as LANGUAGE_CODE %}
-                <a href="/{{ LANGUAGE_CODE }}/" class="logo"></a>
+                {% static 'img/header-logo.png' as header_logo_default %}
+                <a href="/{{ LANGUAGE_CODE }}/" class="logo" style="background-image: url('{% if conf.logo_header_main %} {{ conf.logo_header_main.url}}{% else %}{{ header_logo_default }}{% endif %}')"></a>
                 <ul class="mb-menu">
                     <li class="open"><i class="fa fa-bars" aria-hidden="true"></i>
                         <ul class="submenu">
@@ -126,7 +127,8 @@
 
     <section class="footer">
         <div class="container">
-            <a href="#!" class="footer__logo"></a>
+            {% static 'img/header-logo.png' as footer_logo_default %}
+            <a href="/{{ LANGUAGE_CODE }}/" class="footer__logo" style="background-image: url('{% if conf.logo_footer %} {{ conf.logo_footer.url }}{% else %}{{ footer_logo_default }}{% endif %}')"></a>
             <ul class="footer__menu">
                 {% for item in menu %}
                     <li><a class="link" href="{% if item.link %}{{ item.link }}{% else %}#{% endif %}">{{ item.name }}</a></li>

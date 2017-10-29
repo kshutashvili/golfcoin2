@@ -33,7 +33,8 @@
 
     <section class="footer">
         <div class="container">
-            <a href="#!" class="footer__logo"></a>
+            {% static 'img/header-logo.png' as footer_logo_default %}
+            <a href="/{{ LANGUAGE_CODE }}/" class="footer__logo" style="background-image: url('{% if conf.logo_footer %}{{ conf.logo_footer.url }}{% else %} {{ footer_logo_default }}{% endif %}')"></a>
             <ul class="footer__menu">
                 {% for item in menu %}
                     <li><a class="link" href="{% if item.link %}{{ item.link }}{% else %}#{% endif %}">{{ item.name }}</a></li>
