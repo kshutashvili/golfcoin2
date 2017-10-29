@@ -22,7 +22,7 @@
 {% get_solo 'config.SiteConfiguration' as conf %}
     <!-- header start -->
 
-    <header class="header">
+    <header class="header" style="background-image: url('{% if conf.header_bg %}{{ conf.header_bg.url }}{% else %}{% static 'img/header-bg.png' %}{% endif %}')">
         <div class="container">
             <div class="top-line">
                 {% get_current_language as LANGUAGE_CODE %}

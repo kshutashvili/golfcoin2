@@ -3264,7 +3264,6 @@ body {
 /*media end*/
 .block4 {
   height: 645px;
-  background-image: url(../img/how_it_works_bg.jpg);
   background-size: cover; }
   .block4__title {
     padding: 50px 0 15px 0;
@@ -3379,7 +3378,6 @@ body {
 .block7 {
   margin: 147px 0 0 0;
   padding: 0 0 46px 0;
-  background-image: url("../img/bg_team.png");
   background-size: cover; }
   @media only screen and (max-width: 1024px) {
     .block7 {
@@ -3548,8 +3546,7 @@ body {
 /*media start*/
 /*media end*/
 .block9 {
-  padding-bottom: 116px;
-  background-image: url("../img/bg_faq.png"); }
+  padding-bottom: 116px; }
   .block9__title {
     margin: 0 0 30px 0;
     padding: 83px 0 0 0;
@@ -3689,7 +3686,6 @@ body {
 /*media end*/
 .header {
   padding-bottom: 30px;
-  background-image: url("../img/header-bg.png");
   background-size: cover; }
   @media only screen and (max-width: 1100px) {
     .header {

@@ -11,7 +11,10 @@ from django.utils.translation import ugettext_lazy as _, ugettext
 class SiteConfiguration(SingletonModel):
     show_site = models.BooleanField('Включить основной сайт',
                                     default=True)
+
     # main block
+    header_bg = models.ImageField(_("Фон в хедере"),
+                                  blank=True)
     main_block_title = models.CharField('Заголовок блока',
                                          max_length=128,
                                          default='We integrates the blockchain of 60 million golfers')
@@ -144,6 +147,8 @@ class SiteConfiguration(SingletonModel):
                                       blank=True,
                                       null=True)
     # block team
+    team_block_bg = models.ImageField("Фоновое изображение",
+                                      blank=True)
     team_block_html_id = models.CharField("Идентификатор HTML",
                                           max_length=16,
                                           default='team')
@@ -165,6 +170,8 @@ class SiteConfiguration(SingletonModel):
                                             max_length=64,
                                             default="Our partners")
     # block FAQ
+    faq_block_bg = models.ImageField("Фоновое изображение",
+                                     blank=True)
     faq_block_html_id = models.CharField("Идентификатор HTML",
                                            max_length=16,
                                            default='faq-block')
@@ -179,6 +186,8 @@ class SiteConfiguration(SingletonModel):
     enable_zh = models.BooleanField("Включить Китайский язык",
                                     default=False)
     # how block
+    how_block_bg = models.ImageField("Фоновое изображение",
+                                     blank=True)
     how_block_html_id = models.CharField("Идентификатор HTML",
                                          max_length=16,
                                          default='how-it-works')

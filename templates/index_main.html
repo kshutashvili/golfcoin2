@@ -23,7 +23,7 @@
 {% get_solo 'config.SiteConfiguration' as conf %}
     <!-- header start -->
 
-    <header class="header main">
+    <header class="header main" style="background-image: url('{% if conf.header_bg %}{{ conf.header_bg.url }}{% else %}{% static 'img/header-bg.png' %}{% endif %}')">
         <div class="container">
             <div class="top-line">
                 {% get_current_language as LANGUAGE_CODE %}
@@ -189,7 +189,7 @@
 
     <!-- block4 start -->
 
-    <section class="block4" id="{{ conf.how_block_html_id }}">
+    <section class="block4" id="{{ conf.how_block_html_id }}" style="background-image: url('{% if conf.how_block_bg %}{{ conf.how_block_bg.url }}{% else %}{% static 'img/how_it_works_bg.jpg' %}{% endif %}')">
         <div class="container video embed-responsive embed-responsive-16by9">
             <h2 class="block4__title">{{ conf.how_block_block_title }}</h2>
             <div class="video embed-responsive embed-responsive-16by9" style="text-align:center;">
@@ -261,7 +261,7 @@
 
     <!-- block7 start -->
 
-    <section class="block7" id="{{ conf.team_block_html_id }}">
+    <section class="block7" id="{{ conf.team_block_html_id }}" style="background-image: url('{% if conf.team_block_bg %}{{ conf.team_block_bg.url }}{% else %}{% static 'img/bg_team.png' %}{% endif %}')">
         <div class="container">
             {% if conf.teammates.all|length > 0 %}
             <div class="team-block">
@@ -335,7 +335,7 @@
 
     <!-- block9 start -->
     {% if conf.faq.all|length > 0 %}
-    <section class="block9" id="{{ conf.faq_block_html_id }}">
+    <section class="block9" id="{{ conf.faq_block_html_id }}" style="background-image: url('{% if conf.faq_block_bg %}{{ conf.faq_block_bg.url }}{% else %}{% static 'img/bg_faq.png' %}{% endif %}')">
         <div class="container">
             <h2 class="block9__title">{{ conf.faq_block_title }}</h2>
 

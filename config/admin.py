@@ -48,7 +48,8 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "enable_zh")}),
                  ("Информация для главного блока", {
                     'classes': ('collapse',),
-                    "fields": ("main_block_title_en",
+                    "fields": ("header_bg",
+                               "main_block_title_en",
                                "main_block_title_ru",
                                "main_block_title_de",
                                "main_block_title_es",
@@ -116,7 +117,8 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "login_form_text_zh",)}),
                  ("Блок 'How it works'", {
                     'classes': ('collapse',),
-                    "fields": ("how_block_block_title_en",
+                    "fields": ("how_block_bg",
+                               "how_block_block_title_en",
                                "how_block_block_title_ru",
                                "how_block_block_title_de",
                                "how_block_block_title_es",
@@ -192,7 +194,8 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                 "details_img_2_zh"))}),
                  ("Блок 'Команда'", {
                     'classes': ('collapse',),
-                    "fields": ("team_block_html_id",
+                    "fields": ("team_block_bg",
+                               "team_block_html_id",
                                "team_block_title_en",
                                "team_block_title_ru",
                                "team_block_title_de",
@@ -216,7 +219,8 @@ class SiteConfigurationAdmin(SingletonModelAdmin):
                                "partners_block_title_zh",)}),
                  ("Блок 'FAQ'", {
                     'classes': ('collapse',),
-                    "fields": ("faq_block_html_id",
+                    "fields": ("faq_block_bg",
+                               "faq_block_html_id",
                                "faq_block_title_en",
                                "faq_block_title_ru",
                                "faq_block_title_de",
