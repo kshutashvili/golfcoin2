@@ -68,6 +68,15 @@ class CustomLoginView(LoginView):
     redirect_authenticated_user = True
     success_url = reverse_lazy('profile')
 
+    def form_valid(self, form):
+        user = form.get_user()
+
+        # do not allow superuser login here
+        if user.is_superuser:
+            return redirect('two_factor:login')
+
+        return super(CustomLoginView, self).form_valid(form)
+
 
 @login_required(login_url=reverse_lazy('login'))
 def logout_view(request):
