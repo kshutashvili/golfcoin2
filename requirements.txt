@@ -2,7 +2,7 @@ Babel==2.5.1
 certifi==2017.7.27.1
 chardet==3.0.4
 cytoolz==0.8.2
-Django==1.11.5
+Django==1.11.28
 django-ckeditor==5.3.0
 django-cleanup==1.0.1
 django-decorator-include==1.3
